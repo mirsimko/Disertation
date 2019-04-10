@@ -1,0 +1,219 @@
+\documentclass[a4paper,titlepage,11pt]{book} %draft
+
+
+% \usepackage[square,comma,numbers]{natbib}
+% \bibliographystyle{apsrev4-1}
+\usepackage{cite}
+\bibliographystyle{h-physrev-vv}
+
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{dsfont, amsmath, amsthm, amssymb}
+\usepackage[breaklinks, hidelinks]{hyperref} %colorlinks, pdfborder = {0 0 0 0}, linktocpage
+\usepackage{breakurl}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8x]{inputenc}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\usepackage{subfigure}
+%\usepackage[czech]{babel}
+\usepackage[english]{babel}
+\usepackage{siunitx}
+\usepackage{upgreek}
+\usepackage[refpage]{nomencl}
+\usepackage[final]{pdfpages}
+\usepackage[toc,page]{appendix}
+\makeatletter\@openrightfalse\makeatother % removes the unnecessary page
+%\usepackage{thebibliography}
+\let\abbrev\nomenclature
+\renewcommand{\nomname}{List of Abbreviations}
+\setlength{\nomlabelwidth}{.25\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+\setlength{\nomitemsep}{.2cm} \makenomenclature
+\newcommand{\Listofabbrev}{
+                           \printnomenclature
+                           \newpage
+                          }
+\usepackage{fancyhdr}
+\usepackage{datetime}
+
+\newdateformat{czechdate}{\THEDAY.\THEMONTH.\ \THEYEAR}
+\newdateformat{justyear}{{\THEYEAR}}
+%%%%%%% dvakrat prelozit build.tex a pak spustit
+% bibtex rozprava
+% makeindex rozprava.nlo -s nomencl.ist -o rozprava.nls a znovu prelozit build.tex %%%%%%%-\parsep
+
+%-------------------------------------------------------------------------------------------------------------------
+
+\newcommand{\myself}{Ing. Miroslav Šimko}
+\newcommand{\engtitle}{Study of Heavy Flavor at the STAR Experiment}
+\newcommand{\czechtitle}{Studium těžkých vůní na experimentu STAR}
+\newcommand{\skolitel}{Mgr.\ Jaroslav Bielčík, Ph.D.}
+\newcommand{\konzultant}{Mgr.\ Jana Bielčíková, Ph.D.}
+
+\newcommand{\konv}[1]{\ensuremath{\stackrel{\rm #1}{\longrightarrow}}}
+%\topmargin      -3cm \oddsidemargin  -1.5cm \textwidth      19cm
+%\textheight     26cm
+
+\newcommand{\ddd}{\ensuremath{\,\mathrm{d}}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\eee}{\ensuremath{\mathrm{e}}}
+\newcommand{\pt}{{}\ensuremath{p_{\mathrm{T}}}{}}
+\newcommand{\dedx}{$\dd E / \dd x$}
+\newcommand{\Lambdac}{\ensuremath{\Lambda_\text{c}}}
+\newcommand{\beamtuning}{\texttt{BEAM\_TUNING}}
+\newcommand{\comp}[1]{\texttt{alidcscom#1}}
+\newcommand{\Pconv}{\ensuremath{P_{\mathrm{conv}}}}
+\newcommand{\snn}{\ensuremath{\sqrt{s_\text{NN}}}}
+\newcommand{\Raa}{\ensuremath{R_\text{AA}}}
+\newcommand{\Rcp}{\ensuremath{R_\text{cp}}}
+\newcommand{\dzero}{\ensuremath{\text{D}^0}}
+
+
+\usepackage{geometry}
+ \geometry{verbose,a4paper,tmargin=4cm,bmargin=3.2cm,lmargin=3cm,rmargin=2cm}
+
+%-------------------------------------------------------------------------------------------------------------------
+\hyphenation{ap-pro-xi-mate}
+\hyphenation{EMCaL}
+\hyphenation{con-fe-rence}
+\hyphenation{in-co-ming}
+\hyphenation{da-ta-ba-ses}
+\hyphenation{fi-gure}
+\hyphenation{vi-sua-li-za-tion}
+\hyphenation{me-cha-nisms}
+\hyphenation{ex-pe-ri-ment}
+\hyphenation{Brook-ha-ven}
+\hyphenation{pro-ton}
+
+%-------------------------------------------------------------------------------------------------------------------
+\begin{document}
+
+%-------------------------------------------------------------------------------------------------------------------
+\thispagestyle{empty}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\begin{center}
+    {\LARGE \textsc CZECH TECHNICAL UNIVERSITY IN \\[0.3cm]PRAGUE}\\[2ex]
+    {\LARGE \textsc Faculty of Nuclear Sciences and Physical \\[0.2cm]Engineering}\\[2ex]
+    {\LARGE \textsc Department of Physics}\\
+    \vspace{1cm}
+    \begin{figure}[ht!]
+    \begin{center}
+      {\includegraphics[width=5cm]{lev}}
+    \end{center}
+    \end{figure}
+    \vspace{1cm}
+
+    {\textbf {\Huge Ph.D. Thesis \\[4ex]}
+    {\LARGE \bf \engtitle} 
+    }
+
+    \vfill
+
+    {\Large \bf \myself }\\ [4ex]
+    {\large \bf  Supervisor: \skolitel}\\[4ex]
+    {\Large \bf Prague, \justyear\today}\\
+    \newpage \rule{0pt}{2cm}
+\end{center}
+\thispagestyle{empty}
+\begin{center}
+    {\LARGE \textsc \mbox{\v{C}ESK\' E VYSOKÉ U\v CEN\' I TECHNICK\' E \\[0.3cm]V PRAZE}}\\[2ex]
+    {\LARGE \textsc Fakulta Jadern\' a a Fyzik\' aln\v e In\v zen\' yrsk\' a}\\[2ex]
+    {\LARGE \textsc Katedra fyziky}\\
+    \vspace{1cm}
+    \begin{figure}[ht!]
+    \begin{center}
+      {\includegraphics[width=5cm]{lev}}
+    \end{center}
+    \end{figure}
+    \vspace{1cm}
+
+    {\textbf {\Huge Rozprava k Diserta\v cn\' i pr\' aci \\[4ex]}
+    {\LARGE \bf \czechtitle} 
+    }
+
+    \vfill
+
+    {\Large \bf \myself }\\ [4ex]
+    {\large \bf Školitel: \skolitel}\\[4ex]
+    {\Large \bf Praha, \justyear\today}\\
+    \newpage \rule{0pt}{2cm}
+\end{center}
+
+\thispagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+% \input{zadani}
+\input{prohlaseni}
+\input{vzor}
+\newpage
+% \input{acknowledgement}
+\input{contribution}
+\tableofcontents 
+% \thispagestyle{plain}
+% \pagestyle{headings}
+%-------------------------------------------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields_
+\fancyhead[RE]{\rightmark}
+\fancyhead[LO]{\leftmark}
+
+\renewcommand{\footrulewidth}{0.4pt}
+%--------%----------------------------------------------------------------------------------------------------------
+\chapter{Introduction}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\chapter{The Physics of Quark-Gluon Plasma}
+
+% \chapter{\Lambdac\ measurements at the LHC\label{LcLHC}}
+\input{introduction}
+
+
+% \chapter{Experimental setup\label{experiment}}
+\chapter{Solenoidal Tracker at Relativistic-Heavy-Ion Collider (STAR)\label{STARchapter}}
+\input{setup}
+
+% \chapter{Charm hadrons production at RHIC\label{cQuarkRHIC}}
+\chapter{Open Heavy Flavor and Quark-Gluon Plasma}
+\input{hf}
+\input{lc}
+
+% \chapter{\Lambdac\ baryon analysis\label{analysis}}
+\chapter{Reconstruction of the $\Lambda_\text{c}$ Baryon in Au+Au Collisions}
+\input{analysis}
+
+\chapter{Discussion}
+
+\chapter{Conclusion and outlook} \label{conclusion}
+\input{conclusion}
+% % -------------------------------------------------------------------------------------------------------------------
+
+% \listoffigures
+% \markboth{}{}
+
+%  \newpage
+ \cleardoublepage
+ \phantomsection
+  \markboth{LIST OF ABBREVIATIONS}{LIST OF ABBREVIATIONS}
+
+ \addcontentsline{toc}{chapter}{List of Abbreviations}
+\Listofabbrev \newpage
+
+\cleardoublepage
+\input{bibliography}
+% % -------------------------------------------------------------------------------------------------------------------
+
+\begin{appendices}
+\chapter{Proceedings and posters}
+\input{papers}
+\end{appendices}
+
+\end{document}

@@ -1,0 +1,88 @@
+This work is dedicated to study of open charm in ultra-relativistic heavy-ion collisions at the Solenoidal Tracker At RHIC (STAR\nomenclature{STAR}{Solenoidal Tracker At RHIC}) experiment at the Relativistic Heavy-Ion Collider (RHIC\nomenclature{RHIC}{Relativistic Heavy Ion Collider}) with the emphasis on the \Lambdac\ baryon which has never been measured before in heavy ion--ion collisions and has a potential to uncover some key properties of the strongly coupled quark-gluon plasma.
+
+In this chapter, we introduce the physics of heavy flavor and \Lambdac\ in heavy-ion collisions; Chapter~\ref{cQuarkRHIC} deals with the production of other open-charm hadrons at RHIC\@; Chapter~\ref{LcLHC} describes the reconstruction of \Lambdac\ at other experiments besides STAR, i.e.\ at the LHC\@; In Chapter~\ref{experiment} RHIC, STAR, and the important detectors for the \Lambdac\ analysis are described; In Chapter~\ref{analysis}, the main topic of this work, the \Lambdac\ analysis is shown; Finally in the last chapter, conclusions are drawn together with requirements to finish the \Lambdac\ analysis to the point of publication.
+
+\section{Ultra-relativistic heavy-ion collisions}
+
+Physicists have constructed facilities that are capable of creating a new state of matter a strongly-coupled quark-gluon plasma (sQGP\nomenclature{sQGP}{strongly-coupled Quark-Gluon Plasma}). One of them is the Relativistic Heavy Ion Collider (RHIC -- described in Section~\ref{RHIC}) located in Brookhaven National Laboratory in the USA\@. It is capable of reaching the collision energy per nucleon of $\snn= \SI{200}{\giga\electronvolt}$. The collisions are called ultra-relativistic because the energy of the nucleons is much higher than their rest masses ($E \gg m$).
+
+\section{Phase diagram of the quark-gluon plasma (QGP)}\nomenclature{QCD}{Quantum Chromodynamics}\nomenclature{QGP}{Quark-Gluon Plasma}
+
+Experimental evidence and theoretical predictions suggest that with high enough temperature (around \SI{170}{\mega\electronvolt}) the matter can enter a new state of matter, the so called strongly-coupled quark gluon plasma~\cite{QGPdiscovered}\@. Figure~\ref{fig:phaseDiagram} shows an illustration of the QCD phase diagram. The y-axis shows the temperature and the x-axis shows the baryon density, which is the density of baryons minus anti-baryons. This density corresponds directly to the baryon chemical potential $\eta$ which represents the potential of the difference in numbers between baryons and anti-baryons. In the bottom left corner, we can see the hadronic matter, where the quarks are always trapped -- confined inside hadrons (e.g.\ the protons at rest have a baryon chemical potential equal to $\eta = \SI{938}{\mega\electronvolt}$ and the temperature of $T \approx 0$). 
+As we go higher in temperature in heavy-ion collisions, the baryon density gets lower (the number of anti-baryons, compared to baryons, is increasing). At one point, a transition into a new state of matter occurs --- the quark-gluon plasma is created. The temperature is so high that the quarks and gluons are no longer trapped inside hadrons --- they become deconfined. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.5\textwidth]{img/phaseDiagram}
+\caption{The QCD phase diagram. Taken from~\cite{bnlSite}.}
+\label{fig:phaseDiagram}
+\end{figure}
+
+At the top RHIC energies ($\snn = 200\,$GeV) and at the LHC energies for the Pb+Pb collisions ($\snn > \SI{2.76}{\tera\electronvolt}$ in the collider mode), the experimental evidence and lattice--QCD (lQCD\nomenclature{lQCD}{lattice--QCD}) calculations point to a crossover (second-order) transition between the hadron matter and the sQGP\@. lQCD calculations suggest, however, that at lower temperatures and higher baryon chemical potential, the transition changes to a first-order one. Therefore, in between, there has to be a critical point. RHIC beam energy scan program, in which \snn\ is scanned by lowering the energy of the accelerated nuclei, is an ongoing endeavor to find this critical point~\cite{BESII}. 
+ 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.8\textwidth]{img/lightCone}
+\caption{The space-time evolution of a heavy-ion collision. Taken from~\cite{helen}.}
+\label{fig:lightCone}
+\end{figure}
+
+The space-time evolution of a heavy-ion collision is shown in Figure~\ref{fig:lightCone}. When we look at the proper time around $\tau = 1\,$fm$/c$, the local thermodynamic equilibrium is established and from this point on, the system can be described hydrodynamically. At this point it is going through the phase of quark-gluon plasma, in which the quarks are deconfined, until it cools down to the temperature of the chemical freeze-out $T_\mathrm{ch}$. This is when the single quarks become confined in hadrons in pairs and triplets. The hadrons can, however still interact with each other because the density is high enough; this state of the system is called the hadron gas. After some time, the distances between the hadrons become long enough that the mean free path of the hadrons becomes higher than the volume of the medium. This if called the kinetic freeze-out with the temperature $T_\mathrm{fo}$. After this, the hadrons are free. 
+
+
+\section{Heavy flavor production in heavy-ion collisions}
+
+The heavy quarks such as c or b have much higher masses compared to the light quarks (u, d, and s) and  than the temperature of the system during the hydrodynamic expansion~\cite{summaryHF}. As a result, they can be only produced in hard processes during the very early stages of the collision. Therefore, they can experience the whole evolution of the system and can act as excellent probes into the processes of energy loss in the sQGP\@.
+
+\section{\Lambdac\ baryon}
+
+The \Lambdac\ baryon has a quark content of c, u, and d~\cite{PDG}. It is the lightest charmed baryon with the rest mass of $m = \SI{2286.46 \pm 0.14}{\mega\electronvolt}/c$\@. Its decay length is, however, quite small $c\tau = \SI{60.0 \pm 1.8}{\micro\metre}$ which makes the reconstruction challenging, especially in heavy-ion collisions. The measurement of \Lambdac\ is possible via the leptonic channels $\Lambdac^+ \rightarrow \mathrm{e}^+ + \upnu_\mathrm{e} + \mathrm{X}$ or $\Lambdac^+ \rightarrow \upmu^+ + \upnu_\upmu + \mathrm{X}$, however, the energy information is lost because of the outgoing neutrino, which cannot be detected, and therefore, the leptons cannot be separated from the ones from D and B mesons decay. Possible channels for the direct reconstruction of the \Lambdac\ with all the decay products detected are listed in Table~\ref{tab:lcDecayCahnnels}. In these channels all the decay particles can be reconstructed and, thus, the mass and momentum can be fixed.
+
+\begin{table}[htb]
+\caption{\label{tab:lcDecayCahnnels}Decay channels of \Lambdac\ that can be used in its reconstruction~\cite{PDG}. Note that the $\Lambda_c^+ \rightarrow \mathrm{p} + \mathrm{K}^- + \uppi^+$ channel can have various resonances as an intermediate step in the decay.}
+\begin{center}
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{l}{Decay channel} & Branching ratio \\
+\midrule
+$\Lambda_c^+ \rightarrow$ &  p + K$^- + \uppi^+$ (all) & 5.0$\,\%$ \\
+  & p + K* & $1.6\,\%$ \\
+  & $\Delta^{++}$ + K$^-$ & $0.86\,\%$ \\
+  & $\Lambda(1520) + \uppi^+$ & $1.8\,\%$ \\
+  & Nonresonant & $2.8\,\%$ \\
+$\Lambda_c^+ \rightarrow$ &  p + $\overline{\mathsf{K}}^0$ & $2.3\,\% $ \\
+$\Lambda_c^+ \rightarrow$ & $ \Lambda + \uppi^+$ & $1.07\,\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+\section{Baryon enhancement, baryon to anti-baryon ratio, and coalescence of the \Lambdac\ baryon}
+
+An enhancement of strange baryons compared to mesons has been observed in the intermediate transverse momentum ($p_\mathrm{T}$) range in central heavy-ion collisions at RHIC~\cite{STARLambda} and the LHC~\cite{LambdaALICE}\@. This phenomenon is known as strange baryon enhancement and is believed to be one of the key pieces of evidence of the existence of the sQGP\@. This behavior can be explained via hadronization models which include quark coalescence~\cite{coalescenceKrakow,coalescenceKFKI}, which is a process in which the quarks are combined to form hadrons, as compared to the quark fragmentation, in which new quarks are created from the vacuum which is the process that governs the hadronization in p+p and e+e collisions.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\linewidth]{img/coalescencePic}
+\caption{Baryon to meson ratio in RHIC Au+Au collisions with the center of mass energy per nucleon $\sqrt{s_\mathrm{NN}} = 200\,$GeV vs transverse momentum ($p_\mathrm{T}$)~\cite{GuannanLc}\@. Left: Ratio of the invariant yields of p and $\overline{\mathrm{p}}$ over $\uppi^+$ and $\uppi^-$ at STAR for the centralities 0--12$\,\%$ and 60--80$\,\%$~\cite{STARLambda}. Middle: ratio of the yields of $\Lambda$ over K$^0_\mathrm{s}$ at STAR for central (0--5$\,\%$) and peripheral (60--80$\,\%$) collisions. Right: Models of ratios of $\Lambda_\mathrm{c}$ over D$^0$~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM}.}
+\label{fig:LambdaKzero}
+\end{figure}
+
+The baryon enhancement observed at RHIC is demonstrated in Figure~\ref{fig:LambdaKzero}, in which the left-hand-side panel shows the ratio of the yield of p and $\overline{\mathrm{p}}$ to $\uppi^+$ and $\uppi^-$, and the middle panel is a plot of the ratio of $\Lambda^+$ and $\overline{\Lambda}^-$ to 2-times the yield of K$^0_\mathrm{s}$, which both contain a strange quark. An enhancement in the $p_\mathrm{T}$ region of $\sim$2--4$\,$GeV$/c$ is clearly observed in the case of the $\Lambda$ baryons. 
+
+An interesting question (and one of the main topics of this document) is whether the charm baryons follow the same pattern as the strange ones. As the quark compositions of the \Lambdac\ and D$^0$ are cud and c$\overline{\mathrm{u}}$, respectively, we can draw a direct comparison to the measurement of $\Lambda$ and~K$^0$.
+
+The plot in the right-hand-side panel of Figure~\ref{fig:LambdaKzero} shows theoretical estimates of the ratio of the yields of $\Lambda_\mathrm{c}$ to D$^0$. The scenario with no coalescence is demonstrated by the green line which was produced using the PYTHIA simulator~\cite{PYTHIA}. The dashed lines (Ko) show two coalescence models~\cite{LcCoalescence_OhKoLeeYasui}: One where the  quarks coalesce as the charm quark with a light di-quark structure and one where all three quarks coalesce. No rescattering in the hadron gas is considered in these two models. The darker gray band (Greco) indicates a model with three-quark coalescence calculated in the framework described in~\cite{Greco_framework} with the results from~\cite{Greco_results}, then the $\Lambda_\mathrm{c}$ and D meson diffusion is calculated, using an effective T--matrix approach~\cite{Ghosh_Lc_rescattering}. Note that the denominator for this band is the sum of the yields of all D mesons (D$^\pm$, D$^0$, and~$\mathrm{\overline{D^0}}$). The light gray rectangle (SHM --- Scattering with Hadronic Matter) is a model~\cite{SHM} with coalescence of di-quark and the c-quark. This model uses $\Lambda_\mathrm{c}$ diffusion in the hadronic matter, in which the $\Lambda_\mathrm{c}$ is allowed to change into other hadron species when scattering on other hadrons.
+
+Another key signiture of coalescence process is the ratio between the yields of anti-baryons. Figure~\ref{fig:BtoAntiB} shows such ratios for different experiments. At STAR, we can observe that with increasing strangeness content, the ratio gets closer to unity. This is because the u and d quarks are more abundant, compared to $\overline{\mathrm{u}}$ and $\overline{\mathrm{d}}$, due to the non-zero baryon chemical potential. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{img/baryonToAntibaryon}
+\caption{Ratio of the yields of baryons compared to anti-baryons measured at SPS and RHIC\@. The full symbols represent full maximum RHIC energy $\snn = \SI{200}{GeV}$ and the empty symbols represent experiments at SPS at CERN with the collision energy per nucleon $\snn = \SI{17}{GeV}$. Taken from~\cite{BtoAntiB}.}
+\label{fig:BtoAntiB}
+\end{figure}
+

@@ -1,0 +1,85 @@
+The $\Lambda_\mathrm{c}$ baryons were measured for the first time in heavy-ion--ion collisions~\cite{GuannanLc} at the STAR experiment at RHIC\@. STAR~\cite{STARoverview} is a multipurpose experiment with excellent particle identification capabilities that can measure particles at midrapidity in the full azimuth. In particular, the $\Lambda_\mathrm{c}$ measurement was enabled by the Heavy Flavor Tracker (HFT)~\cite{Kapitan} upgrade that took data in the years 2014--2016\@. The HFT is a vertex tracker that consists of 4 layers of silicon with a distance-of-closest-approach (DCA) of the tracks to the primary vertex resolution of $\lesssim$30$\,\upmu$m for high-$p_\mathrm{T}$ particles. This was allowed by the small radius of the first layer, which was placed at 2.8$\,$cm from the center of the accelerator tube, as well as the use of the MAPS technology with excellent granularity for the two innermost layers of the HFT--Pixel detector.
+% \section{$\Lambda_\mathrm{c}$ measurements in Au+Au collisions at RHIC}
+
+
+
+\section{Topological cuts optimization}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width = 0.5\textwidth]{img/LambdaMethod}
+\caption{Illustration of variables used for topological cuts for the \Lambdac\ analysis.}
+\label{fig:method}
+\end{figure}
+
+For the run 2014 data, the cuts for reduction of the background were optimized via the Toolkit for Multivariate Analysis Package~\cite{TMVA}, using the simulated decayed $\Lambda_\mathrm{c}$ particles as signal and background from the measured data with incorrect sign. This approach is needed to reduce the background enough to see the peak in the invariant mass spectrum. A novel data-driven approach to the simulation of the detector effects was developed for the open charm decays at STAR to reduce the computation time and decrease the systematic uncertainties coming from the simulation. Because of the limited statistics in 2014, $\Lambda_\mathrm{c}$ were only analyzed in the $p_\mathrm{T}$ region of 3--6$\,$GeV$/c$ for centralities of 10--60$\,\%$\@.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[height = 5.5cm]{img/cosTheta}
+\includegraphics[height = 5.5cm]{img/dLength}
+\caption{Examples of topological variables used for cuts: Left panel: decay length --- length between the reconstructed primary and secondary vertex (PV and SV, respectively\nomenclature{PV}{Primary Vertex}\nomenclature{SV}{Secondary Vertex}); Right panel: cos($\theta$) where $\theta$ is the angle between the reconstructed momentum of the triplet and the line between PV and SV\@. The red line is the background from data with a wrong charge sign combination and the signal is extracted from the data-driven Monte Carlo simulation.}
+\label{fig:optimization}
+\end{figure}
+
+
+
+\section{Signal extraction}
+
+The invariant mass spectra of the \Lambdac\ can be found in Figure~\ref{fig:invMass}. The shape of the combinatorial background can be determined via the wrong-sign method in which we collect the charge combinations that cannot make a \Lambdac, thus making an uncorrelated -- combinatorial background. There are $2^3 = 8$ sign combinations (2 for each particle species), therefore we have $3\times$ larger statistics for the background, and thus the background uncertainties reduced by a factor of $\sqrt{3}$. This factor can be made even higher by using the mixed-event method of background subtraction.
+
+\subsection{Mixed-event background subtraction}
+In the mixed-event method, tracks from different events are mixed together to determine the background, thus removing all correlations between tracks. The advantage of this method is that the number of such mixed events is only limited by the computing power. Therefore, the background can be measured very precisely by mixing with a large amount of events. 
+
+\begin{figure}[htb]
+\centering
+$
+\vcenter{\hbox{\includegraphics[width = 0.6\textwidth]{img/Mixing.pdf}
+\footnotesize{(a)}
+}}
+$
+\hspace*{0.\textwidth}
+$
+\vcenter{\hbox{\includegraphics[width = 0.2\textwidth]{img/trackShiftEventMixing.pdf}
+\footnotesize{(b)}
+}}
+$
+\caption{The event-mixing method: (a) Illustration of how events are selected. Each particle species is selected from a different event. (b) Each mixed track has to be shifted by the difference of the positions of the primary vertices of the two events.}
+\label{fig:mixedIllustrations}
+\end{figure}
+
+The events are always mixed within the same centrality and $v_z$ bin in order to reconstruct the same shape of the background. Figure~\ref{fig:mixedIllustrations} shows, how the mixed-event method is performed. When a buffer of 5 events of the same centrality and $v_z$ is filled, first protons are combined with kaons from another event, then these pairs are combined with pions. We can make 12 ($3 \times 4$) combinations for a buffer with 5 events. Because of the topological cuts, the tracks have to be shifted when they are mixed into another event by the difference in position of the primary vertices.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width = 0.6\textwidth]{img/mixedEvent12x}
+\caption{Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$. Mixed-event and wrong-sign background subtraction methods are compared.}
+\label{fig:invMass}
+\end{figure}
+
+\section{Efficiency corrections and assessment of systematic uncertainties}
+
+\begin{figure}[htb]
+\centering % negative space after an empty character
+\includegraphics[width=0.6\textwidth]{img/BaryonMesonRatio_onlyData_430}
+\caption{Ratio of the yield of $\Lambda_\mathrm{c}$ over D$^0$ vs $p_\mathrm{T}$ measured at STAR in Au+Au collisions with centrality 10--60$\,\%$~\cite{GuannanLc} compared to coalescence models~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM} --- see description in text.}
+\label{fig:ratio}
+\end{figure}
+
+In this analysis, the efficiency corrections of the yield were done using the data-driven simulations and the systematic uncertainties were obtained by varying the cuts. The ratio of the yields of the $\Lambda_\mathrm{c}$ and D$^0$ was calculated from the published D$^0$ spectrum~\cite{publishedDzero}. The resulting ratio for $p_\mathrm{T}$ of 3--6$\,$GeV$/c$ and centrality of 10--60$\,\%$ was calculated as $N(\Lambda_\mathrm{c}^+ + \overline{\Lambda_\mathrm{c}}^-)/N(\mathrm{D^0 + \overline{D^0}}) = 1.31 \pm 0.26\text{(stat.)} \pm 0.42$(sys.). The systematic uncertainties were inferred by varying all the cuts.
+
+
+As can be seen in Figure~\ref{fig:ratio}, $\Lambda_\mathrm{c}$ are clearly enhanced enhanced in Au+Au collisions, compared to p+p (obtained from PYTHIA~\cite{PYTHIA}). The data are consistent (within $2\sigma$) with both the di-quark and three-quark coalescence models calculated for the centralities of 0--5$\,\%$~\cite{LcCoalescence_OhKoLeeYasui} and are consistent with the ``Greco''~\cite{Ghosh_Lc_rescattering} model calculated for minimum-bias data. Note that the centrality range is different for the the calculations and the data. Currently, STAR is not sensitive in the same $p_\mathrm{T}$ range as the ``SHM'' model~\cite{SHM}. 
+
+
+
+% 
+% \begin{figure*}
+% \centering
+% \includegraphics[width=0.8\linewidth]{graph_a}
+% \caption{Wide figure~\cite{}.}
+% \label{fig:gr_a}
+% \end{figure*}
+
+
+

@@ -1,0 +1,299 @@
+The method of choice for studying of Quark-Gluon Plasma, that was discussed in length in the previous chapter, are collisions of relativistic nuclei. These are achieved in laboratory on particle accelerators. The work in this thesis was performed at Relativistic Heavy-Ion Collider (RHIC) that can collide several species of nuclei, as well as polarized protons, at various energies. 
+
+Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAnge Hadron Magnetic Spectrometers}, PHENIX\footnote{Pioneering High Energy Nuclear Interaction eXperiment}, and finally, recording data at the time of writing this thesis: STAR. Phobos and Brahms were decommissioned after concluding their successful physics programs in 2005 and 2006, respectively, and PHENIX is currently undergoing a major overhaul upgrade to be transformed into a new experiment: the sPHENIX~\cite{sphenix}. This future experiment will be able to measure charged particles with high rate in the entire azimuth and it will feature electromagnetic and hadronic calorimeters which will make it a perfect tool for measuring jets and heavy flavor.
+
+\section{Relativistic Heavy Ion Collider (RHIC)\label{RHIC}}
+
+RHIC~\cite{RHICproject, RHICdesign} is a circular accelerator located in the Brookhaven National Laboratory 
+(BNL)\nomenclature{BNL}{Brookhaven National Laboratory} in the USA\@. It is a versatile accelerator capable of
+colliding several species of nuclei (Au+Au, d+Au, Au+$^3$He, Au+Cu, U+U,~\dots) at
+center-of-mass energies per nucleon
+ranging $\snn = (\text{7.7--200})\,\si{\giga\electronvolt}$ in a collider mode or down to
+$\snn = 3.9\,\si{\giga\electronvolt}$
+using a fixed target \cite{fixedTarget}\@. This versatility allows for studying  Moreover, RHIC has a unique capability to collide polarized protons with
+the center-of-mass energy up to $\sqrt{s} = \SI{500}{\giga\electronvolt}$~\cite{polarizedProtons}\@. The overview
+of the RHIC runs is summarized in Table~\ref{runTableYears}\@.
+
+\subsection{RHIC Accelerator Complex}
+Ions and protons are accelerated in several stages before colliding in one of the RHIC experiments at the desired energy. Ions are generated in the Electron Beam Ion Source (EBIS\nomenclature{EBIS}{Electron Beam Ion Source}~\cite{EBIS}) which provides all stable ion beam source ranging from deuterons to uranium. A part of the EBIS is the Linac which can reach energies up to\footnote{200 GeV can be reached in the case of protons} 200$\,$GeV\@. The EBIS can switch different ion species in the order of seconds which was important for the 2018 isobar running with zirconium and xenon.
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/RHIC}\\
+\end{center}
+\caption{\label{RHICcomplex}Diagram of the RHIC accelerator complex~\cite{RHICpages}.}
+\end{figure}
+
+The ions then enter the circular Booster Synchrotron which accelerates them enough to enter the Alternating Gradient Synchrotron (AGS\nomenclature{AGS}{Alternating Gradient Synchrotron}~\cite{AGS}). This is an accelerator that fulfilled a rich physics program, including three Nobel-prize discoveries, before the RHIC facility was constructed. From AGS, the ions enter the AGS-to-RHIC (AtR\nomenclature{AtR}{AGS-to-RHIC transfer line}~\cite{AtR}) transfer line. Finally, the ions are injected into RHIC where they are accelerated to their final energies. 
+
+Protons experience a similar journey to the ions. However, they are produced by ionizing hydrogen gas and then injecting them directly into the Linac, and then they continue to be accelerated in the same way as the ions. One of the unique capabilities of RHIC is the ability to produce polarized protons up to 500$\,$GeV, which is facilitated by the so-called Siberian-Snake magnets in the RHIC accelerator ring. In the end, they are collided in one of the six crossing points. Currently, the only experiment, measuring collisions is STAR, as PHENIX is undergoing an upgrade into a new experiment called sPHENIX\@.
+
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+
+\section{Solenoidal Tracker At RHIC (STAR)}
+
+STAR is a multipurpose detector that is capable of measuring charged particles and 
+% When RHIC started its operation in the year 2000, it was a dream come true for many people studying the QGP and spin of the proton. 
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.9\textwidth]{img/STAR}\\
+\end{center}
+\caption{\label{STAR}Overview of the STAR detector.}
+\end{figure}
+
+The Solenoidal Tracker At RHIC (STAR) experiment \cite{STARoverview} can be seen in Figure~\ref{STAR}. It is a multipurpose detector with full-azimuth
+coverage dedicated to
+studying ultrarelativistic heavy-ion collisions and polarized proton--proton collisions. Currently in 2016, STAR is the
+only detector system running at RHIC\@.
+
+The main barrel of STAR is enclosed in a water-cooled magnet with a magnetic field of \SI{0.5}{\tesla}. The magnet contains the
+following detectors: Time -Projection Chambre (TPC\nomenclature{TPC}{Time-Projection Chamber} --- Section~\ref{TPCsection}), the GEM
+Chambers to Monitor the TPC Tracking Calibrations (GMT\nomenclature{GMT}{GEM Chambers to Monitor the TPC Tracking Calibrations}), 
+which is a set of 8 GEM detectors, used for the calibration of the TPC callibration, and Time-Of-Flight
+(TOF\nomenclature{TOF}{Time-Of-Flight Detector}) Detector (Section~\ref{TOFsection}). In 2014, STAR received two major upgrades
+concerning the heavy flavor measurements: The Heavy Flavor Tracker (HFT\nomenclature{HFT}{Heavy Flavor Tracker} --- section~\ref{HFTsection}), and the Muon Telescope Detector (MTD) which consists of fast Multi-wire Resistive Plate Chambers (MRPC) palced
+outside the magnet. The main purpose of the MTD is to detect muons, which can easily traverse the volume of the magnet. The important
+detectors for the open-charm hadrons reconstruction are listed here:
+% -----------------------------------------------------------------------------------------------------------
+\section{Time-Projection Chamber (TPC)\label{TPCsection}} 
+It is not an exaggeration to say that the Time-Projection Chamber~\cite{TpcNim} is the beating heart of STAR. It combines the role of the main tracking detector with the ionizing-energy-loss
+(\dedx) information for particle identification (PID\nomenclature{PID}{Particle IDentification}). The TPC is able to provide excellent tracking of particles down to low \pt\ with the large multiplicities at top RHIC energies.
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.9\textwidth]{img/TPC}\\
+\end{center}
+\caption{\label{TPC}Overview of the STAR Time-Projection Chamber~\cite{TpcNim}.}
+\end{figure}
+
+
+ 
+
+When a charged particle traverses through the TPC, it ionizes the gas in the TPC volume. Then, the created negative 
+charge (electrons) drifts to the anodes where it encounters \SI{20}{\micro\metre} wide wires which amplify the signal that is,
+consequently, measured. The position in the transverse plane to the beam line (the xy-direction) is measured thanks to the
+granularity of the TPC anodes and the position along the beam line (in the z-direction) is fixed by measuring the time taken by
+he electrons to drift to the anodes. Hence, the spatial position of the track is fixed. The drift velocity of the electrons
+in the P10 gas is calibrated every several hours via a laser calibration system~\cite{laser}. 
+
+
+The layout of the TPC is shown in Figure~\ref{TPC}. It is barrel-shaped with the outer radius of \SI{2}{\metre}, inner radius of \SI{0.5}{\metre} and length of \SI{4.2}{\metre}
+with the beam pipe going through the center. This barrel is filled with the P10 gas: a mixture of 90$\,\%$ argon and 10$\,\%$ methane. It covers the full azimuth ($0 < \phi < 2\pi$) and the outer edge covers the
+pseudorapidity range of $|\eta| < 1$. 
+In the center ($z = 0$), it is divided into two halves by the, so called, Central Membrane which is connected to an electric 
+potential of $-\SI{28}{\kilo\volt}$\@.  The sides of the cylinder consist of the, so called, field cage that ensures that the electric field in the TPC stays uniform.
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.6\textwidth]{img/TPC_side}\\
+\end{center}
+\caption{\label{TPCside}A side view of the TPC-outer-sector pad plane. The bubble shows additional information on the wire planes of the anodes~\cite{TpcNim}.}
+\end{figure}
+
+The bases of the TPC cylinder are grounded and equipped with multi-wire proportional chambers
+(MWPC\nomenclature{MWPC}{Multi-Wire Proportional Chamber}) as sensitive detectors. Each side consists of 12 sectors, numbered like on a clock and split into 
+the inner and outer parts. A side (the $xy$-plane) view of the sectors is shown in Figure~\ref{TPCside}\@. Each MWPC consists of 3 planes of wires mounted over a plane of sensitive pads. Going from inside of the TPC volume out, the innermost plane of wires makes the, so called, gating grid. This part acts as a shutter that does not allow any electrons to enter the MWPC and it stops the ions from escaping the MWPC into the drift area where they would distort the electric field. It also lowers the amount of noise in the MWPC as ions are eaten out by the wires. The second row of wires is called the Shield Grid and it terminates the amplification region created by the outermost plane of wires: the Anode Grid. Here, the drifting electrons are multiplied in avalanches around the wires where the voltage differentials are high. These wires are set on potential of $\sim$1350$\,$V which sets the signal multiplication to $\sim$20$\times$\@: A value selected as a sweet spot between spatial resolution and the signal amplification. The signal is subsequently read out from the rectangular pads behind the anode wires. The pads are placed so that they always have an anode wire in the middle and their pitch is 6.7$\,$mm along the wires and 20$\,$mm --- same as the distance between the wires --- across. The inner part utilizes 13 rows and outer part with 32 rows of pads, the inner sectors, however, underwent a substantial 
+upgrade in the year 2019~\cite{iTPC}, which increased the number of sensitive pad rows in the inner sector to the same number as in the outer sectors. This greatly
+increased the efficiency, resolution, and pseudorapidity coverage of the TPC\@.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.6\textwidth]{img/TPC_dedx}\\
+\end{center}
+\caption{\label{TpcPid}PID capabilities of the TPC via \dedx\ separation~\cite{TpcNim}.}
+\end{figure}
+
+The TPC provides excellent momentum-measuring and PID capabilities in a high particle-multiplicity environment of the heavy-ion collisions.
+A plot of particle-species separation can be found in Figure~\ref{TpcPid}.
+% -----------------------------------------------------------------------------------------------------------
+\section{Time-Of-Flight Detector (TOF)\label{TOFsection}} 
+
+The main purpose of the Time-Of-Flight (TOF) detector~\cite{TOFproposal} is to extend the PID capabilities of STAR into higher 
+momenta via the measurements of the time of flight from its point of origin of the charged particles (or vertex) to the TOF 
+detector, thus measuring its velocity. It was partially installed at STAR in 2009 and the remainder was added in 2010 
+to make the TOF fully operational.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.6\textwidth]{img/TOF_pid}\\
+\end{center}
+\caption{\label{TOF_pid}PID capabilities of the TOF via measurement of the inverse velocity $1/\beta$ versus \pt~\cite{TOFpid}. A clear separation of the particle species is visible, moreover it reaches further in \pt, compared to \dedx\ measurements of the TPC.}
+\end{figure}
+
+The TOF consists of 120 trays of Multi-gap Resistive Plate Chambers (MRPC)\nomenclature{MRPC}{Multi-gap Resistive Plate
+Chamber}~\cite{MRPC} th	at cover $|\eta| \lesssim 0.96$ and $0 < \phi < 2\pi$. The time of the original collision is measured 
+by the Vertex Position Detector (VPD\nomenclature{VPD}{Vertex Position Detector} --- see section~\ref{VPD}). The leading edge of 
+the signal is sampled with \SI{25}{\pico\second} binning. Corrections can be made for the decay products of particles that 
+decayed outside of the primary vertex, such as K$^0$ or $\Lambda$. The PID capabilities of TOF are demonstrated in Figure~\ref{TOF_pid}.
+
+% -----------------------------------------------------------------------------------------------------------
+\section{Heavy Flavor Tracker (HFT)\label{HFTsection}} 
+
+The Heavy Flavor Tracker (HFT) was installed at STAR for the years 2014 -- 2016 data 
+taking \cite{HftTdr, HFTLeo, HftFinal}. It is the innermost 
+sub-detector of STAR and consists of 4
+layers of silicon detectors. From the outermost layer in: A double-sided strip detector, called Silicon Strip
+Tracker/Detector
+(SST/SSD\nomenclature{SST/SSD}{Silicon Strip Tracker/Detector}), which is a previously installed detector in STAR that has been
+refurbished and upgraded with new electronics; Next, the second outermost layer is formed by conventional silicon 
+pad detectors
+of Intermediate Silicon Tracker (IST\nomenclature{IST}{Intermediate Silicon Tracker}) 
+with rectangular pads; Finally, the two innermost layers consist of the Pixel (PXL\nomenclature{PXL}{Pixel Detector}) 
+Detector
+that employs the novel MAPS technology that was used for the first time in a collider experiment. The overview of the 
+HFT
+subdetectors is summarized in Table~\ref{HFTtab}.
+
+\begin{table}[htb]
+\caption{\label{HFTtab}HFT subdetectors and their properties. For the SSD, the hit resolution $\sigma_{xy}$ and $\sigma_z$ are listed, instead of the pitch, because it is a double sided strip detector where the strips are not perpendicular.}
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+System & Type & Radius [cm] & Pitch--$r\phi$ [$\upmu$m] & Pitch--$z$ [$\upmu$m]\\
+\midrule
+SSD & Double-sided strip detector & 22 & $\sigma$ = 20 & $\sigma$ = 740 \\
+IST & Silicon pad detector & 14 & 600 & 6000 \\
+PXL & Silicon pixel detector & 2.7, 8 & 20.7 & 20.7 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}  
+
+
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.6\textwidth]{img/DCAXy}\\
+\end{center}
+\caption{\label{DCA}Distance of Closest Approach (DCA\nomenclature{DCA}{Distance of Closest Approach}) from the PV in the $xy$-plane for identified particles~\cite{D0v2paper}.}
+\end{figure}
+
+The purpose of the IST and the SSD is to guide the track from the TPC to the innermost layers of HFT--PXL in the high-track-multiplicity environment of STAR. The PXL provides an unparalleled pointing precision thanks to its high granularity as well as the proximity to the primary vertex. The beam pipe had to be replaced with a narrower one, in order to accommodate for the low radius of the innermost layer of PXL\@. The resolution of the distance of closest approach (DCA resolution) can be seen in Figure~\ref{DCA}. For high-momentum tracks the resolution is as low as \SI{20}{\micro\metre}.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/HFT_layers}\\
+\end{center}
+\caption{\label{HFT_layers}Average resolution from the TPC down to the innermost layer of the PXL detector~\cite{KubaVyzkumak}.}
+\end{figure}
+
+\subsection{Pixel (PXL) detector}
+The two innermost layers of the HFT consist of the Pixel (PXL) detector which employs a unique design as it is the
+first detector using the Monolythic Active Pixel Sensor (MAPS\nomenclature{MAPS}{Monolythic Active Pixel Sensor})
+technology. This enables the pixel sensor to have a miniscule pixel pitch of \SI{20.7}{\micro\metre} is extremely close to the center of the beam pipe (the innermost layer has a radius of 2.7$\,$cm) while maintaining
+a small radiation length. This is important for the recognition of secondary and tertiary vertices of charm- and beauty-mesons
+decays. The resolution of the distance of closest approach (DCA) of the reconstructed 
+tracks to the primary vertex, depending on the particle species, is shown in Figure~\ref{DCA}.
+
+
+
+% -----------------------------------------------------------------------------------------------------------
+\section{Zero Degree Calorimeter (ZDC)\label{ZDCsection}} \nomenclature{ZDC}{Zero Degree Calorimeter}
+The Zero Degree Calorimeter (ZDC)~\cite{ZDC, ZDCSMD} consists of two identical sides, both placed in the RHIC tunnel, behind 
+the first deflecting magnets. The purpose of the zero degree calorimeters is to detect neutral particles from the spectators of 
+the collision. Each side consists of 3 towers made of a tungsten absorber, sensitive volume, consisting of plastic optical fibers, and a photomultiplier tube.
+Behind the first tower, there is the Shower-Maximum Detector which adds spatial information to the ZDC\@. The ZDC is used
+to determine the frequency of collisions and it serves as an important detector for determination of the collision event plane, and the polarization of the protons.
+
+\begin{figure}[!htb]
+\begin{center}
+  \includegraphics[width=0.7\textwidth]{img/ZDC_position_and_PMT}\\
+\end{center}
+\caption{\label{ZDC_scheme}~\cite{ZDCphysics}. }
+\end{figure}
+
+
+
+\subsection{Calibration of the ZDC towers\label{ZDCcalibration}}
+At the start of each ion run, it is needed to calibrate the ZDC towers. When an ultra-peripheral
+collision\nomenclature{UPC}{Ultra-Peripheral Collision} occurs, with a high probability, the nucleus is excited and loses energy by emiting neutrons
+(typically one or two). Since these neutrons have low momenta (units of MeV/$c$) in the frame of the emitting nucleus, in the laboratory frame, they have almost exactly the same momenta as the momentum per nucleon of the emitting nucleus. These neutrons manifest themselves in the ZDC in the form of Single- and Double-Neutron Peaks
+(SNP\nomenclature{SNP}{Single-Neutron Peak} and DNP\nomenclature{DNP}{Double-Neutron Peak}, respectively),
+where the SNP has the energy per nucleon of the beam and the DNP has double the energy of the SNP\@. I.e.\ if
+the beam has $\snn = 200\,$GeV, the SNP will sit at 100$\,$GeV and the DNP at 200$\,$GeV\@.
+
+The ADC readout value is proportional to the energy lost in the sensitive volume and the high voltage applied to the
+photomultiplier tubes (PMT\nomenclature{PMT}{PhotoMultiplier Tube})\@. Therefore, we can calibrate the output of the ZDC towers by changing the high voltage (HV\nomenclature{HV}{High Voltage}) applied to the PMTs. 
+
+When a single neutron, emitted from a nucleus at 100$\,$GeV, hits the three towers of the ZDC, simulations show that the ratio of energy loss
+in the three towers should be 
+approximately 6:3:1~\cite{ZDCphysics}\@. We analyze the single-neutron peak (SNP\nomenclature{SNP}{Single-Neutron Peak}) created in heavy-ion collisions and adjust the high voltage so that the ADC value 
+distribution of each tower matches the ideal ratio of 6:3:1 as closely as possible. Equally, we expect the ZDC 
+single-neutron peak (SNP) to
+be at the same ADC value in both, the East and the West side. In reality, these two conditions are not achieved precisely, but the voltages are adjusted in an iterative process to be close to the ideal case.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.65\textwidth]{img/oneMoreTestEast.pdf}
+\end{center}
+\caption{\label{SNPillustration} Single neutron and double neutron peaks for east towers in Run16.}
+
+\end{figure}
+
+% \begin{figure}[htb]
+% \begin{center}
+% \includegraphics[width=.49\textwidth]{img/17038001_east_1}
+% \includegraphics[width=.49\textwidth]{img/17038001_east_2}
+% \includegraphics[width=.49\textwidth]{img/17038001_east_3}
+% \end{center}
+% \caption{\label{gain}Illustration of the gains of the individual towers in the ZDC gain analysis from Run16.}
+% 
+% \end{figure}
+
+
+
+For the calibration, in each step, we take a dedicated ZDC run with
+$\sim$10$\,$M events (at full luminosity, this takes less than $5\,$min). Then, we
+look at the resulting Single-Neutron Peak (SNP\nomenclature{SNP}{Single-Neutron Peak}).
+For an illustration of the SNP see Figure~\ref{SNPillustration} and the gain of the single
+towers can be seen in Figure~\ref{gain}.
+During the calibration, we try to shift the SNP so that it is at a safe ADC value so that the whole width of the SNP is in the ZDC measured
+range. Also, the ratio between the gain of the ZDC towers should be corrected to match the ideal ratio 6:3:1\@. If the
+SNP is too low and/or the ratio between the towers' gain is wrong,
+the voltage in the photomultiplier tubes has to be adjusted and then the whole procedure
+has to be repeated until the desired ratio of the gains is close enough.
+
+The gain on the PMTs follows a power law
+\begin{equation}
+G = aU^b
+\end{equation}
+where $G$ is a gain and $U$ stands for voltage. The coefficients $a$ and $b$ differ for each PMT, but approximately they are close to the values of~\cite{ZDCvoltsDependence}
+\begin{equation}
+b=4.2\,, \qquad a=4.0\,.
+\end{equation}
+These values were used before the run 2018, however, in 2018, the PMTs were taken out for refurbishment and the values $a$ and $b$ were measured for all the PMTs using an LED light.
+
+We usually use the desired position of the single neutron peak as 60 ADC values. To calculate
+the desired voltages we use the formula
+\begin{equation}
+U_{\text{result}} = U_\text{current}\left(\frac{G_\text{desired}}{G} 
+\frac{R_\text{desired}}{R}\right)^{1/b}
+\end{equation}
+where $G$ is the current position of the neutron peak, $G_\text{desired}$ is the desired position
+of the neutron peak (currently 60), $R_\text{desired}$ is the desired ratio between the gain of the ADC SUM
+tower and the current tower, and $R$ is the current ratio.
+
+
+\section{Vertex-Position Detector (VPD)\label{VPD}}
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/VPD}\\
+\end{center}
+\caption{\label{VPDassembly}VPD assembly~\cite{VPD}.}
+\end{figure}
+
+The VPD~\cite{VPD} consists of two identical assemblies, positioned \SI{5.7}{\metre} from the center of STAR\@. A schematic 
+picture of an assembly can be seen in Figure~\ref{VPDassembly}. Each of them is made of 19 detectors, consisting of a lead 
+converter, followed by a fast plastic scintillator read by a photo-multiplier tube. The main purpose of the VPD is to measure 
+photons from $\uppi^0$ decays in forward direction and thus accurately measure the time of the collision, as well as 
+the position of the primary vertex with the resolution of $\sim \SI{1}{\centi\metre}$ and  $\sim \SI{2.5}{\centi\metre}$ 
+for Au+Au and p+p collisions, respectively.
+
+\section{Data Acquisition}
+\subsection{Trigger}
+

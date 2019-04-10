@@ -1,0 +1,64 @@
+\chapter*{Author's Contribution}
+
+\section*{Service task}
+During the course of my Ph.D.\ studies, I had two major service tasks: One was on the slow simulator on the Heavy Flavor Tracker (HFT --- for more detail see Section~\ref{HFTsection}) which was installed at STAR in the years 2014--2016. This work was later continued by Jakub Kvapil, to whom I served as an advisor. The other one is the maintenance of the STAR Zero Degree Calorimeters (ZDC --- for more detail see Section~\ref{ZDCsection}). This task was joined by Lukáš Kramárik at the end of the year 2016.
+
+\subsection*{HFT--Pixel Slow Simulator Evaluation}
+Simulations are an integral part of every analysis on high-energy experiments. My task was to evaluate the slow simulator for the Pixel (PXL) detector of the HFT\@. The HFT~\cite{HftTdr, HFTLeo, HftFinal} is a state-of-the-art silicon vertexing detector out of which the two innermost layers consist of the novel MAPS technology based Pixel detector which provides a yet unparalleled tracking resolution that can facilitate the tracking of the relatively short-lived heavy-flavor hadrons via their decay products, e.g.\ the \Lambdac\ which was never measured in heavy-ion collisions before.
+
+The point of a Slow simulator, as opposed to a Fast simulator, is to simulate the output of the detector on the level of a single pixel, whereas the fast simulator operates on the level of a hit, i.e.\ an already reconstructed cluster of pixels. This allows the simulator to be fast, however some information is lost, for example the information about electric noise which renders the Fast simulator unusable e.g.\ for the purposes of the, so called, embedding, in which the signal is simulated, using GEANT~\cite{GEANT} and then embedded into a real measured event.
+This is used at STAR to evaluate the detector efficiencies for measured particles.
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/DIGMAPS_cosmic}\\
+\end{center}
+\caption{\label{cosmicDigmaps}Pixel slow simulator compared to cosmic data at the angle of 0--10°.}
+\end{figure}
+
+My task was to simulate several hits of particles in the detector and then compare them to real measured particles. This was done for the cosmic particles and, later, for Au+Au collisions at the center-of-mass energy per nucleon $\snn = \SI{200}{\giga\electronvolt}$\@. The particles were divided into bins by angle and then the sizes of the clusters were compared between the data and the simulation. An example of such angle bin from the cosmic-ray data can be seen in Figure~\ref{cosmicDigmaps}.
+This work was brought several steps further by Jakub Kvapil~\cite{KubaVyzkumak}, who did the comparison, not only divided by angle, but also for identified particles in the Time Projection Chamber (TPC). The comparison can be seen 
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=\textwidth]{img/DIGMAPS_AuAu.png}\\
+\end{center}
+\caption{\label{AuAuDigmaps}Comparison of cluster size of the Slow simulator and global identified tracks (left) and primary (tracks that originate in the primary vertex) track only
+(right)~\cite{KubaVyzkumak}.}
+\end{figure}
+
+\subsection*{Zero Degree Calorimeter (ZDC)}
+The Zero Degree Calorimeter is an integral part of the STAR--trigger system, but also serves as an important tool for monitoring the instant luminosity at RHIC\@. It consists~\cite{ZDC, ZDCSMD} of two identical sides, both placed in the RHIC tunnel, behind 
+the first deflecting magnets. Each side consists of 3 towers made of a tungsten absorber, scintillator volume and a photomultiplier tube.
+Behind the first tower, there is the Shower-Maximum Detector which adds spatial information to the ZDC\@.
+
+I am personally responsible for the smooth operation of the ZDC system, partially on-site at BNL as an on-call expert. Part of the duty is also the preparation of the detector before each run and its calibration (see Section~\ref{ZDCcalibration}). This year, as a part of a plan to increase the reliability and stability of the detector. New high-voltage power supply will be installed at the ZDC and deployed with a new slow-controls system for remote control of the source. Moreover, we documented the whole maintenance of the ZDC together with Lukáš Kramárik~\cite{ZDCmanual} as there was no prior documentation on how to operate the detector. 
+
+
+
+\section*{Analysis}
+The main topic of my research is the analysis of the \Lambdac\ at the STAR experiment at RHIC\@. Other than my supervisor, this analysis has been done with a close collaboration with a number of people from Lawrence Berkeley National Laboratory; most notably Guannan Xie, Xin Dong, Jochen Thaeder, Mustafa Mustafa, and Michael Lomnitz. Currently,
+the research is ongoing and on a good track towards a publication. One of my topics of interest is the ratio between the yields of the baryon $\Lambdac^+$ and anti-baryon $\overline{\Lambdac}^-$. Some of my contributions to the \Lambdac\ analysis include the development of the analysis code, optimization of the topological cuts, and development of the software for the mixed-event background.
+
+\section*{Student advisory}
+
+One of my other duties is advisory of students. One of them is Jakub Kvapil who is, on top of his work on the HFT, successfully working on the analysis of the D$^\pm$ meson which was presented at the Quark Matter 2017 conference, among others. He is currently finishing his M.Sc.\ degree. Another one is Zuzana Moravcová who is finishing her B.Sc.\ degree. She is working on machine learning methods of signal extraction of the D$^\pm$ meson and \Lambdac.
+
+\section*{Presentations}
+
+This work has been presented at a number of international conferences and workshops:
+\begin{enumerate}
+\item Cracow School of Theoretical Physics, LIV Course, 2014, Cracow, Poland, Oral presentation: ``Simulations for the HFT--Pixel detector at the STAR experiment''.
+\item VERTEX2014, Macha Lake, Czech Republic, Poster: ``Simulations for the HFT--Pixel detector at the STAR experiment'' (available in the back of this document).
+\item 18th Conference of Czech and Slovak Physicists 2014, Olomouc, Czech Republic, Talk: ``Simulations for the HFT--Pixel detector at the STAR experiment''.
+\item ICPAQGP2015, Kolkata, India, Talk: ``Heavy Flavor Tracker at the STAR Experiment''.
+\item Quark Matter 2015, Kobe, Japan, Poster: ``$\Lambda_\mathrm{c}^+$ baryon production in Au+Au collisions at
+$\sqrt{s_{\mathrm{NN}}}$ = 200 GeV'' (available in the back of this document).
+\item Zimanyi School 2015, Budapest, Hungary, Oral presentation: ``Lambda\_c baryon production in Au+Au collisions at 200 GeV''.
+\item 2016 European School of High-Energy Physics, Skeikampen, Norway, Poster: $\Lambda_\mathrm{c}^+$ baryon production in Au+Au collisions at
+$\sqrt{s_{\mathrm{NN}}}$ = 200 GeV'' (available in the back of this document).
+\item Hot Quarks 2016, Padre Island, Texas, USA, Talk: ``Measurements of open charm hadrons at STAR experiment'' (Proceedings is available in the back of this document).
+\item 2017 Winter Workshop of Experimental Nuclear and Particle Physics at FNSPE, Bily Potok, Czech Republic, Talk: ``\Lambdac\ BARYON RECONSTRUCTION IN HEAVY-ION COLLISIONS'' (Proceedings is available in the back of this document).
+
+\end{enumerate}
+
