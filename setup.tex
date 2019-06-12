@@ -1,26 +1,11 @@
 The method of choice for studying of Quark-Gluon Plasma, that was discussed in length in the previous chapter, are collisions of relativistic nuclei. These are achieved in laboratory on particle accelerators. The work in this thesis was performed at Relativistic Heavy-Ion Collider (RHIC) that can collide several species of nuclei, as well as polarized protons, at various energies. 
 
 
-Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAnge Hadron Magnetic Spectrometers}, PHENIX\footnote{Pioneering High Energy Nuclear Interaction eXperiment}, and finally, recording data at the time of writing this thesis: STAR. Phobos and Brahms were decommissioned after concluding their physics programs in 2005 and 2006, respectively, and PHENIX is currently undergoing a major overhaul upgrade to be transformed into a new experiment: the sPHENIX~\cite{sphenix}. This future experiment will be able to measure charged particles with high rate in the entire azimuth and it will feature electromagnetic and hadronic calorimeters which will make it a perfect tool for measuring jets and heavy flavor.
+Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAnge Hadron Magnetic Spectrometers}, PHENIX\footnote{Pioneering High Energy Nuclear Interaction eXperiment}, and finally, recording data at the time of writing this thesis: STAR. Phobos and Brahms were decommissioned after concluding their physics programs in 2005 and 2006, respectively, and PHENIX is currently undergoing a major overhaul upgrade to be transformed into a new experiment: the sPHENIX~\cite{sphenix}. This state-of-the-art experiment will be able to measure charged particles with high rate in the entire azimuth. It will feature a time-projection chamber with a continuous readout, as well electromagnetic and hadronic calorimeters which will make it a perfect tool for measuring jets and heavy flavor.
 
 %-------------------------------------------------------------------------------------------------------------------
 
-\section{Relativistic Heavy Ion Collider (RHIC)\label{RHIC}}
-
-RHIC~\cite{RHICproject, RHICdesign} is a circular accelerator located in the Brookhaven National Laboratory 
-(BNL)\nomenclature{BNL}{Brookhaven National Laboratory} in the USA\@. It is a versatile accelerator capable of
-colliding several species of nuclei (Au+Au, d+Au, Au+$^3$He, Au+Cu, U+U,~\dots) at
-center-of-mass energies per nucleon
-ranging $\snn = (\text{7.7--200})\,\si{\giga\electronvolt}$ in a collider mode or down to
-$\snn = 3.9\,\si{\giga\electronvolt}$
-using a fixed target \cite{fixedTarget}\@. This versatility allows for studying various properties of the QGP since, by changing the collision system, we are able to vary the initial geometry and energy density, pressure, and electromagnetic-field profiles. Moreover, RHIC has a unique capability to collide polarized protons with
-the center-of-mass energy up to $\sqrt{s} = \SI{500}{\giga\electronvolt}$~\cite{polarizedProtons}\@. The overview
-of the RHIC runs between 2013 and 2019 is summarized in Table~\ref{runTableYears}\@. The energies per nucleon $E_1$ and $E_2$ were taken from~\cite{RHICrunsTable} and \snn\ was calculated as
-\begin{equation}
- \snn = \sqrt{m_\mathrm{N1}^2c^4 + m_\mathrm{N2}^2c^4 + 2E_1E_2 + 2\sqrt{E_1^2-m_\mathrm{N1}^2c^4}\sqrt{E_2^2-m_\mathrm{N2}^2c^4}}
-\end{equation}
-where $m_\mathrm{N1}$ and $m_\mathrm{N2}$ are the masses of an average nucleon in the collided ion.
-
+\section{Relativistic Heavy Ion Collider (RHIC)\label{RHIC}}\
 
 \begin{table}[!htb]
 \caption{\label{runTableYears}Summary of RHIC runs between 2013 and 2019 with integrated luminosity at the STAR experiment~\cite{RHICrunsTable}. As of writing this thesis, the 2019 run is currently on-going, therefore the final luminosity data are not available.}
@@ -57,7 +42,24 @@ where $m_\mathrm{N1}$ and $m_\mathrm{N2}$ are the masses of an average nucleon i
 \bottomrule
 \end{tabular}
 \end{center}
-\end{table}  
+\end{table} 
+
+RHIC~\cite{RHICproject, RHICdesign} is a circular accelerator located in the Brookhaven National Laboratory 
+(BNL)\nomenclature{BNL}{Brookhaven National Laboratory} in the USA\@. It is a versatile accelerator capable of
+colliding several species of nuclei (Au+Au, d+Au, Au+$^3$He, Au+Cu, U+U,~\dots) at
+center-of-mass energies per nucleon
+ranging $\snn = (\text{7.7--200})\,\si{\giga\electronvolt}$ in a collider mode or down to
+$\snn = 3.9\,\si{\giga\electronvolt}$
+using a fixed target \cite{fixedTarget}\@. This versatility allows for studying various properties of the QGP since, by changing the collision system, we are able to vary the initial geometry and energy density, pressure, and electromagnetic-field profiles. Moreover, RHIC has a unique capability to collide polarized protons with
+the center-of-mass energy up to $\sqrt{s} = \SI{500}{\giga\electronvolt}$~\cite{polarizedProtons}\@. The overview
+of the RHIC runs between 2013 and 2019 is summarized in Table~\ref{runTableYears}\@. The energies per nucleon $E_1$ and $E_2$ were taken from~\cite{RHICrunsTable} and \snn\ was calculated as
+\begin{equation}
+ \snn = \sqrt{m_\mathrm{N1}^2c^4 + m_\mathrm{N2}^2c^4 + 2E_1E_2 + 2\sqrt{E_1^2-m_\mathrm{N1}^2c^4}\sqrt{E_2^2-m_\mathrm{N2}^2c^4}}
+\end{equation}
+where $m_\mathrm{N1}$ and $m_\mathrm{N2}$ are the masses of an average nucleon in the collided ion.
+
+
+ 
 
 \subsection{RHIC Accelerator Complex}
 Ions and protons are accelerated in several stages before colliding in one of the RHIC experiments at the desired energy. Ions are generated in the Electron Beam Ion Source (EBIS\nomenclature{EBIS}{Electron Beam Ion Source}~\cite{EBIS}) which provides all stable ion beam source ranging from deuterons to uranium. A part of the EBIS is the Linac which can reach energies up to\footnote{200 GeV can be reached in the case of protons} 200$\,$GeV\@. The EBIS can switch different ion species in the order of seconds which was important for the 2018 isobar running with zirconium and xenon.
@@ -142,15 +144,17 @@ potential of $-\SI{28}{\kilo\volt}$\@.  The sides of the cylinder consist of the
 
 The bases of the TPC cylinder are grounded and equipped with multi-wire proportional chambers
 (MWPC\nomenclature{MWPC}{Multi-Wire Proportional Chamber}) as sensitive detectors. Each side consists of 12 sectors, numbered like on a clock and split into 
-the inner and outer parts. A side (the $xy$-plane) view of the sectors is shown in Figure~\ref{TPCside}\@. Each MWPC consists of 3 planes of wires mounted over a plane of sensitive pads. Going from inside of the TPC volume out, the innermost plane of wires makes the, so called, gating grid. This part acts as a shutter that does not allow any electrons to enter the MWPC and it stops the ions from escaping the MWPC into the drift area where they would distort the electric field. It also lowers the amount of noise in the MWPC as ions are eaten out by the wires. The second row of wires is called the Shield Grid and it terminates the amplification region created by the outermost plane of wires: the Anode Grid. Here, the drifting electrons are multiplied in avalanches around the wires where the voltage differentials are high. These wires are set on potential of $\sim$1350$\,$V which sets the signal multiplication to $\sim$20$\times$\@: A value selected as a sweet spot between spatial resolution and the signal amplification. The signal is subsequently read out from the rectangular pads behind the anode wires. The pads are placed so that they always have an anode wire in the middle and their pitch is 6.7$\,$mm along the wires and 20$\,$mm --- same as the distance between the wires --- across. The inner part utilizes 13 rows and outer part with 32 rows of pads, the inner sectors, however, underwent a substantial 
-upgrade in the year 2019~\cite{iTPC}, which increased the number of sensitive pad rows in the inner sector to the same number as in the outer sectors. This greatly
-increased the efficiency, resolution, and pseudorapidity coverage of the TPC\@.
+the inner and outer parts. A side (the $xy$-plane) view of the sectors is shown in Figure~\ref{TPCside}\@. Each MWPC consists of 3 planes of wires mounted over a plane of sensitive pads. Going from inside of the TPC volume out, the innermost plane of wires makes the, so called, gating grid. This part acts as a shutter that does not allow any electrons to enter the MWPC and it stops the ions from escaping the MWPC into the drift area where they would distort the electric field. It also lowers the amount of noise in the MWPC as ions are eaten out by the wires. The second row of wires is called the Shield Grid and it terminates the amplification region created by the outermost plane of wires: the Anode Grid. Here, the drifting electrons are multiplied in avalanches around the wires where the voltage differentials are high. These wires are set on potential of $\sim$1350$\,$V which sets the signal multiplication to $\sim$20$\times$\@: A value selected as a sweet spot between spatial resolution and the signal amplification. The signal is subsequently read out from the rectangular pads behind the anode wires. The pads are placed so that they always have an anode wire in the middle and their pitch is 6.7$\,$mm along the wires and 20$\,$mm --- same as the distance between the wires --- across. 
+
+Until the run 2018, the inner part utilized 13 rows and outer part with 32 rows of pads, the inner sectors, however, underwent a substantial 
+upgrade in the year 2019~\cite{iTPC}. This upgrade increased the number of sensitive pad rows in the inner sector to the same number as in the outer sectors. This greatly
+increased the efficiency, resolution, and pseudorapidity coverage of the TPC which, in turn, enabled the fixed-event measurements at STAR with the endcap-Time-Of-Flight (eTOF) detector in 2019 and, in the future, it will be able to facilitate the measurement of electron+ion and electron+polarized-proton collisions after the upgrade to eRHIC\@. 
 
 \begin{figure}[!htb]
 \begin{center}
- \includegraphics[width=0.6\textwidth]{img/TPC_dedx}\\
+ \includegraphics[width=0.9\textwidth]{img/TPC_dedx}\\
 \end{center}
-\caption{\label{TpcPid}PID capabilities of the TPC via \dedx\ separation~\cite{TpcNim}.}
+\caption{\label{TpcPid}PID capabilities of the TPC via \dedx\ separation in the 2014 Au+Au run at $\snn = 200\,$GeV\@.}
 \end{figure}
 
 The TPC provides excellent momentum-measuring and PID capabilities in a high particle-multiplicity environment of the heavy-ion collisions.
@@ -158,23 +162,54 @@ A plot of particle-species separation can be found in Figure~\ref{TpcPid}.
 % -----------------------------------------------------------------------------------------------------------
 \section{Time-Of-Flight Detector (TOF)\label{TOFsection}} 
 
-The main purpose of the Time-Of-Flight (TOF) detector~\cite{TOFproposal} is to extend the PID capabilities of STAR into higher 
+
+
+The main purpose of the Time-Of-Flight (TOF\nomenclature{TOF}{Time-Of-Flight detector}) detector~\cite{TOFproposal} is to extend the PID capabilities of STAR into higher 
 momenta via the measurements of the time of flight from its point of origin of the charged particles (or vertex) to the TOF 
 detector, thus measuring its velocity. It was partially installed at STAR in 2009 and the remainder was added in 2010 
 to make the TOF fully operational.
 
 \begin{figure}[!htb]
 \begin{center}
- \includegraphics[width=0.6\textwidth]{img/TOF_pid}\\
+ \includegraphics[width=\textwidth]{img/TOF_MRPC}\\
 \end{center}
-\caption{\label{TOF_pid}PID capabilities of the TOF via measurement of the inverse velocity $1/\beta$ versus \pt~\cite{TOFpid}. A clear separation of the particle species is visible, moreover it reaches further in \pt, compared to \dedx\ measurements of the TPC.}
+\caption{\label{TOF_mrpc}Layout of the TOF MRPC~\cite{TOFproposal}\@. The upper and lower images show views of the longer and shorted edge, respectively. The two views do not show the same scale.}
 \end{figure}
 
 The TOF consists of 120 trays of Multi-gap Resistive Plate Chambers (MRPC)\nomenclature{MRPC}{Multi-gap Resistive Plate
-Chamber}~\cite{MRPC} th	at cover $|\eta| \lesssim 0.96$ and $0 < \phi < 2\pi$. The time of the original collision is measured 
+Chamber}~\cite{MRPC} that cover $|\eta| \lesssim 0.96$ and $0 < \phi < 2\pi$. The time of the original collision is measured 
 by the Vertex Position Detector (VPD\nomenclature{VPD}{Vertex Position Detector} --- see section~\ref{VPD}). The leading edge of 
 the signal is sampled with \SI{25}{\pico\second} binning. Corrections can be made for the decay products of particles that 
-decayed outside of the primary vertex, such as K$^0$ or $\Lambda$. The PID capabilities of TOF are demonstrated in Figure~\ref{TOF_pid}.
+decayed outside of the primary vertex, such as K$^0$ or $\Lambda$\@. 
+
+
+
+Figure~\ref{TOF_mrpc} shows two side views of the TOF tray. A MRPC basically consists of a stack of resistive plates with uniform gas gaps in between. A high voltage is applied to the graphite electrodes that have electrically floating glass plates in between Typical resistivity of the glass plates is in the order of $10^13\,\Omega/$cm. A charged particle going through the tray generates electrical avalanches in the gas gaps. The signal is read out via copper pads on the outside of the graphite electrodes, separated by $0.35\,$mm of mylar. Because of the high resistivity of the glass plates, they are transparent to the charge induction in the gaps. The signal is the sum of all avalanches in the gas gaps in between the opposing copper pads. The gas consists of 95$\,\%$ Freon R134a and 5$\,\%$ iso-butane. This gas mixture was chosen for its dielectric strength and electronegativity. The trays are mechanically supported poly-carbonate (PC\nomenclature{PC}{Poly-Carbonate}) boards on each side, glued to honeycomb structures that are rigid while having a low material budget.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.9\textwidth]{img/TOF_PID}\\
+\end{center}
+\caption{\label{TOF_pid}PID capabilities of the TOF via measurement of the inverse velocity $1/\beta$ versus \pt in the 2014 Au+Au run at $\snn = 200\,$GeV\@. }
+\end{figure}
+
+The PID capabilities of TOF are demonstrated in Figure~\ref{TOF_pid}\@. The fraction of the speed of light in vacuum $\beta$ is calculated as
+\begin{equation}
+ \beta = \frac{L}{ct}
+\end{equation}
+where $L$ is the path-length from the primary vertex (PV\nomenclature{PV}{Primary Vertex}) and $t$ is the flight time, measured by TOF\@.
+A clear separation of the particle species is visible, moreover it reaches further in \pt, compared to \dedx\ PID of the TPC e.g.\ shown in Figure~\ref{TpcPid}\@.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.8\textwidth]{img/eTOF}\\
+\end{center}
+\caption{\label{eTOF}Illustration of the endcap-Time-Of-Flight detector layout~\cite{eTOF}. }
+\end{figure}
+
+% \subsection{Endcap-Time-of-Flight Detector (eTOF)}
+In 2019, the time-of-flight coverage of STAR was greatly expanded by a new upgrade to the STAR detector: the endcap-Time-Of-Flight detector (eTOF\nomenclature{eTOF}{endcap-Time-Of-Flight detector}~\cite{eTOF})\@. This detector was developed in collaboration with the Compressed Baryonic Matter (CBM\nomenclature{CBM}{Compressed Baryonic Matter}~\cite{CBM}) as eTOF doubles as a test of the CBM Time-Of-Flight detector. eTOF consists of trays of similar design to the TOF mounted to the endcap of the TPC\@. The layout is shown in Figure\ref{eTOF}\@. eTOF enhances the pseudorapidity reach of PID via time-of-flight measurements down to at least $\eta > 1.5$~\cite{eTOF_LOI}\@.
+
 
 % -----------------------------------------------------------------------------------------------------------
 \section{Heavy Flavor Tracker (HFT)\label{HFTsection}} 
@@ -195,7 +230,7 @@ HFT
 subdetectors is summarized in Table~\ref{HFTtab}.
 
 \begin{table}[htb]
-\caption{\label{HFTtab}HFT subdetectors and their properties. For the SSD, the hit resolution $\sigma_{xy}$ and $\sigma_z$ are listed, instead of the pitch, because it is a double sided strip detector where the strips are not perpendicular.}
+\caption{\label{HFTtab}HFT subdetectors, their average radii from the center of the beam pipe, and pitches of the sensitive pads. For the SSD, the hit resolutions $\sigma_{r\phi}$ and $\sigma_z$ are listed, instead of the pitch, because it is a double sided strip detector where the strips are not perpendicular.}
 \begin{center}
 \begin{tabular}{lcccc}
 \toprule
@@ -227,6 +262,10 @@ The purpose of the IST and the SSD is to guide the track from the TPC to the inn
 \caption{\label{HFT_layers}Average resolution from the TPC down to the innermost layer of the PXL detector~\cite{KubaVyzkumak}.}
 \end{figure}
 
+\subsection{Silicon-Strip Detector (SSD)}
+
+\subsection{Intermediate Silicon Tracker (IST)}
+
 \subsection{Pixel (PXL) detector}
 The two innermost layers of the HFT consist of the Pixel (PXL) detector which employs a unique design as it is the
 first detector using the Monolythic Active Pixel Sensor (MAPS\nomenclature{MAPS}{Monolythic Active Pixel Sensor})
@@ -235,7 +274,25 @@ a small radiation length. This is important for the recognition of secondary and
 decays. The resolution of the distance of closest approach (DCA) of the reconstructed 
 tracks to the primary vertex, depending on the particle species, is shown in Figure~\ref{DCA}.
 
+\subsubsection{HFT Slow Simulator Evaluation}
 
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/DIGMAPS_cosmic}\\
+\end{center}
+\caption{\label{cosmicDigmaps}Pixel slow simulator compared to cosmic data at the angle of 0--10°.}
+\end{figure}
+
+My task was to simulate several hits of particles in the detector and then compare them to real measured particles. This was done for the cosmic particles and, later, for Au+Au collisions at the center-of-mass energy per nucleon $\snn = \SI{200}{\giga\electronvolt}$\@. The particles were divided into bins by angle and then the sizes of the clusters were compared between the data and the simulation. An example of such angle bin from the cosmic-ray data can be seen in Figure~\ref{cosmicDigmaps}.
+This work was brought several steps further by Jakub Kvapil~\cite{KubaVyzkumak}, who did the comparison, not only divided by angle, but also for identified particles in the Time Projection Chamber (TPC). The comparison can be seen 
+
+\begin{figure}[htb]
+\begin{center}
+ \includegraphics[width=\textwidth]{img/DIGMAPS_AuAu.png}\\
+\end{center}
+\caption{\label{AuAuDigmaps}Comparison of cluster size of the Slow simulator and global identified tracks (left) and primary (tracks that originate in the primary vertex) track only
+(right)~\cite{KubaVyzkumak}.}
+\end{figure}
 
 % -----------------------------------------------------------------------------------------------------------
 \section{Zero Degree Calorimeter (ZDC)\label{ZDCsection}} \nomenclature{ZDC}{Zero Degree Calorimeter}
@@ -258,7 +315,7 @@ the first deflecting magnets. Each side consists of 3 towers made of a tungsten 
 
 \begin{figure}[!htb]
 \begin{center}
-  \includegraphics[width=0.55\textwidth]{img/ZDC_modules_photo}
+  \includegraphics[width=0.75\textwidth]{img/ZDC_modules_photo}
 \end{center}
 \caption{\label{ZDC_photo}Photo of the ZDC assembly installed between RHIC accelerator tubes~\cite{ZDCSMD}. }
 \end{figure}
@@ -310,7 +367,7 @@ has to be repeated until the ratio of the gains approximates the desired one wel
 
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=.5\textwidth]{img/SNPandDNPexample.pdf}
+\includegraphics[width=.6\textwidth]{img/SNPandDNPexample.pdf}
 \end{center}
 \caption{\label{SNPillustration} Single-neutron and double-neutron peaks for the West towers for in a 2018 test run.}
 
@@ -382,14 +439,14 @@ West  &1 & same & 2431  \\
 
 \begin{figure}[!htb]
 % \begin{center}
-\includegraphics[width=0.33\textwidth]{img/ZDC_E_1}
-\includegraphics[width=0.33\textwidth]{img/ZDC_E_2}
-\includegraphics[width=0.33\textwidth]{img/ZDC_E_3}\\
-\includegraphics[width=0.33\textwidth]{img/ZDC_W_1}
-\includegraphics[width=0.33\textwidth]{img/ZDC_W_2}
-\includegraphics[width=0.33\textwidth]{img/ZDC_W_3}\\
-\includegraphics[width=0.33\textwidth]{img/AA1783}
-\includegraphics[width=0.33\textwidth]{img/H2431-50}
+\includegraphics[width=0.32\textwidth]{img/ZDC_E_1}
+\includegraphics[width=0.32\textwidth]{img/ZDC_E_2}
+\includegraphics[width=0.32\textwidth]{img/ZDC_E_3}\\
+\includegraphics[width=0.32\textwidth]{img/ZDC_W_1}
+\includegraphics[width=0.32\textwidth]{img/ZDC_W_2}
+\includegraphics[width=0.32\textwidth]{img/ZDC_W_3}\\
+\includegraphics[width=0.32\textwidth]{img/AA1783}
+\includegraphics[width=0.32\textwidth]{img/H2431-50}
 % \end{center}
 \caption{\label{ZDCgains}Measurement of the dependence of the PMT gain on the applied high voltage. All the ZDC towers were measured as well as two spares that were used instead of ZDC East3 and ZDC West3\@. AA1783 and H2431-50 are serial numbers of the PMTs. The data are fitted by the power law~\eqref{powerLaw} where $a=1/U_0$ and $b$ is the Exponent.}
 \end{figure}
