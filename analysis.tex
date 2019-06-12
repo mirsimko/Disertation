@@ -1,0 +1,164 @@
+$\Lambda_\mathrm{c}^\pm$ is the lightest baryon containing a charm quark. As such, it is an excellent probe into the behavior of the QGP alongside precise measurements of D mesons. However, the combination of facts that it has an extremely short lifetime times the speed of light $c\tau \sim 60\,\upmu$m and the the useful decay for a direct reconstruction is a three-body decay into $\uppi^\pm$, K$^\mp$, and p$^\pm$, makes this measurement challenging. $\pi^\pm$, K$^\mp$, and p$^\pm$ are the most abundant particles coming out of heavy-ion collisions which implies that any measurement of \Lambdac$^\pm$ has to deal with a large background.
+
+The $\Lambdac^\pm$ were measured for the first time in heavy-ion--ion collisions~\cite{GuannanLc} at the STAR experiment at RHIC\@. In particular, the $\Lambda_\mathrm{c}$ measurement was enabled by the Heavy Flavor Tracker (HFT)~\cite{Kapitan} upgrade that took data in the years 2014--2016\@. The HFT is described in more detail in section~\ref{HFTsection}\@. In this chapter, we describe the measurement of the \Lambdac\ from signal extraction to the ratios of $\Lambdac/\dzero$ and $\Lambdac^-/\Lambdac^+$ invariant yields. 
+% \section{$\Lambda_\mathrm{c}$ measurements in Au+Au collisions at RHIC}\\
+
+\section{Track selection}
+For this analysis, we use triplets of pions, Kaons, and pions. The HFT tracking is required which means: In the 2014 data, the tracks are required to have at least one hit in each pixel layer and a hit in the IST (the SSD is not used in the tracking in 2014); in 2016 data, we require at least one hit in each pixel layer and at least one hit in either IST or SSD\@.  In the TPC, tracks were selected to ensure that they are not fakes consisting of hits that do not come from one particle, but e.g.\ a combination of noise or hits from several tracks combined into one. We require the number of hits $N_\mathrm{hits} \geq 20$ and the ratio to maximum number of hits in the track trajectory $N_\mathrm{hits}/N_\text{hits max} > 0.52$\@. The minimum track \pt\ was chosen as 0.5$\,$GeV/$c$ to save computation time and because bellow, the \Lambdac\ cannot be extracted as they are drowned in the combinatorial background\@.
+
+As for the PID, looser cuts were applied to the $\pi^\pm$, because of their higher abundance, compared to K$^\mp$ and p$^\pm$. In the TPC, we compare the \dedx\ value of the track to the width of the distribution $\sigma_{\dedx}$ of each particle species at the track momentum
+\begin{equation}
+N_\sigma = \frac{\dedx}{\sigma_{\dedx}}\,. 
+\end{equation}
+We set the cut at $|N_\sigma| < 3$ for \pipm\ and $|N_\sigma| < 2$ for \Kmp\ and \ppm\@. A match of the track to a hit in the TOF detector is required for kaons and protons, however, in the case of pions, we use the, so called, hybrid approach, in which we use TOF only if the information is available. The cut on the fraction $\beta$ of the speed of light, compared to the supposed speed of the particle divided by $c$ at its momentum $p$ and supposed rest mass $m$ is set as
+\begin{equation}
+ \left|\Delta \frac{1}{\beta}\right| = \left| \frac{1}{\beta} - \frac{1}{\beta_\mathrm{sup}} \right| = \left| \frac{1}{\beta} - \sqrt{\frac{m^2c^2}{p^2} + 1} \,\,\right| < 0.03
+\end{equation}
+for all particles. All tracks are then saved and combined into triplets so that additional cuts can be applied.
+
+
+\section{Topological reconstruction and cuts optimization}
+
+All three \Lambdac-decay daughter particles come from the same secondary vertex (SV)\@. In reality, however, it is rather challenging to recognize a \Lambdac\ decay from random combinations of \pipm, \Kmp, and \ppm, because of the detector resolution and because the \Lambdac\ decay close to the PV\@.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width = 0.5\textwidth]{img/LambdaMethod}
+\caption{Illustration of variables used for topological cuts for the \Lambdac\ analysis.}
+\label{fig:method}
+\end{figure}
+
+The SV of each \Lambdac\ candidate triplet is reconstructed as follows: First, the distance of closest approach (DCA) of the PV (yellow star in Figure~\ref{fig:method}) to each track helix is calculated and an initial cut is applied. Next, we proceed with the reconstruction of the SV itself\@: Since the SV is very close to the PV (in the order of tens of $\upmu$m), the track helices can be approximated via straight lines. This approximation has been shown to have negligible effect on all the topological variables and saves the computational time by $\sim$2 orders of magnitude since the points of closest approach (PCA\nomenclature{PCA}{Point of Closest Approach}) of two lines can be calculated analytically. The PCA is calculated for each combination of two tracks, i.e. we end up with 6 PCA. The vector average of each two PCA is stored as the, so called, vertex of daughter pairs (VDP\nomenclature{VDP}{Vertex of Daughter Pairs} -- yellow circles in Figure~\ref{fig:method})
+\begin{equation}
+\overrightarrow{\mathrm{VDP}}_{i,j} = \frac{1}{2} \left( \overrightarrow{\mathrm{PCA}}_i + \overrightarrow{\mathrm{PCA}}_j \right)\,. 
+\end{equation}
+ 
+Finally, the SV position (red star in Figure~\ref{fig:method}) is calculated as an average of all the PCA
+\begin{equation}
+\overrightarrow{\mathrm{SV}}=\frac{1}{6}\sum_{i=1}^6 \overrightarrow{\mathrm{PCA}}_i \,.
+\end{equation}
+
+
+
+Since the \Lambdac\ daughter tracks come from the same SV, the signal differs from the background in several key topological variables. The chosen ones are shown in Figure~\ref{fig:method} and they are listed here:
+\begin{itemize}
+ \item The distance between the reconstructed PV and SV: the ``Decay length'' (full red line),
+ \item the distances of closest approach (DCA) of each daughter track to the PV,
+ \item the maximum distance between each pair of daughter tracks (green dashed lines),
+ \item the maximum distance of pair vertices (full light blue lines),
+ \item the cosine of the angle $\theta$ between reconstructed momentum of the triplet (vector extended by the dashed dark blue line) and the line between SV and PV (full red line).
+\end{itemize}
+The difference between the data and background is illustrated in Figure~\ref{fig:optimization} from Run 2014\@. While there is not a clear-cut separation between the signal and the background, using multivariate analysis, we can optimize the selection criteria for \Lambdac\ candidates.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[height = 5.5cm]{img/cosTheta}
+\includegraphics[height = 5.5cm]{img/dLength}
+\caption{Examples of topological variables used for cuts: Left panel: Decay length; Right panel: cos($\theta$)\@. The red line is the background from data with a wrong charge sign combination and the signal is extracted from the data-driven Monte Carlo simulation.}
+\label{fig:optimization}
+\end{figure}
+
+To optimize the cuts on the topological variables, we maximize the significance $s$ of the \Lambdac\ signal
+\begin{equation} \label{significance}
+ s = \frac{S}{\sigma_{S+B}}
+\end{equation}
+where $S$ is the number of \Lambdac\ signal counts, $\sigma_{S+B}$ is the uncertainty of obtaining the signal.
+If we apply this to the most common background estimations, we get
+\begin{equation} \label{significanceEstimates}
+  s_\text{wrong-sign} \simeq \frac{S}{\sqrt{S+\frac{4}{3}B_\text{wrong-sign}}}\,, \qquad
+ s_\text{mixed} \simeq \frac{S}{\sqrt{S + B_\text{mixed}}} 
+\end{equation}
+where $B_\text{wrong-sign}$ is a background estimate, using the wrong-sign method, and $B_\text{mixed}$ uses the mixed-event method. The factor 4/3 comes from combinatorics of the wrong sign background estimate. In a very large pool of \pipm, \Kmp, and \ppm, there are 3$\times$ more combinations of wrong-sign triplets than there are correct ones. Therefore, the error of the signal is $\sqrt{S + B}$ and the error of the background estimate is $\sqrt{\frac{1}{3}B_\text{wrong-sign}}$\@. Because the uncertainties are not correlated, we can calculate the final error as $\sqrt{S+\frac{4}{3}B_\text{wrong-sign}}$\@. In the case of the mixed-event background extraction, we expect the number of events to be large, thus we can neglect the contribution from the background estimate. Since $B_\text{wrong-sign}$ and $B_\text{mixed}$ are about equal --- albeit with different uncertainties --- the approximations~\eqref{significanceEstimates} clearly shows that the mixed event background estimate gives higher significance $s_\text{mixed}$ than $s_\text{wrong-sign}$, however, in the case of the \Lambdac, only slightly.
+
+\subsection{Boosted Decision Trees}
+
+The selection criteria for reduction of the combinatorial background were optimized via the Toolkit for Multivariate Analysis (TMVA) Package~\cite{TMVA}. For this analysis, we use the Boosted Decision Trees (BDT\nomenclature{BDT}{Boosted Decision Trees}) method --- a well-established method for selection criteria. The advantages, compared to set cuts in each variable, is that the BDT selects a hyperplane in the space of all selected variables. Thus, we avoid the, so called, dimensionality problem --- the fact that strait cuts tend to fail in many-dimensional spaces. Also, the BDT tend to produce a higher significance of the signal which was the case in our analysis as well. The significance of the \Lambdac\ improved approximately twice, using the BDT, compared to set (rectangular) cuts.
+
+
+
+
+The BDT were trained using simulated decayed $\Lambda_\mathrm{c}$ particles as signal and background from the measured data with incorrect sign. The signal has to come from a simulation to avoid bias on the measured data. A novel data-driven approach to the simulation of the detector effects was developed for the open charm decays at STAR to reduce the computation time and decrease the systematic uncertainties coming from the simulation. For more information, relate to Section~\ref{fastsim}\@. Approximately half of the simulated events are used for training and half for the validation of the BDT method, especially for the overtraining check.
+
+
+
+
+\section{Data-driven fast simulation\label{fastsim}}
+
+The data-driven fast simulation is a novel approach of making a realistic monte-carlo model of all the detector variables. Its vast advantage over GEANT-based~\cite{GEANT} simulations is the computational speed without sacrificing accuracy. Compared to HIJING~\cite{HIJING} simulation of central Au+Au collisions decayed into a GEANT3 model of the STAR detector, the data-driven fast simulation is $\sim$7 orders of magnitude faster.
+
+The detector response is simulated in the following steps:
+\begin{itemize}
+ \item First, $\Lambdac^\pm$ are produced in EvtGen~\cite{EvtGen} decayer uniformly in \pt\ and rapidity $y$, within 0.5$\,$GeV$/c < \pt < 10\,$GeV$/c$ and $|y| < 1$\@. EventGen is a PYTHIA8-based simulator of particle-decay topology and dynamics, including the three-body weak-sector Dalitz decays, such as the \Lambdac-three-body decay.
+ \item Next, the \Lambdac\ are decayed via the three-body decay, and via $\text{K*}+\ppm$ and $\Lambda(1520\,\text{GeV}/c^2)+\pipm$ resonance decays with the measured branching ratios, according to~\cite{PDG}, into \ppm, \Kmp, and~\pipm\@.
+ \item The momenta of daughter particles are smeared, according to resolution, obtained from the embedding of GEANT simulated \ppm, \Kmp, and \pipm\ tracks into measured Au+Au events in the TPC\@. The efficiency of the TPC is obtained in the same way.
+ \item The HFT properties are obtained from measured data in this simulation, hence the name of this simulator:
+ \begin{itemize}
+  \item TPC and HFT tracking are independent, therefore, the HFT efficiency is obtained from the ratio of HFT tracks divided by all the TPC tracks.
+  \item The daughter tracks positions are smeared according to resolution of the DCA of the primary tracks to the PV\@. In the case of \pipm\ and \Kmp\ the DCA distributions of inclusive tracks are used, because the contributions of secondary tracks were proven to be negligible in an independent simulation. The \ppm\ have to be corrected for the $\Lambda$-baryon decays.
+  \item The PV has a finite resolution as well and its position has to be smeared. In the central Au+Au collisions this can be neglected as the DCA resolution is much worse than the PV, however in the peripheral collisions the PV position has to be smeared, according to HIJING simulation of these events in a GEANT model of STAR\@.
+ \end{itemize}
+\end{itemize}
+
+This simulation has been verified, using simulated $\Lambdac^\pm$ decays in full HIJING simulations of Au+Au events in a GEANT model of STAR, as well as the embedding of GEANT-simulated $\Lambdac^\pm$ decays in measured Au+Au collisions\@.
+
+
+\section{Signal extraction}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width = 0.6\textwidth]{img/mixedEvent12x}
+\caption{Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$. Mixed-event and wrong-sign background subtraction methods are compared.}
+\label{fig:invMass}
+\end{figure}
+
+The invariant mass spectra of the \Lambdac\ can be found in Figure~\ref{fig:invMass}\@. 
+
+\subsection{Mixed-event background subtraction}
+In the mixed-event method, tracks from different events are mixed together to determine the background, thus removing all correlations between tracks. The advantage of this method is that the number of such mixed events is only limited by the computing power. Therefore, the background can be measured very precisely by mixing with a large amount of events. 
+
+\begin{figure}[htb]
+\centering
+$
+\vcenter{\hbox{\includegraphics[width = 0.6\textwidth]{img/Mixing.pdf}
+\footnotesize{(a)}
+}}
+$
+\hspace*{0.\textwidth}
+$
+\vcenter{\hbox{\includegraphics[width = 0.2\textwidth]{img/trackShiftEventMixing.pdf}
+\footnotesize{(b)}
+}}
+$
+\caption{The event-mixing method: (a) Illustration of how events are selected. Each particle species is selected from a different event. (b) Each mixed track has to be shifted by the difference of the positions of the primary vertices of the two events.}
+\label{fig:mixedIllustrations}
+\end{figure}
+
+The events are always mixed within the same centrality and $v_z$ bin in order to reconstruct the same shape of the background. Figure~\ref{fig:mixedIllustrations} shows, how the mixed-event method is performed. When a buffer of 5 events of the same centrality and $v_z$ is filled, first protons are combined with kaons from another event, then these pairs are combined with pions. We can make 12 ($3 \times 4$) combinations for a buffer with 5 events. Because of the topological cuts, the tracks have to be shifted when they are mixed into another event by the difference in position of the primary vertices.
+
+
+\section{Efficiency corrections and assessment of systematic uncertainties}
+
+\begin{figure}[htb]
+\centering % negative space after an empty character
+\includegraphics[width=0.6\textwidth]{img/BaryonMesonRatio_onlyData_430}
+\caption{Ratio of the yield of $\Lambda_\mathrm{c}$ over D$^0$ vs $p_\mathrm{T}$ measured at STAR in Au+Au collisions with centrality 10--60$\,\%$~\cite{GuannanLc} compared to coalescence models~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM} --- see description in text.}
+\label{fig:ratio}
+\end{figure}
+
+In this analysis, the efficiency corrections of the yield were done using the data-driven simulations and the systematic uncertainties were obtained by varying the cuts. The ratio of the yields of the $\Lambda_\mathrm{c}$ and D$^0$ was calculated from the published D$^0$ spectrum~\cite{publishedDzero}. The resulting ratio for $p_\mathrm{T}$ of 3--6$\,$GeV$/c$ and centrality of 10--60$\,\%$ was calculated as $N(\Lambda_\mathrm{c}^+ + \overline{\Lambda_\mathrm{c}}^-)/N(\mathrm{D^0 + \overline{D^0}}) = 1.31 \pm 0.26\text{(stat.)} \pm 0.42$(sys.). The systematic uncertainties were inferred by varying all the cuts.
+
+
+As can be seen in Figure~\ref{fig:ratio}, $\Lambda_\mathrm{c}$ are clearly enhanced enhanced in Au+Au collisions, compared to p+p (obtained from PYTHIA~\cite{PYTHIA}). The data are consistent (within $2\sigma$) with both the di-quark and three-quark coalescence models calculated for the centralities of 0--5$\,\%$~\cite{LcCoalescence_OhKoLeeYasui} and are consistent with the ``Greco''~\cite{Ghosh_Lc_rescattering} model calculated for minimum-bias data. Note that the centrality range is different for the the calculations and the data. Currently, STAR is not sensitive in the same $p_\mathrm{T}$ range as the ``SHM'' model~\cite{SHM}. 
+
+
+
+% 
+% \begin{figure*}
+% \centering
+% \includegraphics[width=0.8\linewidth]{graph_a}
+% \caption{Wide figure~\cite{}.}
+% \label{fig:gr_a}
+% \end{figure*}
+
+
+
