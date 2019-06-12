@@ -27,6 +27,7 @@
 \usepackage[refpage]{nomencl}
 \usepackage[final]{pdfpages}
 \usepackage[toc,page]{appendix}
+\usepackage{xcolor}
 \makeatletter\@openrightfalse\makeatother % removes the unnecessary page
 %\usepackage{thebibliography}
 \let\abbrev\nomenclature
@@ -63,7 +64,7 @@
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\eee}{\ensuremath{\mathrm{e}}}
 \newcommand{\pt}{{}\ensuremath{p_{\mathrm{T}}}{}}
-\newcommand{\dedx}{$\dd E / \dd x$}
+\newcommand{\dedx}{\ensuremath{\dd E / \dd x}}
 \newcommand{\Lambdac}{\ensuremath{\Lambda_\text{c}}}
 \newcommand{\beamtuning}{\texttt{BEAM\_TUNING}}
 \newcommand{\comp}[1]{\texttt{alidcscom#1}}
@@ -72,6 +73,9 @@
 \newcommand{\Raa}{\ensuremath{R_\text{AA}}}
 \newcommand{\Rcp}{\ensuremath{R_\text{cp}}}
 \newcommand{\dzero}{\ensuremath{\text{D}^0}}
+\newcommand{\pipm}{\ensuremath{\uppi^\pm}}
+\newcommand{\ppm}{\ensuremath{\text{p}^\pm}}
+\newcommand{\Kmp}{\ensuremath{\text{K}^\mp}}
 
 
 \usepackage{geometry}
@@ -190,7 +194,8 @@
 \chapter{Reconstruction of the $\Lambda_\text{c}$ Baryon in Au+Au Collisions}
 \input{analysis}
 
-\chapter{Discussion}
+\chapter{Results}
+
 
 \chapter{Conclusion and outlook} \label{conclusion}
 \input{conclusion}
