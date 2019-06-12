@@ -301,16 +301,23 @@ be at the same ADC value in both, the East and the West side. In reality, these 
 For the calibration, in each step, we take a dedicated ZDC run with
 $\sim$10$\,$M events (at full luminosity, this takes less than $5\,$min). Then, we
 look at the resulting Single-Neutron Peak (SNP\nomenclature{SNP}{Single-Neutron Peak}).
-For an illustration of the SNP see Figure~\ref{SNPillustration} and the gain of the single
-towers can be seen in Figure~\ref{gain}.
-During the calibration, we try to shift the SNP so that it is at a safe ADC value so that the whole width of the SNP is in the ZDC measured
-range. Also, the ratio between the gain of the ZDC towers should be corrected to match the ideal ratio 6:3:1\@. If the
-SNP is too low and/or the ratio between the towers' gain is wrong,
+For an illustration of the SNP see Figure~\ref{SNPillustration}\@.
+During the calibration, we change the voltages until at least 1 standard deviation of the SNP is in the ZDC measured
+range. Also, the ratio between the gain of the ZDC towers is corrected to match the ideal ratio 6:3:1\@. If the position of the SNP is too low and/or the ratio between the towers' gain is wrong,
 the voltage in the photomultiplier tubes has to be adjusted and then the whole procedure
-has to be repeated until the desired ratio of the gains is close enough.
+has to be repeated until the ratio of the gains approximates the desired one well enough.
+
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=.5\textwidth]{img/SNPandDNPexample.pdf}
+\end{center}
+\caption{\label{SNPillustration} Single-neutron and double-neutron peaks for the West towers for in a 2018 test run.}
+
+\end{figure}
 
 The gain on the PMTs follows a power law
-\begin{equation}
+\begin{equation} \label{powerLaw}
 G = aU^b
 \end{equation}
 where $G$ is a gain and $U$ stands for voltage. The coefficients $a$ and $b$ differ for each PMT, but approximately they are close to the values of~\cite{ZDCvoltsDependence}
@@ -324,7 +331,6 @@ The desired position of the SNP is usually set as 60 ADC values. The gain at the
 %  N = A \exp(-D x) + B \exp\left[-\frac{(x-G_\mathrm{SNP})^2}{\sigma_\mathrm{SNP}^2}\right]  + C \exp\left[-\frac{(x-G_\mathrm{DNP})^2}{\sigma_\mathrm{DNP}^2}\right]
 % \end{equation}
 To calculate
-
 the desired voltages we use the formula
 \begin{equation}
 U_{\text{result}} = U_\text{current}\left(\frac{G_\text{desired}}{G} 
