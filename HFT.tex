@@ -1,0 +1,141 @@
+The Heavy Flavor Tracker (HFT) was installed at STAR for the years 2014 -- 2016 data 
+taking \cite{HftTdr, HFTLeo, HftFinal}. It is the innermost 
+sub-detector of STAR that resides between the beam pipe and the TPC, and consists of 4
+layers of silicon detectors. From the outermost layer in: A double-sided strip detector, called Silicon Strip
+Tracker/Detector
+(SST/SSD\nomenclature{SST/SSD}{Silicon Strip Tracker/Detector}), which is a previously installed detector in STAR that has been
+refurbished and upgraded with new electronics; Next, the second outermost layer is formed by conventional silicon 
+pad detectors
+of Intermediate Silicon Tracker (IST\nomenclature{IST}{Intermediate Silicon Tracker}) 
+with rectangular pads; Finally, the two innermost layers consist of the Pixel (PXL\nomenclature{PXL}{Pixel Detector}) 
+Detector
+that employs the novel MAPS technology that was used for the first time in a collider experiment. The overview of the 
+HFT
+subdetectors is summarized in Table~\ref{HFTtab}.
+
+\begin{table}[htb]
+\caption{\label{HFTtab}HFT subdetectors, their average radii from the center of the beam pipe, and pitches of the sensitive pads. For the SSD, the hit resolutions $\sigma_{r\phi}$ and $\sigma_z$ are listed, instead of the pitch, because it is a double sided strip detector where the strips are not perpendicular~\cite{HftTdr}.}
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+System & Type & Radius [cm] & Pitch--$r\phi$ [$\upmu$m] & Pitch--$z$ [$\upmu$m]\\
+\midrule
+SSD & Double-sided strip detector & 22 & $\sigma$ = 20 & $\sigma$ = 740 \\
+IST & Silicon pad detector & 14 & 600 & 6000 \\
+PXL & Silicon pixel detector & 2.7, 8 & 20.7 & 20.7 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.8\textwidth]{img/HFT_layers}\\
+\end{center}
+\caption{\label{HFT_layers}Average resolution improvement with each layer of the HFT, going from the TPC down to the innermost layer of the PXL detector~\cite{KubaVyzkumak}.}
+\end{figure}
+
+
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.6\textwidth]{img/DCAXy}\\
+\end{center}
+\caption{\label{DCA}Distance of Closest Approach (DCA\nomenclature{DCA}{Distance of Closest Approach}) from the PV in the $xy$-plane for identified particles~\cite{D0v2paper}.}
+\end{figure}
+
+The purpose of the IST and the SSD is to guide the track from the TPC to the innermost layers of HFT--PXL in the high-track-multiplicity environment of STAR. Figure~\ref{HFT_layers} illustrates the improvement of the tracking resolution with each layer of the HFT\@. The PXL especially provides an unparalleled pointing precision thanks to its high granularity as well as the proximity to the primary vertex. For the runs with the HFT, the beam pipe had to be replaced with a narrower one, in order to accommodate for the low radius of the innermost layer of PXL\@. The resolution of the distance of closest approach (DCA resolution) of identified particles can be seen in Figure~\ref{DCA}. For high-momentum tracks, the resolution is as low as \SI{20}{\micro\metre}.
+
+
+Great care was used when engineering the mechanical support so that it is lightweight while providing enough support and allows for cooling of the system. The entire HFT is mounted on a novel structure on rails so that it can be removed and replaced within 24 hours. This structure also provides air flow for cooling. For PLX and SSD  air cooling is sufficient, but the IST is also liquid cooled.
+
+\subsection{Silicon-Strip Detector (SSD)}
+
+The Silicon-Strip Detector (SSD) is a refurbished detector with upgraded electronics that can facilitate the high collision rates in runs 2014 and 2016\@. The SSD consists of 20 ladders 67$\,$cm in length with double-sided silicon strip wafers, mounted 22$\,$cm from the center of the beam pipe. The strips are 95$\,\upmu$m wide and 4.2$\,$cm long and are crossed at an angle of 35 mrad, oriented to prioritize the resolution in the $r\phi$ direction. The material of the SSD amounts to $\sim$1$\,\%$ of the radiation length.
+
+\subsection{Intermediate Silicon Tracker (IST)}
+
+The Intermediate Silicon Tracker (IST) is a single-sided silicon-pad detector with rectangular pads of $600\,\upmu\mathrm{m}\times6\,$mm. It is located between the PXL detector and the SSD at a radius of 14$\,$cm. The IST consists of 24 ladders with 6 sensors each, supported on kapton mechanical structure with cooling tubes. The IST is cooled by the Novec 7200 liquid which is a dielectric, it evaporates quickly in the event of a spill, and it is not harmful to the environment. The material budget of the IST is calculated as $\sim$1.5$\,\%$ of the radiation length.
+
+\subsection{Pixel (PXL) detector}
+The two innermost layers of the HFT consist of the Pixel (PXL) detector which employs a unique design as it is the
+first detector using the Monolithic Active-Pixel Sensor (MAPS\nomenclature{MAPS}{Monolithic Active-Pixel Sensor})
+technology. This enables the pixel sensors to have a miniscule pixel pitch of \SI{20.7}{\micro\metre} while maintaining
+a small material budget.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=.7\textwidth]{img/MAPS_illustration.jpg}\\
+\end{center}
+\caption{\label{MAPS}Illustration of the MAPS technology principle~\cite{MAPS_illustration}.}
+\end{figure}
+
+Compared to conventional bump-bonded pixel sensors, advantage of the MAPS technology is that it incorporates the front-end electronics (FEE\nomenclature{FEE}{Front-End Electronics}), such as amplifiers and discriminators, inside the pixels themselves. The MAPS uses one layer of silicon instead of two layers in traditional pixels which reduces the material budget, cost of the detector, and the pixels can be made smaller as they employ traditional CMOS\nomenclature{CMOS}{Complementary Metal--Oxide--Semiconductor}-printing technology. The FEEs can be incorporated on the same silicon wafer, because they are shielded inside a deep P-well while the signal electrons are read out via an N-well. An illustration of a cut through a MAPS wafer is shown in Figure~\ref{MAPS}\@. When a charged particle traverses the PXL detector, a cloud of electron-hole pairs is created predominantly in the P+-type epitaxial layer. Then some of the electrons drift into the depleted zone around the N-well collection electrode via diffusion, and are subsequently picked up as signal. A single-particle hit is typically read out by multiple N-wells and it creates a cluster of several wounded pixels. This improves the resolution of the pixel sensor as the position of multiple pixels can be averaged as a probable position of the particle impact.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=\textwidth]{img/PXL_mounted}\\
+\end{center}
+\caption{\label{PXL}Layout of the PXL detector mounted on the supporting structure~\cite{HftTdr}.}
+\end{figure}
+
+The layout of the PXL detector, mounted on the HFT-support structure, is illustrated in Figure~\ref{PXL}\@. The sensors themselves are on the right-hand side of the image and are marked by a blue color. The PXL consists of two concentric barrels, each 20$\,$cm long, first one at a radius of 2.7$\,$cm and the second one at 8$\,$cm.  The sensors are organized into ladders, 10 in the inner barrel and 30 in the outer one. The support structure for the PXL consists of 10 roughly trapeziodal kapton sections, each having glued on 3 ladders from the outer layer and 1 from the inner one. The innermost layer is placed right on the beam pipe which had to be made anew to accommodate for the small radius of the PXL\@. The sensors are milled so that the material budget of each layer was lowered to only 0.5$\,\%$ of the radiation length.
+
+The combination of the small pixel pitch, the small radius of the first layer, and the low material budget of the PXL make for a before-unforseen pointing resolution of the HFT\@. This is crucial for the precise measurements of open-heavy-flavor hadrons that decay relatively close to the PV (tens to hundreds of $\upmu$m)\@.  
+
+\subsubsection{HFT Slow Simulator Evaluation and comparison to measured data}
+The process of charge deposition in MAPS is illustrated in Figure~\ref{DigmapsIllustration}\@.
+When an ionizing particle passes through a MAPS wafer, it generates a cloud of electrons and holes that can drift to several pixels where they are collected inside the CMOS N-wells and, subsequently, measured as signal.  
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.65\textwidth]{img/DIGMAPS_particle}\\
+\end{center}
+\caption{\label{DigmapsIllustration}An illustration of particle energy deposition and charge transport in a MAPS chip~\cite{DIGMAPS}.}
+\end{figure}
+
+Every analysis of measured data depends on reliable Monte-Carlo simulation for corrections on the efficiency of the detectors. At STAR, GEANT3~\cite{GEANT} is typically used for simulating the detector response to an ionizing particle. However, GEANT does not take into account processes in thin silicon wafers, so the detector response has to be simulated outside of GEANT and then embedded into the GEANT simulation. Two types of detector simulators are employed for PXL, the so called, fast simulator and slow simulator. The fast simulator takes a position where a track crossed the detector, smears it according to the detector resolution, and calculates the efficiency of the detector, according to the particle species and its \pt\@. The slow simulator, on the other hand, simulates deposited energy of the particle inside the detector and generates detector response to the pixel layer. The slow simulator can create a more realistic picture of the detector response, including noise in the detector. This is crucial when using the clustering and tracking algorithms on the simulated detectors. Slow simulator is mainly used in embedding of the simulated track in measured data as it requires information on the level single pixels. The fast simulation is adequate when simulated data are not mixed with the measured ones, because, typically, only the position of the hits is required.
+
+A tool for simulation of the MAPS-detector response --- MAPS digitizer or ``DIGMAPS\nomenclature{DIGMAPS}{MAPS Digitizer}'' --- has been developed at Strasbourg University~\cite{DIGMAPS}\@. This model simulates the relatively complicated process from a passing particle to the output of the MAPS sensor in the following steps: energy deposition, charge transport of the electron--hole pairs, digitization of the ADC with added noise.
+\begin{enumerate}
+ \item The \textbf{energy deposition} is calculated via a Landau distribution with the PDF~\cite{Landau}
+ \begin{equation}
+  P(x,\mathrm{MPV},\mathrm{width}) = \frac{1}{\pi}\int^{\infty}_{0}\, \eee^{-s\cdot y - s\ln s} \cos(\pi s)\ddd s \,,\qquad y=\frac{x-\mathrm{MPV}}{\mathrm{width}}
+ \end{equation}
+ where MPV = 80$\,\eee^-/\upmu$m and width = 18$\,\eee^-/\upmu$m.
+The effective thickness of the sensor is calculated as $L_\mathrm{epi}/\cos \theta$ where $L_\mathrm{epi}$ is the width of the epitaxial layer and $\theta$ is the angle between the passing-particle trajectory and the normal to the sensor plane.
+ \item The \textbf{charge transport} is simulated as a sum of a gaussian and a Lorentzian with the center in the middle of the track's intersection with the MAPS wafer. This ditribution has described the test beam data the best. The charge is then deposited on 25 N-wells around the center of the distribution.
+ \item In the \textbf{digitization} step, noise is introduced into each pixel with a Gaussian distribution, and then the pixels with the number of electrons higher than a set ADC threshold are counted as wounded.
+\end{enumerate}
+
+The DIGMAPS package can be run in the simulation mode that returns a map of wounded pixels or it can be run in a stand-alone mode, without any GEANT, in which it clusterizes the pixels into hits.
+
+DIGMAPS has several free parameters that have to be tuned through data. In this test, we use parameters tuned on minimum-ionizing particles (MIP\nomenclature{MIP}{Minimum-Ionizing Particle}) from beam tests with the exception of the ADC threshold which can be set for each pixel row individually, and is tuned several times during the run. The value 6.2$\,$mV has proven to reproduce the data the best.
+ 
+The DIGMAPS model had to be verified with measured data from run 2014 to ensure that the PXL-slow simulator is accurate. Cluster sizes were compared between the measured data and the Digmaps simulation. At first, cosmic data with zero-magnetic field were used as collisions were not available yet. This data also proved useful when comparing them to the beam tests, because MIP\ are used in both cases.
+
+
+The cosmic tracks are selected as follows: Only tracks, that traverse through the center barrel of the HFT and have 4 hits in the PXL and 2 hits in the IST, are selected. At least one of the hits has to have a cluster size of two or more. These precautions are applied to eliminate fake tracks that merely connect noise hits. The hits are chosen within a square window $6\,\mathrm{mm}\times6\,\mathrm{mm}$ around the center of the track. Only 1 hit may be present inside the square.
+
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/DIGMAPS_cosmic}\\
+\end{center}
+\caption{\label{cosmicDigmaps}Pixel slow-simulator-cluster size compared to cosmic data at the angle of 0--10°.}
+\end{figure}
+
+Measured-cluster data were compared to the DIGMAPS simulations for angles up to $\theta < 60$°. Figure~\ref{cosmicDigmaps} shows a comparison of PXL cluster sizes between the cosmic data at impact angles $0\text{°} < \theta < 10$° and DIGMAPS generated at 5°\@. Both, the distributions from simulation and data, are normalized to 1 for easier comparison.  ADC threshold of 6.2$\,$mV was used for the DIGMAPS simulation. The number of hits rises with more pixels until the cluster size of 4, then it drops steeply. The width and the overall shape of the cluster-size distribution is reproduced well in DIGMAPS, however the dip at 3-pixel clusters does not show in the simulation which is, however, not considered a significant problem as it likely has little effect on the pointing resolution.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=\textwidth]{img/DIGMAPS}\\
+\end{center}
+\caption{\label{AuAuDigmaps}Comparison of cluster size of the Slow simulator and global identified tracks (left) and primary (tracks that originate in the primary vertex) track only
+(right)~\cite{KubaVyzkumak}.}
+\end{figure}
+
+A similar evaluation was later performed with Au+Au collisions at the center-of-mass energy per nucleon $\snn = \SI{200}{\giga\electronvolt}$ from run 2014~\cite{KubaVyzkumak}\@. This time, the cluster sizes generated by DIGMAPS are compared to the clusters in tracks from identified particles and all charged tracks (see Figure~\ref{AuAuDigmaps})\@.  In general, Protons have slightly higher cluster sizes, compared to pions and kaons, however the overall shape stays the same and is reproduced by DIGMAPS.
+
+Overall DIGMAPS have proven to be a useful tool that is incorporated in the PXL slow simulator. The cluster-size distributions copy the data well enough so that the resolution of the HFT and the efficiency are reproduced with sufficient accuracy.
