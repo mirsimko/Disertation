@@ -287,7 +287,7 @@ a small material budget.
 \caption{\label{MAPS}Illustration of the MAPS technology principle~\cite{MAPS_illustration}.}
 \end{figure}
 
-Compared to conventional bump-bonded pixel sensors, advantage of the MAPS technology is that it incorporates the front-end electronics (FEE\nomenclature{FEE}{Front-End Electronics}), such as amplifiers and discriminators, inside the pixels themselves. The MAPS uses one layer of silicon instead of two layers in traditional pixels which reduces the material budget, cost of the detector, and the pixels can be made smaller as they employ traditional CMOS-printing technology. The FEEs can be incorporated on the same silicon wafer, because they are shielded inside a deep P-well while the signal electrons are read out via an N-well. An illustration of a cut through a MAPS wafer is shown in Figure~\ref{MAPS}\@. When a charged particle traverses the PXL detector, a cloud of electron-hole pairs is created predominantly in the P+-type epitaxial layer. Then some of the electrons drift into the depleted zone around the N-well collection electrode via diffusion, and are subsequently picked up as signal. A single-particle hit is typically read out by multiple N-wells and it creates a cluster of several wounded pixels. This improves the resolution of the pixel sensor as the position of multiple pixels can be averaged as a probable position of the particle impact.
+Compared to conventional bump-bonded pixel sensors, advantage of the MAPS technology is that it incorporates the front-end electronics (FEE\nomenclature{FEE}{Front-End Electronics}), such as amplifiers and discriminators, inside the pixels themselves. The MAPS uses one layer of silicon instead of two layers in traditional pixels which reduces the material budget, cost of the detector, and the pixels can be made smaller as they employ traditional CMOS\nomenclature{CMOS}{Complementary Metal--Oxide--Semiconductor}-printing technology. The FEEs can be incorporated on the same silicon wafer, because they are shielded inside a deep P-well while the signal electrons are read out via an N-well. An illustration of a cut through a MAPS wafer is shown in Figure~\ref{MAPS}\@. When a charged particle traverses the PXL detector, a cloud of electron-hole pairs is created predominantly in the P+-type epitaxial layer. Then some of the electrons drift into the depleted zone around the N-well collection electrode via diffusion, and are subsequently picked up as signal. A single-particle hit is typically read out by multiple N-wells and it creates a cluster of several wounded pixels. This improves the resolution of the pixel sensor as the position of multiple pixels can be averaged as a probable position of the particle impact.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -300,21 +300,49 @@ The layout of the PXL detector, mounted on the HFT-support structure, is illustr
 
 The combination of the small pixel pitch, the small radius of the first layer, and the low material budget of the PXL make for a before-unforseen pointing resolution of the HFT\@. This is crucial for the precise measurements of open-heavy-flavor hadrons that decay relatively close to the PV (tens to hundreds of $\upmu$m)\@.  
 
-\subsubsection{HFT Slow Simulator Evaluation}
+\subsubsection{HFT Slow Simulator Evaluation and comparison to measured data}
+The process of charge deposition in MAPS is illustrated in Figure~\ref{DigmapsIllustration}\@.
+When an ionizing particle passes through a MAPS wafer, it generates a cloud of electrons and holes that can drift to several pixels where they are collected inside the CMOS N-wells and, subsequently, measured as signal.  
 
-At STAR, GEANT3~\cite{GEANT} is typically used for simulating the detector response to an ionizing particle, however GEANT does not take into account processes in thin silicon wafers. When a particle passes through a MAPS wafer, it generates a cloud of electrons and holes that can drift to several pixels. A detector response has to be simulated on its own and then embedded into the GEANT simulation. Two types of detector simulators are employed, the so called, fast simulator and slow simulator. The fast simulator takes a position where a track crossed the detector, smears it according to the detector resolution, and calculates the efficiency of the detector, according to the particle species and \pt\@. The slow simulator, on the other hand, simulates deposited energy of the particle inside the detector and generates detector response to the pixel layer. The Slow simulator can create a more realistic picture of the detector response, including noise in the detector. This is crucial when using the clustering and tracking algorithms on the simulated detectors. Slow simulator is mainly used in embedding of the simulated track in measured data.
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.65\textwidth]{img/DIGMAPS_particle}\\
+\end{center}
+\caption{\label{DigmapsIllustration}An illustration of particle energy deposition and charge transport in a MAPS chip~\cite{DIGMAPS}.}
+\end{figure}
 
-A tool for simulating the MAPS detector response has been developped at Strasbourg University~\cite{DIGMAPS}
+Every analysis of measured data depends on reliable Monte-Carlo simulation for corrections on the efficiency of the detectors. At STAR, GEANT3~\cite{GEANT} is typically used for simulating the detector response to an ionizing particle. However, GEANT does not take into account processes in thin silicon wafers, so the detector response has to be simulated outside of GEANT and then embedded into the GEANT simulation. Two types of detector simulators are employed for PXL, the so called, fast simulator and slow simulator. The fast simulator takes a position where a track crossed the detector, smears it according to the detector resolution, and calculates the efficiency of the detector, according to the particle species and its \pt\@. The slow simulator, on the other hand, simulates deposited energy of the particle inside the detector and generates detector response to the pixel layer. The slow simulator can create a more realistic picture of the detector response, including noise in the detector. This is crucial when using the clustering and tracking algorithms on the simulated detectors. Slow simulator is mainly used in embedding of the simulated track in measured data as it requires information on the level single pixels. The fast simulation is adequate when simulated data are not mixed with the measured ones, because, typically, only the position of the hits is required.
+
+A tool for simulation of the MAPS-detector response --- MAPS digitizer or ``DIGMAPS\nomenclature{DIGMAPS}{MAPS Digitizer}'' --- has been developed at Strasbourg University~\cite{DIGMAPS}\@. This model simulates the relatively complicated process from a passing particle to the output of the MAPS sensor in the following steps: energy deposition, charge transport of the electron--hole pairs, digitization of the ADC with added noise.
+\begin{enumerate}
+ \item The \textbf{energy deposition} is calculated via a Landau distribution with the PDF~\cite{Landau}
+ \begin{equation}
+  P(x,\mathrm{MPV},\mathrm{width}) = \frac{1}{\pi}\int^{\infty}_{0}\, \eee^{-s\cdot y - s\ln s} \cos(\pi s)\ddd s \,,\qquad y=\frac{x-\mathrm{MPV}}{\mathrm{width}}
+ \end{equation}
+ where MPV = 80$\,\eee^-/\upmu$m and width = 18$\,\eee^-/\upmu$m.
+The effective thickness of the sensor is calculated as $L_\mathrm{epi}/\cos \theta$ where $L_\mathrm{epi}$ is the width of the epitaxial layer and $\theta$ is the angle between the passing-particle trajectory and the normal to the sensor plane.
+ \item The \textbf{charge transport} is simulated as a sum of a gaussian and a Lorentzian with the center in the middle of the track's intersection with the MAPS wafer. This ditribution has described the test beam data the best. The charge is then deposited on 25 N-wells around the center of the distribution.
+ \item In the \textbf{digitization} step, noise is introduced into each pixel with a Gaussian distribution, and then the pixels with the number of electrons higher than a set ADC threshold are counted as wounded.
+\end{enumerate}
+
+The DIGMAPS package can be run in the simulation mode that returns a map of wounded pixels or it can be run in a stand-alone mode, without any GEANT, in which it clusterizes the pixels into hits.
+
+DIGMAPS has several free parameters that have to be tuned through data. In this test, we use parameters tuned on minimum-ionizing particles (MIP\nomenclature{MIP}{Minimum-Ionizing Particle}) from beam tests with the exception of the ADC threshold which can be set for each pixel row individually, and is tuned several times during the run. The value 6.2$\,$mV has proven to reproduce the data the best.
+ 
+The DIGMAPS model had to be verified with measured data from run 2014 to ensure that the PXL-slow simulator is accurate. Cluster sizes were compared between the measured data and the Digmaps simulation. At first, cosmic data with zero-magnetic field were used as collisions were not available yet. This data also proved useful when comparing them to the beam tests, because MIP\ are used in both cases.
+
+
+The cosmic tracks are selected as follows: Only tracks, that traverse through the center barrel of the HFT and have 4 hits in the PXL and 2 hits in the IST, are selected. At least one of the hits has to have a cluster size of two or more. These precautions are applied to eliminate fake tracks that merely connect noise hits. The hits are chosen within a square window $6\,\mathrm{mm}\times6\,\mathrm{mm}$ around the center of the track. Only 1 hit may be present inside the square.
+
 
 \begin{figure}[!htb]
 \begin{center}
  \includegraphics[width=0.7\textwidth]{img/DIGMAPS_cosmic}\\
 \end{center}
-\caption{\label{cosmicDigmaps}Pixel slow simulator compared to cosmic data at the angle of 0--10°.}
+\caption{\label{cosmicDigmaps}Pixel slow-simulator-cluster size compared to cosmic data at the angle of 0--10°.}
 \end{figure}
 
-This was done for the cosmic particles and, later, for Au+Au collisions at the center-of-mass energy per nucleon $\snn = \SI{200}{\giga\electronvolt}$\@. The particles were divided into bins by angle and then the sizes of the clusters were compared between the data and the simulation. An example of such angle bin from the cosmic-ray data can be seen in Figure~\ref{cosmicDigmaps}.
-This work was brought several steps further by Jakub Kvapil~\cite{KubaVyzkumak}, who did the comparison, not only divided by angle, but also for identified particles in the Time Projection Chamber (TPC). The comparison can be seen 
+Measured-cluster data were compared to the DIGMAPS simulations for angles up to $\theta < 60$°. Figure~\ref{cosmicDigmaps} shows a comparison of PXL cluster sizes between the cosmic data at impact angles $0\text{°} < \theta < 10$° and DIGMAPS generated at 5°\@. Both, the distributions from simulation and data, are normalized to 1 for easier comparison.  ADC threshold of 6.2$\,$mV was used for the DIGMAPS simulation. The number of hits rises with more pixels until the cluster size of 4, then it drops steeply. The width and the overall shape of the cluster-size distribution is reproduced well in DIGMAPS, however the dip at 3-pixel clusters does not show in the simulation which is, however, not considered a significant problem as it likely has little effect on the pointing resolution.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -323,6 +351,12 @@ This work was brought several steps further by Jakub Kvapil~\cite{KubaVyzkumak},
 \caption{\label{AuAuDigmaps}Comparison of cluster size of the Slow simulator and global identified tracks (left) and primary (tracks that originate in the primary vertex) track only
 (right)~\cite{KubaVyzkumak}.}
 \end{figure}
+
+A similar evaluation was later performed with Au+Au collisions at the center-of-mass energy per nucleon $\snn = \SI{200}{\giga\electronvolt}$ from run 2014~\cite{KubaVyzkumak}\@. This time, the cluster sizes generated by DIGMAPS are compared to the clusters in tracks from identified particles and all charged tracks (see Figure~\ref{AuAuDigmaps})\@.  In general, Protons have slightly higher cluster sizes, compared to pions and kaons, however the overall shape stays the same and is reproduced by DIGMAPS well.
+
+Overall DIGMAPS have proven to be a useful tool that is incorporated in the PXL slow simulator. The cluster-size distributions copy the data well enough so that the resolution of the HFT and the efficiency are reproduced with sufficient accuracy.
+
+
 
 % -----------------------------------------------------------------------------------------------------------
 \section{Zero Degree Calorimeter (ZDC)\label{ZDCsection}} \nomenclature{ZDC}{Zero Degree Calorimeter}
@@ -395,7 +429,7 @@ the voltage in the photomultiplier tubes has to be adjusted and then the whole p
 has to be repeated until the ratio of the gains approximates the desired one well enough.
 
 
-\begin{figure}[htb]
+\begin{figure}[!htb]
 \begin{center}
 \includegraphics[width=.6\textwidth]{img/SNPandDNPexample.pdf}
 \end{center}
@@ -445,9 +479,25 @@ A photo of the experimental setup is shown in Figure~\ref{photo_ZDC_PTM_setup}\@
 
 The first measurement consisted of measuring the gain performance of the Brahms-spare PMTs. All data from the test are available in~\cite{PMT_spreadsheet}\@. Gain at a set HV of 2500$\,$V was measured as well as the a test whether a second pulse --- a, so called, afterpulse --- appears behind main pulse caused by the LED flash. The afterpulses are caused by ionized gas inside of the PMT and may indicate that the sealing had been compromised. The gain was measured as height of the pulse in the oscilloscope. The requirements for the PMTs were high gain, stability throughout our measurement, low afterpulsing, and similar time performance to the PMTs, already used in the ZDC towers. Approximately 100 PMTs were cleaned and tested, however --- except for 2 PMTs --- the Brahms spares did not exceed the performance of the PMTs they were supposed to replace. The 2 well-performing PMTs were selected as replacements for the PMTs in the towers with the lowest gains. Moreover, all of the spares had relatively large afterpulses, compared to the old ZDC towers which, however, afterpulse as well.
 
+
+\begin{figure}[!htb]
+% \begin{center}
+\includegraphics[width=0.32\textwidth]{img/ZDC_E_1}
+\includegraphics[width=0.32\textwidth]{img/ZDC_E_2}
+\includegraphics[width=0.32\textwidth]{img/ZDC_E_3}\\
+\includegraphics[width=0.32\textwidth]{img/ZDC_W_1}
+\includegraphics[width=0.32\textwidth]{img/ZDC_W_2}
+\includegraphics[width=0.32\textwidth]{img/ZDC_W_3}\\
+\includegraphics[width=0.32\textwidth]{img/AA1783}
+\includegraphics[width=0.32\textwidth]{img/H2431-50}
+% \end{center}
+\caption{\label{ZDCgains}Measurement of the dependence of the PMT gain on the applied high voltage. All the ZDC towers were measured as well as two spares that were used instead of ZDC East3 and ZDC West3\@. AA1783 and H2431-50 are serial numbers of the PMTs. The data are fitted by the power law~\eqref{powerLaw} where $a=1/U_0$ and $b$ is the Exponent.}
+\end{figure}
+
 Next, all the PMT from the ZDC towers and the chosen spares were tested for linearity of gain vs the light input. The voltage on the LED light was risen and the increase in gain was compared to the control PMT which had been previously proven to be linear. The results were fitted by a linear function. All of the ZDC towers and the tested spares followed a linear response to the change of light input.
 
-\begin{table}[htb] 
+
+\begin{table}[!htb] 
 \caption{\label{HVtable}Swaps and final ZDC voltages after the calibration performed for the 2018 isobar run.}
 \label{corected}
 \begin{center}
@@ -467,19 +517,6 @@ West  &1 & same & 2431  \\
 \end{center}
 \end{table}
 
-\begin{figure}[!htb]
-% \begin{center}
-\includegraphics[width=0.32\textwidth]{img/ZDC_E_1}
-\includegraphics[width=0.32\textwidth]{img/ZDC_E_2}
-\includegraphics[width=0.32\textwidth]{img/ZDC_E_3}\\
-\includegraphics[width=0.32\textwidth]{img/ZDC_W_1}
-\includegraphics[width=0.32\textwidth]{img/ZDC_W_2}
-\includegraphics[width=0.32\textwidth]{img/ZDC_W_3}\\
-\includegraphics[width=0.32\textwidth]{img/AA1783}
-\includegraphics[width=0.32\textwidth]{img/H2431-50}
-% \end{center}
-\caption{\label{ZDCgains}Measurement of the dependence of the PMT gain on the applied high voltage. All the ZDC towers were measured as well as two spares that were used instead of ZDC East3 and ZDC West3\@. AA1783 and H2431-50 are serial numbers of the PMTs. The data are fitted by the power law~\eqref{powerLaw} where $a=1/U_0$ and $b$ is the Exponent.}
-\end{figure}
 
 An important measurement for the calibration of the ZDC, described in the previous section, is the response of the gain to the increase of HV on the PMT\@. The gain follows a power law~\eqref{powerLaw} in which the exponent $b$ has to be measured to make the calibration more precise and less time consuming in the beginning of the run. The results of the tests are plotted in Figure~\ref{ZDCgains}\@. The HV was varied between 1500$\,$V and 3500$\,$V where the highest HV value of 3500$\,$V is outside of the operating range of the ZDC power supply, but serves as a stability check of the PMTs. All the PMTs follow the power law~\eqref{powerLaw}, however two of the original ZDC towers -- ZDC East2 and ZDC West3 had low gains overall and were replaced in the end. According to this measurement and the calibration, several swaps of the PMTs were decided and 2 PMTs were replaced by the Brahms spares. The swaps and operating voltages, that are used since the calibration in Run 2018, are summarized in Table~\ref{HVtable}\@. The new PMTs were installed at the furthermost places from the IP, because the light inputs in the last towers are the lowest the afterpulses fall linearly with the initial pulses. 
 
