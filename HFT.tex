@@ -12,8 +12,14 @@ Detector
 that employs the novel MAPS technology that was used for the first time in a collider experiment. The overview of the 
 HFT
 subdetectors is summarized in Table~\ref{HFTtab}.
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/HFT_whole}\\
+\end{center}
+\caption{\label{HFT_whole}Render of the HFT installed inside STAR~\cite{HftTdr}\@.}
+\end{figure}
 
-\begin{table}[htb]
+\begin{table}[!htb]
 \caption{\label{HFTtab}HFT subdetectors, their average radii from the center of the beam pipe, and pitches of the sensitive pads. For the SSD, the hit resolutions $\sigma_{r\phi}$ and $\sigma_z$ are listed, instead of the pitch, because it is a double sided strip detector where the strips are not perpendicular~\cite{HftTdr}.}
 \begin{center}
 \begin{tabular}{lcccc}
@@ -29,6 +35,9 @@ PXL & Silicon pixel detector & 2.7, 8 & 20.7 & 20.7 \\
 \end{table}
 
 
+
+The purpose of the IST and the SSD is to guide the track from the TPC to the innermost layers of HFT--PXL in the high-track-multiplicity environment of STAR. Figure~\ref{HFT_layers} illustrates the improvement of the tracking resolution with each layer of the HFT\@. The PXL especially provides an unparalleled pointing precision thanks to its high granularity as well as the proximity to the primary vertex. For the runs with the HFT, the beam pipe had to be replaced with a narrower one, in order to accommodate for the low radius of the innermost layer of PXL\@. The resolution of the distance of closest approach (DCA resolution) of identified particles can be seen in Figure~\ref{DCA}. For high-momentum tracks, the resolution is as low as \SI{20}{\micro\metre}.
+
 \begin{figure}[!htb]
 \begin{center}
  \includegraphics[width=0.8\textwidth]{img/HFT_layers}\\
@@ -36,16 +45,12 @@ PXL & Silicon pixel detector & 2.7, 8 & 20.7 & 20.7 \\
 \caption{\label{HFT_layers}Average resolution improvement with each layer of the HFT, going from the TPC down to the innermost layer of the PXL detector~\cite{KubaVyzkumak}.}
 \end{figure}
 
-
-
 \begin{figure}[!htb]
 \begin{center}
  \includegraphics[width=0.6\textwidth]{img/DCAXy}\\
 \end{center}
 \caption{\label{DCA}Distance of Closest Approach (DCA\nomenclature{DCA}{Distance of Closest Approach}) from the PV in the $xy$-plane for identified particles~\cite{D0v2paper}.}
 \end{figure}
-
-The purpose of the IST and the SSD is to guide the track from the TPC to the innermost layers of HFT--PXL in the high-track-multiplicity environment of STAR. Figure~\ref{HFT_layers} illustrates the improvement of the tracking resolution with each layer of the HFT\@. The PXL especially provides an unparalleled pointing precision thanks to its high granularity as well as the proximity to the primary vertex. For the runs with the HFT, the beam pipe had to be replaced with a narrower one, in order to accommodate for the low radius of the innermost layer of PXL\@. The resolution of the distance of closest approach (DCA resolution) of identified particles can be seen in Figure~\ref{DCA}. For high-momentum tracks, the resolution is as low as \SI{20}{\micro\metre}.
 
 
 Great care was used when engineering the mechanical support so that it is lightweight while providing enough support and allows for cooling of the system. The entire HFT is mounted on a novel structure on rails so that it can be removed and replaced within 24 hours. This structure also provides air flow for cooling. For PLX and SSD  air cooling is sufficient, but the IST is also liquid cooled.
@@ -109,7 +114,15 @@ The effective thickness of the sensor is calculated as $L_\mathrm{epi}/\cos \the
  \item In the \textbf{digitization} step, noise is introduced into each pixel with a Gaussian distribution, and then the pixels with the number of electrons higher than a set ADC threshold are counted as wounded.
 \end{enumerate}
 
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.7\textwidth]{img/DIGMAPS_cosmic}\\
+\end{center}
+\caption{\label{cosmicDigmaps}Pixel slow-simulator-cluster size compared to cosmic data at the angle of 0--10°.}
+\end{figure}
+
 The DIGMAPS package can be run in the simulation mode that returns a map of wounded pixels or it can be run in a stand-alone mode, without any GEANT, in which it clusterizes the pixels into hits.
+
 
 DIGMAPS has several free parameters that have to be tuned through data. In this test, we use parameters tuned on minimum-ionizing particles (MIP\nomenclature{MIP}{Minimum-Ionizing Particle}) from beam tests with the exception of the ADC threshold which can be set for each pixel row individually, and is tuned several times during the run. The value 6.2$\,$mV has proven to reproduce the data the best.
  
@@ -118,17 +131,7 @@ The DIGMAPS model had to be verified with measured data from run 2014 to ensure 
 
 The cosmic tracks are selected as follows: Only tracks, that traverse through the center barrel of the HFT and have 4 hits in the PXL and 2 hits in the IST, are selected. At least one of the hits has to have a cluster size of two or more. These precautions are applied to eliminate fake tracks that merely connect noise hits. The hits are chosen within a square window $6\,\mathrm{mm}\times6\,\mathrm{mm}$ around the center of the track. Only 1 hit may be present inside the square.
 
-
-\begin{figure}[!htb]
-\begin{center}
- \includegraphics[width=0.7\textwidth]{img/DIGMAPS_cosmic}\\
-\end{center}
-\caption{\label{cosmicDigmaps}Pixel slow-simulator-cluster size compared to cosmic data at the angle of 0--10°.}
-\end{figure}
-
-Measured-cluster data were compared to the DIGMAPS simulations for angles up to $\theta < 60$°. Figure~\ref{cosmicDigmaps} shows a comparison of PXL cluster sizes between the cosmic data at impact angles $0\text{°} < \theta < 10$° and DIGMAPS generated at 5°\@. Both, the distributions from simulation and data, are normalized to 1 for easier comparison.  ADC threshold of 6.2$\,$mV was used for the DIGMAPS simulation. The number of hits rises with more pixels until the cluster size of 4, then it drops steeply. The width and the overall shape of the cluster-size distribution is reproduced well in DIGMAPS, however the dip at 3-pixel clusters does not show in the simulation which is, however, not considered a significant problem as it likely has little effect on the pointing resolution.
-
-\begin{figure}[!htb]
+\begin{figure}[!tb]
 \begin{center}
  \includegraphics[width=\textwidth]{img/DIGMAPS}\\
 \end{center}
@@ -136,6 +139,11 @@ Measured-cluster data were compared to the DIGMAPS simulations for angles up to 
 (right)~\cite{KubaVyzkumak}.}
 \end{figure}
 
+
+Measured-cluster data were compared to the DIGMAPS simulations for angles up to $\theta < 60$°. Figure~\ref{cosmicDigmaps} shows a comparison of PXL cluster sizes between the cosmic data at impact angles $0\text{°} < \theta < 10$° and DIGMAPS generated at 5°\@. Both, the distributions from simulation and data, are normalized to 1 for easier comparison.  ADC threshold of 6.2$\,$mV was used for the DIGMAPS simulation. The number of hits rises with more pixels until the cluster size of 4, then it drops steeply. The width and the overall shape of the cluster-size distribution is reproduced well in DIGMAPS, however the dip at 3-pixel clusters does not show in the simulation which is, however, not considered a significant problem as it likely has little effect on the pointing resolution.
+
+
+
 A similar evaluation was later performed with Au+Au collisions at the center-of-mass energy per nucleon $\snn = \SI{200}{\giga\electronvolt}$ from run 2014~\cite{KubaVyzkumak}\@. This time, the cluster sizes generated by DIGMAPS are compared to the clusters in tracks from identified particles and all charged tracks (see Figure~\ref{AuAuDigmaps})\@.  In general, Protons have slightly higher cluster sizes, compared to pions and kaons, however the overall shape stays the same and is reproduced by DIGMAPS.
 
-Overall DIGMAPS have proven to be a useful tool that is incorporated in the PXL slow simulator. The cluster-size distributions copy the data well enough so that the resolution of the HFT and the efficiency are reproduced with sufficient accuracy.
+Overall, DIGMAPS have proven to be a useful tool that is incorporated in the PXL slow simulator. The cluster-size distributions copy the data well enough so that the resolution of the HFT and the efficiency are reproduced with sufficient accuracy.

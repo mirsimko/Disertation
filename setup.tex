@@ -7,9 +7,11 @@ Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAn
 
 \section{Relativistic Heavy Ion Collider (RHIC)\label{RHIC}}
 
-\begin{table}[!htb]
+\begin{table}[!t]
 \caption{\label{runTableYears}Summary of RHIC runs between 2013 and 2019 with integrated luminosity at the STAR experiment~\cite{RHICrunsTable}. As of writing this thesis, the 2019 run is currently on-going, therefore the final luminosity data are not available.}
 \begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{spacing}{1.15}
 \begin{tabular}{llD{.}{.}{3.1}c}
 \toprule
  Year & Species & \multicolumn{1}{c}{\snn\ (GeV)} & Luminosity (nb$^{-1}$) \\
@@ -41,6 +43,8 @@ Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAn
        & Au+Au fixed target & 7.8 & --- \\
 \bottomrule
 \end{tabular}
+\end{spacing}
+\renewcommand{\arraystretch}{1.5}
 \end{center}
 \end{table} 
 
@@ -213,15 +217,14 @@ In 2019, the time-of-flight coverage of STAR was greatly expanded by a new upgra
 
 % -----------------------------------------------------------------------------------------------------------
 \section{Heavy Flavor Tracker (HFT)\label{HFTsection}} 
-
-\include{HFT}
+\input{HFT}
 
 
 % -----------------------------------------------------------------------------------------------------------
 \section{Zero Degree Calorimeter (ZDC)\label{ZDCsection}} \nomenclature{ZDC}{Zero Degree Calorimeter}
 
 
-
+\input{ZDC}
 
 
 %-------------------------------------------------------------------------------------------------------------------

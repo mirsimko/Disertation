@@ -42,6 +42,7 @@
 \usepackage{fancyhdr}
 \usepackage{datetime}
 
+
 \newdateformat{czechdate}{\THEDAY.\THEMONTH.\ \THEYEAR}
 \newdateformat{justyear}{{\THEYEAR}}
 %%%%%%% dvakrat prelozit build.tex a pak spustit
@@ -79,8 +80,12 @@
 
 
 \usepackage{geometry}
+\usepackage[doublespacing]{setspace}  % package for setting custom spacing (useful in long tables)
+\usepackage{caption}
  \geometry{verbose,a4paper,tmargin=4cm,bmargin=3.5cm,lmargin=3cm,rmargin=2.5cm}
- \linespread{1.3}
+%  \linespread{1.5}
+ \captionsetup{font={stretch=1.5}}  % this fixes spacing in captions
+ \renewcommand{\arraystretch}{1.5}  % this fixes spacing in tables
 
 %-------------------------------------------------------------------------------------------------------------------
 \hyphenation{ap-pro-xi-mate}

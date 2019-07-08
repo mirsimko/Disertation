@@ -3,7 +3,9 @@ $\Lambda_\mathrm{c}^\pm$ is the lightest baryon containing a charm quark. As suc
 The $\Lambdac^\pm$ were measured for the first time in heavy-ion--ion collisions~\cite{GuannanLc} at the STAR experiment at RHIC\@. In particular, the $\Lambda_\mathrm{c}$ measurement was enabled by the Heavy Flavor Tracker (HFT)~\cite{Kapitan} upgrade that took data in the years 2014--2016\@. The HFT is described in more detail in section~\ref{HFTsection}\@. In this chapter, we describe the measurement of the \Lambdac\ from signal extraction to the ratios of $\Lambdac/\dzero$ and $\Lambdac^-/\Lambdac^+$ invariant yields. 
 % \section{$\Lambda_\mathrm{c}$ measurements in Au+Au collisions at RHIC}\\
 
-\section{Track selection}
+\section{Event and track selection}
+The Au+Au collisions are selected so that the PV lies fully inside the volume of the HFT\@. The distance of the PV from the center of the detector along the $z$-axis is required as $|v_z| < 6\,$cm\nomenclature{$v_z$}{Position of the primary vertex along the $z$-axis} and the difference between the $v_z$ determined from the tracks and the one determined by the VPD has to be less than 3$\,$cm. 
+
 For this analysis, we use triplets of pions, Kaons, and pions. The HFT tracking is required which means: In the 2014 data, the tracks are required to have at least one hit in each pixel layer and a hit in the IST (the SSD is not used in the tracking in 2014); in 2016 data, we require at least one hit in each pixel layer and at least one hit in either IST or SSD\@.  In the TPC, tracks were selected to ensure that they are not fakes consisting of hits that do not come from one particle, but e.g.\ a combination of noise or hits from several tracks combined into one. We require the number of hits $N_\mathrm{hits} \geq 20$ and the ratio to maximum number of hits in the track trajectory $N_\mathrm{hits}/N_\text{hits max} > 0.52$\@. The minimum track \pt\ was chosen as 0.5$\,$GeV/$c$ to save computation time and because bellow, the \Lambdac\ cannot be extracted as they are drowned in the combinatorial background\@.
 
 As for the PID, looser cuts were applied to the $\pi^\pm$, because of their higher abundance, compared to K$^\mp$ and p$^\pm$. In the TPC, we compare the \dedx\ value of the track to the width of the distribution $\sigma_{\dedx}$ of each particle species at the track momentum
@@ -16,6 +18,17 @@ We set the cut at $|N_\sigma| < 3$ for \pipm\ and $|N_\sigma| < 2$ for \Kmp\ and
 \end{equation}
 for all particles. All tracks are then saved and combined into triplets so that additional cuts can be applied.
 
+\section{Centrality determination}
+The centrality of the collision is determined by the number of tracks $N_\mathrm{tracks}$ with at least 10 TPC hits in the rapidity range $|\eta| < 0.5$ and $\mathrm{DCA} < 3\,$cm. This number is then corrected with regards to the geometrical efficiency according to $v_z$ and to the TPC efficiency, according to instant luminosity. Figure~\ref{tab:centrality} shows the centrality definitions extracted from Monte-Carlo simmulations~\cite{centrality, HiroshiCentrality}, using the Glauber Model. The number of binary nucleon--nucleon collisions $N_\mathrm{coll}$ and the number of participants $N_\mathrm{part}$ were calculated in the model as well.
+
+\begin{table}[!htb]
+\caption{\label{tab:centrality} Centrality definitions in 2014 and 2016 Au+Au collisions at $\snn = 200\,$GeV, extracted from Glauber-Model simmulations.}
+\begin{center}
+\input{centralityTable.tex}
+
+\end{center}
+\end{table}
+
 
 \section{Topological reconstruction and cuts optimization}
 
@@ -23,12 +36,11 @@ All three \Lambdac-decay daughter particles come from the same secondary vertex 
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width = 0.5\textwidth]{img/LambdaMethod}
-\caption{Illustration of variables used for topological cuts for the \Lambdac\ analysis.}
-\label{fig:method}
+\includegraphics[width = 0.7\textwidth]{img/LambdaMethod}
+\caption{\label{fig:method}Illustration of variables used for topological cuts for the \Lambdac\ analysis.}
 \end{figure}
 
-The SV of each \Lambdac\ candidate triplet is reconstructed as follows: First, the distance of closest approach (DCA) of the PV (yellow star in Figure~\ref{fig:method}) to each track helix is calculated and an initial cut is applied. Next, we proceed with the reconstruction of the SV itself\@: Since the SV is very close to the PV (in the order of tens of $\upmu$m), the track helices can be approximated via straight lines. This approximation has been shown to have negligible effect on all the topological variables and saves the computational time by $\sim$2 orders of magnitude since the points of closest approach (PCA\nomenclature{PCA}{Point of Closest Approach}) of two lines can be calculated analytically. The PCA is calculated for each combination of two tracks, i.e. we end up with 6 PCA. The vector average of each two PCA is stored as the, so called, vertex of daughter pairs (VDP\nomenclature{VDP}{Vertex of Daughter Pairs} -- yellow circles in Figure~\ref{fig:method})
+The SV of each \Lambdac\ candidate triplet is reconstructed as follows: First, the distance of closest approach (DCA) of the PV (yellow star in Figure~\ref{fig:method}) to each track helix is calculated and an initial cut is applied. Next, we proceed with the reconstruction of the SV itself\@: Since the SV is very close to the PV (in the order of tens of $\upmu$m), the track helices can be approximated via straight lines. This approximation has been shown to have negligible effect on all the topological variables and saves the computational time by $\sim$2 orders of magnitude since the points of closest approach (PCA\nomenclature{PCA}{Point of Closest Approach}) of two lines can be calculated analytically. The PCA is calculated for each combination of two tracks, i.e.\ we end up with 6 PCA\@. The vector average of each two PCA is stored as the, so called, vertex of daughter pairs (VDP\nomenclature{VDP}{Vertex of Daughter Pairs} -- yellow circles in Figure~\ref{fig:method})
 \begin{equation}
 \overrightarrow{\mathrm{VDP}}_{i,j} = \frac{1}{2} \left( \overrightarrow{\mathrm{PCA}}_i + \overrightarrow{\mathrm{PCA}}_j \right)\,. 
 \end{equation}
@@ -42,7 +54,7 @@ Finally, the SV position (red star in Figure~\ref{fig:method}) is calculated as 
 
 Since the \Lambdac\ daughter tracks come from the same SV, the signal differs from the background in several key topological variables. The chosen ones are shown in Figure~\ref{fig:method} and they are listed here:
 \begin{itemize}
- \item The distance between the reconstructed PV and SV: the ``Decay length'' (full red line),
+ \item The distance between the reconstructed PV and SV\@: the ``Decay length'' (full red line),
  \item the distances of closest approach (DCA) of each daughter track to the PV,
  \item the maximum distance between each pair of daughter tracks (green dashed lines),
  \item the maximum distance of pair vertices (full light blue lines),
@@ -50,12 +62,12 @@ Since the \Lambdac\ daughter tracks come from the same SV, the signal differs fr
 \end{itemize}
 The difference between the data and background is illustrated in Figure~\ref{fig:optimization} from Run 2014\@. While there is not a clear-cut separation between the signal and the background, using multivariate analysis, we can optimize the selection criteria for \Lambdac\ candidates.
 
-\begin{figure}[htb]
+\begin{figure}[!htb]
 \centering
-\includegraphics[height = 5.5cm]{img/cosTheta}
-\includegraphics[height = 5.5cm]{img/dLength}
-\caption{Examples of topological variables used for cuts: Left panel: Decay length; Right panel: cos($\theta$)\@. The red line is the background from data with a wrong charge sign combination and the signal is extracted from the data-driven Monte Carlo simulation.}
-\label{fig:optimization}
+\includegraphics[width=0.6\textwidth]{img/cosTheta}\\[1cm]
+\includegraphics[width=0.6\textwidth]{img/dLength}
+\caption{\label{fig:optimization}Examples of topological variables used for cuts: Left panel: Decay length; Right panel: cos($\theta$)\@. The red line is the background from data with a wrong charge sign combination and the signal is extracted from the data-driven Monte Carlo simulation.}
+
 \end{figure}
 
 To optimize the cuts on the topological variables, we maximize the significance $s$ of the \Lambdac\ signal
@@ -107,8 +119,8 @@ This simulation has been verified, using simulated $\Lambdac^\pm$ decays in full
 \begin{figure}[htb]
 \centering
 \includegraphics[width = 0.6\textwidth]{img/mixedEvent12x}
-\caption{Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$. Mixed-event and wrong-sign background subtraction methods are compared.}
-\label{fig:invMass}
+\caption{\label{fig:invMass}Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$. Mixed-event and wrong-sign background subtraction methods are compared.}
+
 \end{figure}
 
 The invariant mass spectra of the \Lambdac\ can be found in Figure~\ref{fig:invMass}\@. 
@@ -129,8 +141,8 @@ $
 \footnotesize{(b)}
 }}
 $
-\caption{The event-mixing method: (a) Illustration of how events are selected. Each particle species is selected from a different event. (b) Each mixed track has to be shifted by the difference of the positions of the primary vertices of the two events.}
-\label{fig:mixedIllustrations}
+\caption{\label{fig:mixedIllustrations}The event-mixing method: (a) Illustration of how events are selected. Each particle species is selected from a different event. (b) Each mixed track has to be shifted by the difference of the positions of the primary vertices of the two events.}
+
 \end{figure}
 
 The events are always mixed within the same centrality and $v_z$ bin in order to reconstruct the same shape of the background. Figure~\ref{fig:mixedIllustrations} shows, how the mixed-event method is performed. When a buffer of 5 events of the same centrality and $v_z$ is filled, first protons are combined with kaons from another event, then these pairs are combined with pions. We can make 12 ($3 \times 4$) combinations for a buffer with 5 events. Because of the topological cuts, the tracks have to be shifted when they are mixed into another event by the difference in position of the primary vertices.
@@ -141,8 +153,8 @@ The events are always mixed within the same centrality and $v_z$ bin in order to
 \begin{figure}[htb]
 \centering % negative space after an empty character
 \includegraphics[width=0.6\textwidth]{img/BaryonMesonRatio_onlyData_430}
-\caption{Ratio of the yield of $\Lambda_\mathrm{c}$ over D$^0$ vs $p_\mathrm{T}$ measured at STAR in Au+Au collisions with centrality 10--60$\,\%$~\cite{GuannanLc} compared to coalescence models~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM} --- see description in text.}
-\label{fig:ratio}
+\caption{\label{fig:ratio}Ratio of the yield of $\Lambda_\mathrm{c}$ over D$^0$ vs $p_\mathrm{T}$ measured at STAR in Au+Au collisions with centrality 10--60$\,\%$~\cite{GuannanLc} compared to coalescence models~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM} --- see description in text.}
+
 \end{figure}
 
 In this analysis, the efficiency corrections of the yield were done using the data-driven simulations and the systematic uncertainties were obtained by varying the cuts. The ratio of the yields of the $\Lambda_\mathrm{c}$ and D$^0$ was calculated from the published D$^0$ spectrum~\cite{publishedDzero}. The resulting ratio for $p_\mathrm{T}$ of 3--6$\,$GeV$/c$ and centrality of 10--60$\,\%$ was calculated as $N(\Lambda_\mathrm{c}^+ + \overline{\Lambda_\mathrm{c}}^-)/N(\mathrm{D^0 + \overline{D^0}}) = 1.31 \pm 0.26\text{(stat.)} \pm 0.42$(sys.). The systematic uncertainties were inferred by varying all the cuts.
