@@ -134,9 +134,9 @@ in the P10 gas is calibrated every several hours via a laser calibration system~
 
 
 The layout of the TPC is shown in Figure~\ref{TPC}. It is barrel-shaped with the outer radius of \SI{2}{\metre}, inner radius of \SI{0.5}{\metre} and length of \SI{4.2}{\metre}
-with the beam pipe going through the center. This barrel is filled with the P10 gas: a mixture of 90$\,\%$ argon and 10$\,\%$ methane. It covers the full azimuth ($0 < \phi < 2\pi$) and the outer edge covers the
+with the beam pipe going through the center. This barrel is filled with the P10 gas: a mixture of 90$\,\%$ argon and 10$\,\%$ methane. It covers the full azimuth \nomenclature{$\phi$}{Azimuthal angle (in a perpendicular plane to the beam pipe)}($0 < \phi < 2\pi$) and the outer edge covers the
 pseudorapidity range of $|\eta| < 1$. 
-In the center ($z = 0$), it is divided into two halves by the, so called, Central Membrane which is connected to an electric 
+In the center ($z = 0$)\nomenclature{$z$}{Horizontal axis in STAR along the beam pipe}, it is divided into two halves by the, so called, Central Membrane which is connected to an electric 
 potential of $-\SI{28}{\kilo\volt}$\@.  The sides of the cylinder consist of the, so called, field cage that ensures that the electric field in the TPC stays uniform.
 
 \begin{figure}[htb]
@@ -148,7 +148,7 @@ potential of $-\SI{28}{\kilo\volt}$\@.  The sides of the cylinder consist of the
 
 The bases of the TPC cylinder are grounded and equipped with multi-wire proportional chambers
 (MWPC\nomenclature{MWPC}{Multi-Wire Proportional Chamber}) as sensitive detectors. Each side consists of 12 sectors, numbered like on a clock and split into 
-the inner and outer parts. A side (the $xy$-plane) view of the sectors is shown in Figure~\ref{TPCside}\@. Each MWPC consists of 3 planes of wires mounted over a plane of sensitive pads. Going from inside of the TPC volume out, the innermost plane of wires makes the, so called, gating grid. This part acts as a shutter that does not allow any electrons to enter the MWPC and it stops the ions from escaping the MWPC into the drift area where they would distort the electric field. It also lowers the amount of noise in the MWPC as ions are eaten out by the wires. The second row of wires is called the Shield Grid and it terminates the amplification region created by the outermost plane of wires: the Anode Grid. Here, the drifting electrons are multiplied in avalanches around the wires where the voltage differentials are high. These wires are set on potential of $\sim$1350$\,$V which sets the signal multiplication to $\sim$20$\times$\@: A value selected as a sweet spot between spatial resolution and the signal amplification. The signal is subsequently read out from the rectangular pads behind the anode wires. The pads are placed so that they always have an anode wire in the middle and their pitch is 6.7$\,$mm along the wires and 20$\,$mm --- same as the distance between the wires --- across. 
+the inner and outer parts. A side (the \nomenclature{$x$}{Horizontal axis in STAR, perpendicular to the beam pipe}\nomenclature{$y$}{Vertical axis in STAR, also rapidity}$xy$-plane) view of the sectors is shown in Figure~\ref{TPCside}\@. Each MWPC consists of 3 planes of wires mounted over a plane of sensitive pads. Going from inside of the TPC volume out, the innermost plane of wires makes the, so called, gating grid. This part acts as a shutter that does not allow any electrons to enter the MWPC and it stops the ions from escaping the MWPC into the drift area where they would distort the electric field. It also lowers the amount of noise in the MWPC as ions are eaten out by the wires. The second row of wires is called the Shield Grid and it terminates the amplification region created by the outermost plane of wires: the Anode Grid. Here, the drifting electrons are multiplied in avalanches around the wires where the voltage differentials are high. These wires are set on potential of $\sim$1350$\,$V which sets the signal multiplication to $\sim$20$\times$\@: A value selected as a sweet spot between spatial resolution and the signal amplification. The signal is subsequently read out from the rectangular pads behind the anode wires. The pads are placed so that they always have an anode wire in the middle and their pitch is 6.7$\,$mm along the wires and 20$\,$mm --- same as the distance between the wires --- across. 
 
 Until the run 2018, the inner part utilized 13 rows and outer part with 32 rows of pads, the inner sectors, however, underwent a substantial 
 upgrade in the year 2019~\cite{iTPC}. This upgrade increased the number of sensitive pad rows in the inner sector to the same number as in the outer sectors. This greatly
@@ -168,7 +168,7 @@ A plot of particle-species separation can be found in Figure~\ref{TpcPid}.
 
 
 
-The main purpose of the Time-Of-Flight (TOF\nomenclature{TOF}{Time-Of-Flight detector}) detector~\cite{TOFproposal} is to extend the PID capabilities of STAR into higher 
+The main purpose of the Time-Of-Flight (TOF) detector~\cite{TOFproposal} is to extend the PID capabilities of STAR into higher 
 momenta via the measurements of the time of flight from its point of origin of the charged particles (or vertex) to the TOF 
 detector, thus measuring its velocity. It was partially installed at STAR in 2009 and the remainder was added in 2010 
 to make the TOF fully operational.
@@ -197,7 +197,7 @@ Figure~\ref{TOF_mrpc} shows two side views of the TOF tray. A MRPC basically con
 \caption{\label{TOF_pid}PID capabilities of the TOF via measurement of the inverse velocity $1/\beta$ versus \pt in the 2014 Au+Au run at $\snn = 200\,$GeV\@. }
 \end{figure}
 
-The PID capabilities of TOF are demonstrated in Figure~\ref{TOF_pid}\@. The fraction of the speed of light in vacuum $\beta$ is calculated as
+The PID capabilities of TOF are demonstrated in Figure~\ref{TOF_pid}\@. The fraction of the speed of light in vacuum $\beta$\nomenclature{$\beta$}{Fraction of the speed of light in vacuum} is calculated as
 \begin{equation}
  \beta = \frac{L}{ct}
 \end{equation}

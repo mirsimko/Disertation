@@ -1,4 +1,4 @@
-\documentclass[a4paper,titlepage,11pt]{book} %draft
+\documentclass[a4paper,titlepage,11pt,twoside,openright]{report} %draft
 
 
 % \usepackage[square,comma,numbers]{natbib}
@@ -47,7 +47,7 @@
 \newdateformat{justyear}{{\THEYEAR}}
 %%%%%%% dvakrat prelozit build.tex a pak spustit
 % bibtex disertation
-% makeindex disertation.nlo -s disertation.ist -o disertation.nls a znovu prelozit build.tex %%%%%%%-\parsep
+% makeindex disertation.nlo -s nomencl.ist -o disertation.nls a znovu prelozit build.tex %%%%%%%-\parsep
 
 %-------------------------------------------------------------------------------------------------------------------
 
@@ -71,6 +71,7 @@
 \newcommand{\comp}[1]{\texttt{alidcscom#1}}
 \newcommand{\Pconv}{\ensuremath{P_{\mathrm{conv}}}}
 \newcommand{\snn}{\ensuremath{\sqrt{s_\text{NN}}}}
+\newcommand{\snnFull}{\ensuremath{\sqrt{s_\text{NN}} = 200\,\text{GeV}}}
 \newcommand{\Raa}{\ensuremath{R_\text{AA}}}
 \newcommand{\Rcp}{\ensuremath{R_\text{cp}}}
 \newcommand{\dzero}{\ensuremath{\text{D}^0}}
@@ -86,6 +87,7 @@
 %  \linespread{1.5}
  \captionsetup{font={stretch=1.5}}  % this fixes spacing in captions
  \renewcommand{\arraystretch}{1.5}  % this fixes spacing in tables
+ 
 
 %-------------------------------------------------------------------------------------------------------------------
 \hyphenation{ap-pro-xi-mate}
@@ -179,30 +181,38 @@
 \chapter{Introduction}
 \pagenumbering{arabic}
 \setcounter{page}{1}
+vbnfnd
 
-
+\cleardoublepage
 \chapter{The Physics of Quark-Gluon Plasma}
 
 % \chapter{\Lambdac\ measurements at the LHC\label{LcLHC}}
 \input{introduction}
 
-
-% \chapter{Experimental setup\label{experiment}}
-\chapter{Solenoidal Tracker at Relativistic-Heavy-Ion Collider (STAR)\label{STARchapter}}
-\input{setup}
-
-% \chapter{Charm hadrons production at RHIC\label{cQuarkRHIC}}
+\cleardoublepage
 \chapter{Open Heavy Flavor and Quark-Gluon Plasma}
 \input{hf}
 \input{lc}
 
+
+% \chapter{Experimental setup\label{experiment}}
+\cleardoublepage
+\chapter{Solenoidal Tracker at Relativistic-Heavy-Ion Collider (STAR)\label{STARchapter}}
+\input{setup}
+
+% \chapter{Charm hadrons production at RHIC\label{cQuarkRHIC}}
+
+
 % \chapter{\Lambdac\ baryon analysis\label{analysis}}
+\cleardoublepage
 \chapter{Reconstruction of the $\Lambda_\text{c}$ Baryon in Au+Au Collisions}
 \input{analysis}
 
+\cleardoublepage
 \chapter{Results}
+\input{results}
 
-
+\cleardoublepage
 \chapter{Conclusion and outlook} \label{conclusion}
 \input{conclusion}
 % % -------------------------------------------------------------------------------------------------------------------
@@ -222,6 +232,7 @@
 \input{bibliography}
 % % -------------------------------------------------------------------------------------------------------------------
 
+\cleardoublepage
 \begin{appendices}
 \chapter{Proceedings and posters}
 \input{papers}

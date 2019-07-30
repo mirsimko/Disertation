@@ -19,7 +19,7 @@ We set the cut at $|N_\sigma| < 3$ for \pipm\ and $|N_\sigma| < 2$ for \Kmp\ and
 for all particles. All tracks are then saved and combined into triplets so that additional cuts can be applied.
 
 \section{Centrality determination}
-The centrality of the collision is determined by the number of tracks $N_\mathrm{tracks}$ with at least 10 TPC hits in the rapidity range $|\eta| < 0.5$ and $\mathrm{DCA} < 3\,$cm. This number is then corrected with regards to the geometrical efficiency according to $v_z$ and to the TPC efficiency, according to instant luminosity. Figure~\ref{tab:centrality} shows the centrality definitions extracted from Monte-Carlo simmulations~\cite{centrality, HiroshiCentrality}, using the Glauber Model. The number of binary nucleon--nucleon collisions $N_\mathrm{coll}$ and the number of participants $N_\mathrm{part}$ were calculated in the model as well.
+The centrality of the collision is determined by the number of tracks $N_\mathrm{tracks}$ with at least 10 TPC hits in the rapidity range $|\eta| < 0.5$ and $\mathrm{DCA} < 3\,$cm. This number is then corrected with regards to the geometrical efficiency according to $v_z$ and to the TPC efficiency, according to instant luminosity. Figure~\ref{tab:centrality} shows the centrality definitions extracted from Monte-Carlo simmulations~\cite{centrality, HiroshiCentrality}, using the Glauber Model. The number of binary nucleon--nucleon collisions $N_\mathrm{coll}$ and the number of participants $N_\mathrm{part}$\nomenclature{$N_\mathrm{part}$}{Number of participants} were calculated in the model as well.
 
 \begin{table}[!htb]
 \caption{\label{tab:centrality} Centrality definitions in 2014 and 2016 Au+Au collisions at $\snn = 200\,$GeV, extracted from Glauber-Model simmulations.}
@@ -32,7 +32,7 @@ The centrality of the collision is determined by the number of tracks $N_\mathrm
 
 \section{Topological reconstruction and cuts optimization}
 
-All three \Lambdac-decay daughter particles come from the same secondary vertex (SV)\@. In reality, however, it is rather challenging to recognize a \Lambdac\ decay from random combinations of \pipm, \Kmp, and \ppm, because of the detector resolution and because the \Lambdac\ decay close to the PV\@.
+In our dacay channel of choice, all the three daughter particles come from the same secondary vertex (SV)\@. In reality, however, it is rather challenging to recognize a $\Lambdac^\pm$ decay from random combinations of \pipm, \Kmp, and \ppm, because of the detector resolution and because the $\Lambdac^\pm$ decay close to the PV\@. Moreover, \pipm, \Kmp, and \ppm\ are the most abundant charged particles in a typical Au+Au collision.
 
 \begin{figure}[!htb]
 \centering
@@ -44,12 +44,11 @@ The SV of each \Lambdac\ candidate triplet is reconstructed as follows: First, t
 \begin{equation}
 \overrightarrow{\mathrm{VDP}}_{i,j} = \frac{1}{2} \left( \overrightarrow{\mathrm{PCA}}_i + \overrightarrow{\mathrm{PCA}}_j \right)\,. 
 \end{equation}
- 
 Finally, the SV position (red star in Figure~\ref{fig:method}) is calculated as an average of all the PCA
 \begin{equation}
 \overrightarrow{\mathrm{SV}}=\frac{1}{6}\sum_{i=1}^6 \overrightarrow{\mathrm{PCA}}_i \,.
 \end{equation}
-
+At this point, the time of flight information of the daughter particles is corrected since their point of origin is known. The TOF PID selection is then reapplied.
 
 
 Since the \Lambdac\ daughter tracks come from the same SV, the signal differs from the background in several key topological variables. The chosen ones are shown in Figure~\ref{fig:method} and they are listed here:
@@ -84,7 +83,18 @@ where $B_\text{wrong-sign}$ is a background estimate, using the wrong-sign metho
 
 \subsection{Boosted Decision Trees}
 
-The selection criteria for reduction of the combinatorial background were optimized via the Toolkit for Multivariate Analysis (TMVA) Package~\cite{TMVA}. For this analysis, we use the Boosted Decision Trees (BDT\nomenclature{BDT}{Boosted Decision Trees}) method --- a well-established method for selection criteria. The advantages, compared to set cuts in each variable, is that the BDT selects a hyperplane in the space of all selected variables. Thus, we avoid the, so called, dimensionality problem --- the fact that strait cuts tend to fail in many-dimensional spaces. Also, the BDT tend to produce a higher significance of the signal which was the case in our analysis as well. The significance of the \Lambdac\ improved approximately twice, using the BDT, compared to set (rectangular) cuts.
+The selection criteria for reduction of the combinatorial background were optimized via the Toolkit for Multivariate Analysis (TMVA) Package~\cite{TMVA}. For this analysis, we use the Boosted Decision Trees (BDT\nomenclature{BDT}{Boosted Decision Trees}) method --- a well-established method for supervised machine learning. 
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.6\textwidth]{img/BDT}
+\caption{\label{BDT}An illustration of principle of decision-tree-based algorithms~\cite{TMVA}\@.}
+\end{figure}
+
+An illustration of a decision tree is shown in Figure~\ref{BDT}\@. Decision-tree-based algorithms recursively separate the data into binary subsets until a stop criterion --- typically a maximum depth of the tree --- is met. Large tree depths can, however, lead to overtraining. The BDT algorithm solves this issue by using a large number of trees with low depths (usually 3--5)\@.  
+
+
+The advantages, compared to set (so-called rectangular) cuts in each variable, is that the BDT selects a hyperplane in the space of all selected variables. Thus, we avoid the, so called, dimensionality problem --- the fact that strait cuts tend to fail in many-dimensional spaces, i.e.\ the significance limit in infinite dimension space goes to zero. Even in as few as two dimensions, however, the BDT tend to produce a higher significance of the signal. In this analysis, the significance of the \Lambdac\ improved approximately twice, using the BDT, compared to rectangular cuts.
 
 
 
