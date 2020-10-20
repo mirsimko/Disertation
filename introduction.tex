@@ -1,40 +1,101 @@
-This work is dedicated to study of open charm in ultra-relativistic heavy-ion collisions at the Solenoidal Tracker At RHIC (STAR\nomenclature{STAR}{Solenoidal Tracker At RHIC}) experiment at the Relativistic Heavy-Ion Collider (RHIC\nomenclature{RHIC}{Relativistic Heavy Ion Collider}) with the emphasis on the \Lambdac\ baryon which has never been measured before in heavy ion--ion collisions and has a potential to uncover some key properties of the strongly coupled quark-gluon plasma.
+In this chapter, we explain basic concepts that thesis is concerned with. First, we briefly talk about the properties of the strong interaction and its theory --- quantum chromodynamics --- then we introduce the physics of ultra-relativistic heavy-ion collisions, such as the ones that take place at RHIC\@. The main topics, such as physics of the production of baryons and heavy quarks with the current understanding of their interaction with the quark-gluon plasma are discussed in more detail.
 
-\textcolor{red}{In this chapter, we introduce the physics of heavy flavor and \Lambdac\ in heavy-ion collisions; Chapter~\ref{cQuarkRHIC} deals with the production of other open-charm hadrons at RHIC\@; Chapter~\ref{LcLHC} describes the reconstruction of \Lambdac\ at other experiments besides STAR, i.e.\ at the LHC\@; In Chapter~\ref{experiment} RHIC, STAR, and the important detectors for the \Lambdac\ analysis are described; In Chapter~\ref{analysis}, the main topic of this work, the \Lambdac\ analysis is shown; Finally in the last chapter, conclusions are drawn together with requirements to finish the \Lambdac\ analysis to the point of publication.}
-
-\section{Ultra-relativistic heavy-ion collisions}
-
-Physicists have constructed facilities that are capable of creating a new state of matter a strongly-coupled quark-gluon plasma (sQGP\nomenclature{sQGP}{strongly-coupled Quark-Gluon Plasma}). One of them is the Relativistic Heavy Ion Collider (RHIC -- described in Section~\ref{RHIC}) located in Brookhaven National Laboratory in the USA\@. It is capable of reaching the collision energy per nucleon of $\snn= \SI{200}{\giga\electronvolt}$\nomenclature{\snn}{Center-of-mass energy per nucleon}\@. The collisions are called ultra-relativistic because the energy of the nucleons is much higher than their rest masses ($E \gg m$).
-
-\section{Phase diagram of the quark-gluon plasma (QGP)}\nomenclature{QCD}{Quantum Chromodynamics}\nomenclature{QGP}{Quark-Gluon Plasma}
+\section{The Standard Model}
 
 \begin{figure}[!htb]
 \centering
+\includegraphics[width=\textwidth]{img/standard_model}
+\caption[Elementary particle in the standard model.]{\label{standard_model}Elementary particle in the standard model. Adopted from~\cite{standardModel}\@.}
+\end{figure}
+
+The Standard Model of particle physics (SM\nomenclature{SM}{Standard Model}) is a theoretical framework for elementary particles and their interactions. It describes several particles that are elementary within this framework: 12 fermions with spin 1/2 and 5 bosons with whole-number spins (see Fig.\ \ref{standard_model})\@.
+
+During the rapid development of detection techniques of cosmic rays and accelerator experiments after the Second World War resulted in the discovery of numerous new particles. A new particle ZOO was being filled rapidly and it was the task of particle physics to find patterns among them. Two physicists --- Gell-Man and Zweig --- found the quark theory independently and thus completed just such a task. Most of the particles -- hadrons -- were found to consist of, so called, quarks with a quantum number, so called flavor, describing their species. At the time, 3 quarks were known: u (up), d (down), and s (strange)\@. Today, these are referred to as light-flavor quarks. In nature, quarks are never found as separate particles; Rather, they are bound in hadrons. This phenomenon is called confinement.
+
+In 1974, the discovery of an unexpected particle at two experiments almost simultaneously changed the landscape of particle physics for good. A resonance at the invariant mass of 3.1$\,$GeV/$c^2$, initially called `J', was found at the precise e$^+$--e$^-$ pair spectrometer on the Alternating-Gradient Synchrotron (AGS\nomenclature{AGS}{Alternating-Gradient Synchrotron}) at Brookhaven National Laboratory (BNL\nomenclature{BNL}{Brookhaven National Laboratory})\@. This find was published in~\cite{JpsiBNL}. A day later, The same journal received a paper from the experiment SPEAR at Stanford Linear Accelerator Laboratory (SLAC\nomenclature{SLAC}{Stanford Linear Accelerator Laboratory})~\cite{JpsiSLAC} that discovered a sharp resonance at the same invariant mass, wishing to call it $\psi$\@. In the end, his particle was called J/$\psi$ and was found to be a long predicted new quarkonium --- a meson consisting of a quark and its antiquark --- in this case of a newly discovered charm quark (c)\@.
+
+A next family of heavy quarks followed as a third generation of quarks was theoretically predicted by Makoto Kobayashi and Toshihide Maskawa to explain the violation of the CP--symmetry in the weak-force theory~\cite{KobayashiMaskawa}\@. There were other explanations for this phenomenon, but finally, the discussion was settled with the discovery of the bottomonium $\Upsilon$ at the E288 experiment on the Bevalac accelerator at Fermilab~\cite{bottomDiscovery}\@. The $\Upsilon$ meson consists of the bottom quark b and its antiparticle $\overline{\mathrm{b}}$\@. The last quark, so called top (t) was discovered by the D0 experiment at the Tevatron accelerator at Fermilab by measuring the invariant mass of jets~\cite{topQuark}. 
+
+Nowadays, quark flavors are known, divided into 3 generations (or families)\@. The first generation is composed of of u and d quarks, the second consists of s and c, and the third one contains b and t. Strong theoretical and experimental evidence is mounting against the existence of a fourth or further generations~\cite{fourGensPhysLettB,fourGensPRL}.
+
+To the 3 generations of quarks, there are 3 families of leptons. These are fermions that unlike quarks do not interact strongly and thus do not form hadrons. The electron\nomenclature{e$^-$}{electron} was discovered by J.J.\ Thompson in the end of the 19th century~\cite{thomson1897cathode} in an experiment with a cathode in an electric field\@. This later led him to formulate the plum pudding model of atom. The electron's antiparticle --- the positron (e$^+$\nomenclature{e$^+$}{positron}) --- was discovered much later (in 1930) from the study of cosmic rays in magnetic field by Carl D.\ Anderson~\cite{positron}\@. The same person with his colleague Seth Neddermeyer later discovered the muon ($\upmu^-$) in cosmic rays~\cite{muon}\@. At the time, the muon was theorized to be the Yukawa particle, i.e.\ the mediating particle of the strong nuclear force in the nucleus. This was later found out to be false as the muon does not interact strongly and another particle was found in its place --- the pi-meson (or pion,~$\uppi$\nomenclature{$\uppi$}{pion})~\cite{pion} a meson, consisting of the u and d quarks, that has similar mass~\cite{PDG}, but interacts strongly. The third and final generation of charged leptons was discovered at SLAC by finding the tau-lepton (tauon, $\uptau$\nomenclature{$\uptau$}{tauon})~\cite{tau} at an e$^+$--e$^-$ accelerator\@. This concluded the search for the standard-model particle charged leptons. Today we know 3 families of leptons, that contains the electron, muon, and tauon, together with their antiparticles.
+
+In addition to the charged leptons, there are also neutral ones, called neutrinos ($\upnu$\nomenclature{$\upnu$}{neutrino})\@. The first indirect evidence of them was theorized by Fermi by formulizing the theory of $\beta$ decay~\cite{Fermi}\@. In this decay, nuclei emit electrons and positrons with energies that are not discrete. Rather, they are emitted on a spectrum of energies that suggest that a third particle must be involved in the decay. Otherwise, this process would violate the conservation-of-energy law. The missing particle was first theorized to be the neutron that is responsible for a large portion of mass of most nuclei, but is electrically neutral. Soon, this was found not to be the case as the missing particle would have to be too massive. Therefore, it must be a new particle, called neutrino.
+
+Neutrinos proved somewhat elusive to detect as they do not interact electromagnetically or strongly so even though they are relatively common in nature, they mostly traverse through matter unimpeded. The only interaction, they participate in, is the weak one. Therefore, large volumes and masses of detection material are needed which was realized by C.L.\ Cowan and F.\ Reines in 1954 when they constructed a large detector next to a nuclear reactor and detected neutrinos for the first time~\cite{CowanNeutrinos}\@.
+
+Like their charged-lepton brethren, neutrinos come in three generations electron- , muon-, and tauon-neutrinos ($\upnu_\mathrm{e}$, $\upnu_\upmu$, and $\upnu_\uptau$, respectively) and their antiparticles ($\overline{\upnu}_\mathrm{e}$, $\overline{\upnu}_\upmu$, and $\overline{\upnu}_\uptau$, respectively). The number of neutrino families was experimentally limited to three by the particle experiments at the LEP accelerator at CERN\@.
+
+\section{Quantum Chromodynamics and strong interaction}
+
+
+Quantum ChromoDynamics (QCD\nomenclature{QCD}{Quantum ChromoDynamics}) is a non-Abelian gauge field theory that describes the strong interaction between quarks and gluons.
+
+The QCD Lagrangean $\mathcal{L}$ can be written as
+\begin{equation}
+ \mathcal{L} = \sum_{q}\overline{\psi}_{q,a}(i\gamma^\mu \partial_\mu \delta_{ab} - g_s \gamma^\mu t_{ab}^CA_\mu^C - m_q\delta_{ab})\psi_{q,b} - \frac{1}{4}F_{\mu\nu}^AF^{\mu\nu}_A
+\end{equation}
+where $q$ is the quark flavor, $\psi_{qa}$ is the quark-field spinor with $a$ as a color index which runs between 1 and $N_q = 3$\@. The $\gamma^\mu$ stands for the Dirac $\gamma$ matrices and $\delta_{ab}$ is the Kronecker Delta. The $g_s$ is the strong coupling constant, the $t_{ab}^C$ are $3\times3$ matrices that correspond to the 8 generators of the SU(3) group. The $A_\mu^C$ is the color field where $C$ stands for the gluon colors, running from 1 to $N_q=8$\@. The field tensor $F^A_{\mu\nu}$ is defined as
+\begin{equation}
+ F_{\mu\nu}^A = \partial_\mu A^A_\nu - \partial_\nu A^A_\mu - g_s f_{ABC} A^B_\mu A_\nu^C
+\end{equation}
+where $f_{ABC}$ is the structure constant of the SU(3) group.
+
+\section{Running coupling constant}
+The QCD is a renormalized theory~\cite{renormalizationTHOOFT,renormalizationBOLLINI}\@. As such, 
+
+
+\subsection{Confinement and deconfinement}
+
+Quarks are never observed as free particles, rather they are always bound into objects that are overall colorless, so called hadrons. The 
+
+\subsection{Asymptotic freedom}
+
+The behavior of the strong coupling constant leads to peculiar behavior of the strong interaction. At high energy scales and very small distances the $\alpha_\mathrm{s}$ becomes arbitrarily small
+\begin{equation}
+ Q^2 \rightarrow \infty \Rightarrow \alpha_\mathrm{s} \rightarrow \infty\,.
+\end{equation}
+This phenomenon is called Asymptotic freedom as, at very large energy scales, quarks and gluons can effectively move freely, i.e.\ they behave in an opposite manner to the electromagnetic interaction where the coupling constant gets larger with higher energy.
+
+\section{Heavy quarks}
+
+\section{Ultra-relativistic heavy-ion collisions}
+One of the scientific frontiers of the current physical research is the study of properties of matter under extreme conditions. The highest man-made temperatures and pressures yet can be achieved in heavy ion-ion and proton-proton collisions in particle accelerators.
+In such facilities, a new state of matter --- the strongly-coupled quark-gluon plasma (sQGP\nomenclature{sQGP}{strongly-coupled Quark-Gluon Plasma})~\cite{QGPdiscovered} is created\@. One of such accelerators is the Relativistic Heavy Ion Collider (RHIC -- described in Section~\ref{RHIC}) located in Brookhaven National Laboratory in the USA\@. It is capable of reaching the collision energy per nucleon of $\snn= \SI{200}{\giga\electronvolt}$\nomenclature{\snn}{Center-of-mass energy per nucleon}\@. The collisions are called ultra-relativistic because the energy of the nucleons is much higher than their rest masses \nomenclature{$E$}{Energy}\nomenclature{$m$}{Mass (or rest mass)}($E \gg m$). Note that in this chapter, we use natural units where the speed of light in vacuum is equal to $c = 1$, the Boltzmann constant $k = 1$, and the reduced Planck constant $\hslash = 1$\@. 
+
+\section{Phase diagram of the quark-gluon plasma (QGP)}\nomenclature{QCD}{Quantum Chromodynamics}\nomenclature{QGP}{Quark-Gluon Plasma}
+
+% Vymenit obrazek
+\begin{figure}[!htb]
+\centering
 \includegraphics[width=0.5\textwidth]{img/phaseDiagram}
-\caption{The QCD phase diagram. Taken from~\cite{bnlSite}.}
-\label{fig:phaseDiagram}
+\caption[The QCD phase diagram.]{\label{fig:phaseDiagram}The QCD phase diagram. Taken from~\cite{bnlSite}.}
 \end{figure}
  
 
-Experimental evidence and theoretical predictions suggest that with high enough temperature (around \SI{170}{\mega\electronvolt}) the matter can enter a new state of matter, the so called strongly-coupled quark gluon plasma~\cite{QGPdiscovered}\@. Figure~\ref{fig:phaseDiagram} shows an illustration of the QCD phase diagram. The y-axis shows the temperature and the x-axis shows the baryon density, which is the density of baryons minus anti-baryons. This density corresponds directly to the baryon chemical potential $\eta$\nomenclature{$\eta$}{Pseudorapidity} which represents the potential of the difference in numbers between baryons and anti-baryons. In the bottom left corner, we can see the hadronic matter, where the quarks are always trapped -- confined inside hadrons (e.g.\ the protons at rest have a baryon chemical potential equal to $\eta = \SI{938}{\mega\electronvolt}$ and the temperature of $T \approx 0$\nomenclature{$T$}{Temperature}). 
+Experimental evidence and theoretical predictions suggest that with high enough temperature (around \SI{170}{\mega\electronvolt}) the usual nuclear matter can enter a new state, the so called strongly-coupled quark gluon plasma~\cite{QGPdiscovered}\@. Figure~\ref{fig:phaseDiagram} shows an illustration of the QCD phase diagram. 
+\textcolor{red}{
+ The y-axis shows the temperature and the x-axis shows the baryon density, which is the density of baryons minus anti-baryons. This density corresponds directly to the baryon-chemical potential $\eta$\nomenclature{$\eta$}{baryon-chemical potential} 
+}
+which represents the potential of the difference in numbers between baryons and anti-baryons. In the bottom left corner, we can see the hadronic matter, where the quarks are always trapped -- confined inside hadrons (e.g.\ the protons at rest have a baryon chemical potential equal to $\eta = \SI{938}{\mega\electronvolt}$ and the temperature of $T \approx 0$\nomenclature{$T$}{Temperature}). 
 As we go higher in temperature in heavy-ion collisions, the baryon density gets lower (the number of anti-baryons, compared to baryons, is increasing). At one point, a transition into a new state of matter occurs --- the quark-gluon plasma is created. The temperature is so high that the quarks and gluons are no longer trapped inside hadrons --- they become deconfined. 
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.8\textwidth]{img/lightCone}
-\caption{The space-time evolution of a heavy-ion collision. Taken from~\cite{helen}.}
+\caption[The space-time evolution of a heavy-ion collision.]{The space-time evolution of a heavy-ion collision. Taken from~\cite{helen}.}
 \label{fig:lightCone}
 \end{figure}
 
-At the top RHIC energies ($\snn = 200\,$GeV) and at the LHC energies for the Pb+Pb collisions ($\snn > \SI{2.76}{\tera\electronvolt}$ in the collider mode), the experimental evidence and lattice--QCD (lQCD\nomenclature{lQCD}{lattice--QCD}) calculations point to a crossover (second-order) transition between the hadron matter and the sQGP\@. lQCD calculations suggest, however, that at lower temperatures and higher baryon chemical potential, the transition changes to a first-order one. Therefore, in between, there has to be a critical point. RHIC beam energy scan program, in which \snn\ is scanned by lowering the energy of the accelerated nuclei, is an ongoing endeavor to find this critical point~\cite{BESII}. 
+At the top RHIC energies ($\snn = 200\,$GeV) and at the LHC energies for the Pb+Pb collisions (e.g.\ $\snn > \SI{2.76}{\tera\electronvolt}$ in the collider mode), the experimental evidence and lattice--QCD (lQCD\nomenclature{lQCD}{lattice--QCD}) calculations point to a crossover (second-order) transition between the hadron matter and the sQGP\@. lQCD calculations suggest, however, that at lower temperatures and higher baryon chemical potential, the transition changes to a first-order one. Therefore, in between, there has to be a critical point. RHIC beam energy scan program, in which \snn\ is scanned by lowering the energy of the accelerated nuclei, is an ongoing endeavor to find this critical point~\cite{BESII}. 
 
 
-The space-time evolution of a heavy-ion collision is shown in Figure~\ref{fig:lightCone}. When we look at the proper time around $\tau \simeq 1\,$fm$/c$\nomenclature{$c$}{Speed of light in vacuum}, the local thermodynamic equilibrium is established and from this point on, the system can be described hydrodynamically. This is when the system is going through a new phase of matter the ,so called, quark-gluon plasma (QGP), in which the quarks are deconfined, until it cools down to the temperature of the chemical freeze-out \nomenclature{$T_\mathrm{ch}$}{Temperature of chemical freeze-out}$T_\mathrm{ch} \simeq 165\,$MeV~\cite{ALICE_lightFlavor,STAR_LightFlavor}\@. From now on, the single quarks become confined again in hadrons in pairs and triplets. The hadrons can, however still interact with each other because the density is high enough; this state of the system is called the hadron gas. After some time, the distances between the hadrons become long enough that the mean free path of the hadrons becomes higher than the volume of the medium. This if called the kinetic freeze-out with the temperature and is measured as \nomenclature{$T_\mathrm{fo}$}{Temperature of kinetic freeze-out}$T_\mathrm{fo} \simeq 100\,$MeV with the average bulk speed of $\sim$1/2$c$\@. After this, the hadrons become free-streaming and can be picked by the detectors.
+The space-time evolution of a heavy-ion collision is shown in Figure~\ref{fig:lightCone}. When we look at the proper time around $\tau \simeq 1\,$fm$/c$\nomenclature{$c$}{Speed of light in vacuum}, the local thermodynamic equilibrium is established and from this point on, the system can be described hydrodynamically. This is when the system is going throgh the QGP phase, in which the quarks are deconfined, until it cools down to the temperature of the chemical freeze-out \nomenclature{$T_\mathrm{ch}$}{Temperature of chemical freeze-out}$T_\mathrm{ch} \simeq 165\,$MeV~\cite{ALICE_lightFlavor,STAR_LightFlavor}\@. From now on, the single quarks become confined again in hadrons -- baryons and mesons. The hadrons can, however still interact with each other because the density is high enough; this state of the system is called the hadron gas. After some time, the distances between the hadrons become long enough that the mean free path of the hadrons becomes higher than the volume of the medium. This is called the kinetic freeze-out with the corresponding temperature measured as \nomenclature{$T_\mathrm{fo}$}{Temperature of kinetic freeze-out}$T_\mathrm{fo} \simeq 100\,$MeV. At this point, the average bulk velocity is still about $\sim$1/2$c$ when the hadrons become free-streaming and can be picked by the detectors.
 
 
 \section{Heavy-flavor production in heavy-ion collisions}
 
-The heavy quarks such as c or b have much higher masses ($m_\mathrm{c} \simeq 1.25\,$GeV$/c^2$ and $m_\mathrm{b} \simeq 4.5\,$GeV$/c^2$~\cite{PDG}) compared to the light quarks (u, d, and s) and  than the temperature of the system during the hydrodynamic expansion~\cite{summaryHF,Prino_Rapp_HF}. As a result, they can be only produced in hard processes during the very early stages of the collision. Therefore, they can experience the whole evolution of the system and can act as excellent probes into the processes of energy loss in the sQGP\@. Moreover, since their masses are much higher than $T_\mathrm{ch}$, the heavy quarks retain their identity and can serve as ideal probes to the hadronization process of the medium. E.g.\ determine whether quarks and anti-quarks are picked up by the heavy quarks or they fragment independently. Here and in the rest of the chapter, we use natural units where the speed of light in vacuum $c = 1$, the Boltzmann constant $k = 1$, and the reduced Planck constant $\hslash = 1$\@.
+The heavy quarks such as c or b have much higher masses ($m_\mathrm{c} \simeq 1.25\,$GeV$/c^2$ and $m_\mathrm{b} \simeq 4.5\,$GeV$/c^2$~\cite{PDG}) as compared to the light quarks (u, d, and s) which, together with gluons, make most of the QGP bulk.  During most of the expansion (after $\sim 0.1\,$fm$/c$ for the c-quarks at top-RHIC energies) the thermal energy of the system is too low to create the heavy quarks~\cite{summaryHF,Prino_Rapp_HF}\@. As a result, they can be only produced in hard processes during the very early stages of the collision. Due to their relatively long life times, as compared to the thermally interacting medium, they can experience the whole evolution of the system and can act as excellent probes into the processes of energy loss in the sQGP\@. Moreover, since their masses are much higher than $T_\mathrm{ch}$, the heavy quarks retain their identity and can serve as ideal probes into the hadronization process of the medium, e.g.\ determine whether lighter quarks are picked up by the heavy quarks or they fragment independently.
 
 The typical momentum exchange of the heavy particles (both quarks and hadrons) is relatively small, compared to the thermal momentum $p^2_\mathrm{Q,th} \simeq 2m_\mathrm{Q}T$~\cite{Prino_Rapp_HF} where $m_\mathrm{Q}$ is the mass of the particle and $T$ is the temperature of the system\@. The thermal relaxation 
 time of heavy particles  $\tau_\mathrm{Q} \simeq \tau_\mathrm{th}m_\mathrm{Q}/T$ is also much longer than in the bulk medium $\tau_\mathrm{th}$\@. The heavy particles, therefore, move akin to Brownian particles in the expanding medium with many small kicks from the bulk particles.
@@ -43,7 +104,7 @@ time of heavy particles  $\tau_\mathrm{Q} \simeq \tau_\mathrm{th}m_\mathrm{Q}/T$
 \begin{figure}[!htb]
 \begin{center}
  \includegraphics[width=0.7\linewidth]{img/Diffusion_coefficient}
-\caption{\label{diffusion}Charm-quark spatial diffusion coefficient $D_s$ multiplied by $2\pi T$ at the c-quark momentum limit of $p = 0$, calculated in lQCD (black circles and squares~\cite{BanerjeeLattice,DingLattice}) and compared to models with different elastic interactions of the charm quark. The green and red bands denote a T-matrix approach with heavy-quark+gluon and heavy-quark+light-quark interactions. The bands denote limit cases with the free-quark potential (F-potential) and internal-quark potential (U-potential), calculated in lQCD~\cite{Tmatrix}\@. The dashed-dotted line denotes a perturbative-QCD (pQCD) approach with strong-interaction constant set as $\alpha_\mathrm{s} = 0.4$\@. The dashed line denotes the diffusion of D-mesons in a hadron-resonance gas~\cite{DmesonHRG}\@. Figure taken from~\cite{summaryHF}.}
+\caption[Charm-quark spatial diffusion coefficient $D_s$.]{\label{diffusion}Charm-quark spatial diffusion coefficient $D_s$ multiplied by $2\pi T$ at the c-quark momentum limit of $p = 0$, calculated in lQCD (black circles and squares~\cite{BanerjeeLattice,DingLattice}) and compared to models with different elastic interactions of the charm quark. The green and red bands denote a T-matrix approach with heavy-quark+gluon and heavy-quark+light-quark interactions. The bands denote limit cases with the free-quark potential (F-potential) and internal-quark potential (U-potential), calculated in lQCD~\cite{Tmatrix}\@. The dashed-dotted line denotes a perturbative-QCD (pQCD) approach with strong-interaction constant set as $\alpha_\mathrm{s} = 0.4$\@. The dashed line denotes the diffusion of D-mesons in a hadron-resonance gas~\cite{DmesonHRG}\@. Figure taken from~\cite{summaryHF}.}
 \end{center}
 \end{figure}
 
@@ -61,10 +122,9 @@ The delay in thermal relaxation of the heavy quarks is, therefore, proportional 
 D_s(2\pi T) \propto \frac{\eta}{s} (4\pi)\,.
 \end{equation}
 
+Figure~\ref{diffusion} shows theoretical calculations of $D_s(2\pi T)$ from the first principles (i.e.\ lQCD~\cite{BanerjeeLattice,DingLattice}) and estimates, employing pQCD and the T-matrix in the quantum field theory~\cite{Tmatrix}\@. The temperature scale is prolonged bellow the critical temperature $T_\mathrm{c}$ and the diffusion of the D-mesons in the hadron-resonance gas is considered from the calculation~\cite{DmesonHRG}, because the c-quarks are likely hadronized in a medium with such temperature.
 
-$D_s$ cannot be  measured experimentally directly, however with the increasing precision of the data, phenomenological models can make relatively estimates. Figure~\ref{diffusion}
-
-
+$D_s$ cannot be  measured experimentally directly. However with the increasing precision of the data, phenomenological models can make relatively accurate estimates, when comparing the calculations to the experimental data, e.g.\ the nuclear-modification factor $R_\mathrm{AA}$ or the elliptic flow coefficient $v_2$ of the D-mesons with one c-quark\@.
 
 
 \nocite{Langevin,LangevinTranslation}
@@ -76,7 +136,7 @@ $D_s$ cannot be  measured experimentally directly, however with the increasing p
 The \Lambdac\ baryon has a quark content of c, u, and d~\cite{PDG}. It is the lightest charmed baryon with the rest mass of $m = 2286.46 \pm \SI{0.14}{\mega\electronvolt}/c^2$\@. Its decay length is, however, quite short $c\tau = 60.0 \pm \SI{1.8}{\micro\metre}$ which makes the reconstruction challenging, especially in heavy-ion collisions. The measurement of \Lambdac\ is possible via the leptonic channels $\Lambdac^+ \rightarrow \mathrm{e}^+ + \upnu_\mathrm{e} + \mathrm{X}$ or $\Lambdac^+ \rightarrow \upmu^+ + \upnu_\upmu + \mathrm{X}$, however, the energy information is lost because of the outgoing neutrino, which cannot be detected, and therefore, the leptons cannot be separated from the ones from D and B mesons decay. Possible channels for the direct reconstruction of the \Lambdac\ with all the decay products detected are listed in Table~\ref{tab:lcDecayCahnnels}. In these channels all the decay particles can be reconstructed and, thus, the mass and momentum can be fixed.
 
 \begin{table}[htb]
-\caption{\label{tab:lcDecayCahnnels}Decay channels of \Lambdac\ that can be used in its reconstruction~\cite{PDG}. Note that the $\Lambda_c^+ \rightarrow \mathrm{p}^+ + \mathrm{K}^- + \uppi^+$ channel can have various resonances as an intermediate step in the decay.}
+\caption[Decay channels of \Lambdac\ that can be used in its reconstruction.]{\label{tab:lcDecayCahnnels}Decay channels of \Lambdac\ that can be used in its reconstruction~\cite{PDG}. Note that the $\Lambda_c^+ \rightarrow \mathrm{p}^+ + \mathrm{K}^- + \uppi^+$ channel can have various resonances as an intermediate step in the decay.}
 \begin{center}
 \begin{tabular}{llc}
 \toprule
@@ -104,7 +164,7 @@ An enhancement of strange baryons compared to mesons has been observed in the in
 \begin{figure}
 \centering
 \includegraphics[width=0.8\linewidth]{img/coalescencePic}
-\caption{Baryon to meson ratio in RHIC Au+Au collisions with the center of mass energy per nucleon $\sqrt{s_\mathrm{NN}} = 200\,$GeV vs transverse momentum ($p_\mathrm{T}$)~\cite{GuannanLc}\@. Left: Ratio of the invariant yields of p and $\overline{\mathrm{p}}$ over $\uppi^+$ and $\uppi^-$ at STAR for the centralities 0--12$\,\%$ and 60--80$\,\%$~\cite{STARLambda}. Middle: ratio of the yields of $\Lambda$ over K$^0_\mathrm{s}$ at STAR for central (0--5$\,\%$) and peripheral (60--80$\,\%$) collisions. Right: Models of ratios of $\Lambda_\mathrm{c}$ over D$^0$~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM}.}
+\caption[Baryon to meson ratio in RHIC Au+Au collisions.]{Baryon to meson ratio in RHIC Au+Au collisions with the center of mass energy per nucleon $\sqrt{s_\mathrm{NN}} = 200\,$GeV vs transverse momentum ($p_\mathrm{T}$)~\cite{GuannanLc}\@. Left: Ratio of the invariant yields of p and $\overline{\mathrm{p}}$ over $\uppi^+$ and $\uppi^-$ at STAR for the centralities 0--12$\,\%$ and 60--80$\,\%$~\cite{STARLambda}. Middle: ratio of the yields of $\Lambda$ over K$^0_\mathrm{s}$ at STAR for central (0--5$\,\%$) and peripheral (60--80$\,\%$) collisions. Right: Models of ratios of $\Lambda_\mathrm{c}$ over D$^0$~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM}.}
 \label{fig:LambdaKzero}
 \end{figure}
 
@@ -119,7 +179,7 @@ Another key signiture of coalescence process is the ratio between the yields of 
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{img/baryonToAntibaryon}
-\caption{Ratio of the yields of baryons compared to anti-baryons measured at SPS and RHIC\@. The full symbols represent full maximum RHIC energy $\snn = \SI{200}{GeV}$ and the empty symbols represent experiments at SPS at CERN with the collision energy per nucleon $\snn = \SI{17}{GeV}$. Taken from~\cite{BtoAntiB}.}
+\caption[Ratio of the yields of baryons compared to anti-baryons measured at SPS and~RHIC\@.]{Ratio of the yields of baryons compared to anti-baryons measured at SPS and RHIC\@. The full symbols represent full maximum RHIC energy $\snn = \SI{200}{GeV}$ and the empty symbols represent experiments at SPS at CERN with the collision energy per nucleon $\snn = \SI{17}{GeV}$. Taken from~\cite{BtoAntiB}.}
 \label{fig:BtoAntiB}
 \end{figure}
 

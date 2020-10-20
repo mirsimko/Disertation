@@ -7,6 +7,7 @@
 \bibliographystyle{h-physrev-vv}
 
 \usepackage{graphicx}
+
 \usepackage{lscape}
 \usepackage{dsfont, amsmath, amsthm, amssymb}
 \usepackage[breaklinks, hidelinks]{hyperref} %colorlinks, pdfborder = {0 0 0 0}, linktocpage
@@ -64,9 +65,13 @@
 \newcommand{\ddd}{\ensuremath{\,\mathrm{d}}}
 \newcommand{\dd}{\ensuremath{\mathrm{d}}}
 \newcommand{\eee}{\ensuremath{\mathrm{e}}}
-\newcommand{\pt}{{}\ensuremath{p_{\mathrm{T}}}{}}
+\newcommand{\pt}{\ensuremath{{p_{\mathrm{T}}}}}
 \newcommand{\dedx}{\ensuremath{\dd E / \dd x}}
-\newcommand{\Lambdac}{\ensuremath{\Lambda_\text{c}}}
+\newcommand{\Lambdac}{\ensuremath{{\Lambda_\text{c}}}}
+\newcommand{\Lambdacpm}{\ensuremath{{\Lambda_\text{c}^\pm}}}
+\newcommand{\Lcplus}{\ensuremath{{\Lambda_\text{c}^+}}}
+\newcommand{\LcminusBar}{\ensuremath{{\overline{\Lambda_\text{c}^-}}}}
+\newcommand{\Lcminus}{\ensuremath{{\Lambda_\text{c}^-}}}
 \newcommand{\beamtuning}{\texttt{BEAM\_TUNING}}
 \newcommand{\comp}[1]{\texttt{alidcscom#1}}
 \newcommand{\Pconv}{\ensuremath{P_{\mathrm{conv}}}}
@@ -74,11 +79,21 @@
 \newcommand{\snnFull}{\ensuremath{\sqrt{s_\text{NN}} = 200\,\text{GeV}}}
 \newcommand{\Raa}{\ensuremath{R_\text{AA}}}
 \newcommand{\Rcp}{\ensuremath{R_\text{cp}}}
-\newcommand{\dzero}{\ensuremath{\text{D}^0}}
+\newcommand{\dzero}{\ensuremath{{\text{D}^0}}}
 \newcommand{\pipm}{\ensuremath{\uppi^\pm}}
 \newcommand{\ppm}{\ensuremath{\text{p}^\pm}}
 \newcommand{\Kmp}{\ensuremath{\text{K}^\mp}}
-
+\newcommand{\piplus}{\ensuremath{\uppi^+}}
+\newcommand{\pplus}{\ensuremath{\text{p}^+}}
+\newcommand{\Kplus}{\ensuremath{\text{K}^+}}
+\newcommand{\Nsig}{\ensuremath{S}}
+\newcommand{\Nbkg}{\ensuremath{B}}
+\newcommand{\Nevt}{\ensuremath{N_\mathrm{Event}}}
+\newcommand{\branching}{\ensuremath{F_\mathrm{Br}}}
+\newcommand{\pKpi}{\ensuremath{\text{p, K, }\uppi}}
+\newcommand{\pKandpi}{\ensuremath{\text{p, K, and\ }\uppi}}
+\newcommand{\piKandp}{\ensuremath{\uppi\text{, K, and p}}}
+\newcommand{\Kshort}{\ensuremath{\text{K}^0_\text{s}}}
 
 \usepackage{geometry}
 \usepackage[doublespacing]{setspace}  % package for setting custom spacing (useful in long tables)
@@ -92,15 +107,17 @@
 %-------------------------------------------------------------------------------------------------------------------
 \hyphenation{ap-pro-xi-mate}
 \hyphenation{EMCaL}
-\hyphenation{con-fe-rence}
-\hyphenation{in-co-ming}
+\hyphenation{con-fer-ence}
+\hyphenation{in-com-ing}
 \hyphenation{da-ta-ba-ses}
 \hyphenation{fi-gure}
-\hyphenation{vi-sua-li-za-tion}
-\hyphenation{me-cha-nisms}
+\hyphenation{vi-sua-li-zat-ion}
+\hyphenation{me-chan-isms}
 \hyphenation{ex-pe-ri-ment}
 \hyphenation{Brook-ha-ven}
 \hyphenation{pro-ton}
+\hyphenation{res-pect-ive-ly}
+\hyphenation{re-con-nect-ion}
 
 %-------------------------------------------------------------------------------------------------------------------
 \begin{document}
@@ -167,6 +184,8 @@
 \newpage
 % \input{acknowledgement}
 \input{contribution}
+\listoffigures
+\listoftables
 \tableofcontents 
 % \thispagestyle{plain}
 % \pagestyle{headings}
@@ -175,13 +194,22 @@
 \fancyhead{} % clear all header fields_
 \fancyhead[RE]{\rightmark}
 \fancyhead[LO]{\leftmark}
+%-------------------------------------------------------------------------------------------------------------------
 
 \renewcommand{\footrulewidth}{0.4pt}
-%--------%----------------------------------------------------------------------------------------------------------
-\chapter{Introduction}
+\cleardoublepage
+\phantomsection
 \pagenumbering{arabic}
 \setcounter{page}{1}
-vbnfnd
+\markboth{LIST OF ABBREVIATIONS}{LIST OF ABBREVIATIONS}
+
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\Listofabbrev \newpage
+\cleardoublepage
+%--------%----------------------------------------------------------------------------------------------------------
+\chapter{Introduction}
+
+\input{intro}
 
 \cleardoublepage
 \chapter{The Physics of Quark-Gluon Plasma}
@@ -221,12 +249,7 @@ vbnfnd
 % \markboth{}{}
 
 %  \newpage
- \cleardoublepage
- \phantomsection
-  \markboth{LIST OF ABBREVIATIONS}{LIST OF ABBREVIATIONS}
 
- \addcontentsline{toc}{chapter}{List of Abbreviations}
-\Listofabbrev \newpage
 
 \cleardoublepage
 \input{bibliography}
@@ -234,7 +257,7 @@ vbnfnd
 
 \cleardoublepage
 \begin{appendices}
-\chapter{Proceedings and posters}
+\chapter{Papers, proceedings, and posters}
 \input{papers}
 \end{appendices}
 
