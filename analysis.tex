@@ -1,6 +1,6 @@
         $\Lambda_\mathrm{c}^\pm$ is the lightest baryon containing a charm quark. As such, it is an excellent probe into the behavior of the QGP alongside precise measurements of D mesons. However, the combination of facts that it has an extremely short lifetime times the speed of light $c\tau \sim 60\,\upmu$m and the the useful decay for a direct reconstruction is a three-body decay into $\uppi^\pm$, K$^\mp$, and p$^\pm$, makes this measurement challenging. $\uppi^\pm$, K$^\mp$, and p$^\pm$ are the most abundant particles coming out of heavy-ion collisions which implies that any measurement of \Lambdac$^\pm$ has to deal with a large background.
 
-The $\Lambdac^\pm$ were measured for the first time in heavy-ion--ion collisions~\cite{GuannanLc} at the STAR experiment at RHIC\@. In particular, the $\Lambda_\mathrm{c}$ measurement was enabled by the Heavy Flavor Tracker (HFT)~\cite{Kapitan} upgrade that took data in the years 2014--2016\@. The HFT is described in more detail in section~\ref{HFTsection}\@. In this chapter, we describe the measurement of the \Lambdac\ from signal extraction to the ratios of $\Lambdac/\dzero$ and $\Lambdac^-/\Lambdac^+$ invariant yields. 
+The $\Lambdac^\pm$ were measured for the first time in heavy-ion--ion collisions~\cite{GuannanLc} at the STAR experiment at RHIC\@. In particular, the $\Lambda_\mathrm{c}$ measurement was enabled by the Heavy Flavor Tracker (HFT)~\cite{HFTLeo} upgrade that took data in the years 2014--2016\@. The HFT is described in more detail in section~\ref{HFTsection}\@. In this chapter, we describe the measurement of the \Lambdac\ from signal extraction to the ratios of $\Lambdac/\dzero$ and $\Lambdac^-/\Lambdac^+$ invariant yields. 
 % \section{$\Lambda_\mathrm{c}$ measurements in Au+Au collisions at RHIC}\\
 
 
@@ -25,7 +25,7 @@ for all particles. For protons and kaons, we use the hybrid approach for high-\p
 
 
 \begin{table}[!htb]
-\caption{\label{tab:PID} PID selection criteria for \Lambdac-daughter candidates. }
+\caption[PID selection criteria for \Lambdac-daughter candidates.]{\label{tab:PID} PID selection criteria for \Lambdac-daughter candidates. }
 \begin{center}
 
 \begin{tabular}{lccc}
@@ -46,7 +46,7 @@ Particle species & \dedx\ cut & Hybrid-TOF region & $\Delta (1/\beta)$ cut \\
 \section{Centrality determination}
 
 \begin{table}[!htb]
-\caption{\label{tab:centrality} Centrality definitions in 2014 and 2016 Au+Au collisions at $\snn = 200\,$GeV, extracted from Glauber-Model simmulations.}
+\caption[Centrality definitions in 2014 and 2016 Au+Au collisions.]{\label{tab:centrality} Centrality definitions in 2014 and 2016 Au+Au collisions at $\snn = 200\,$GeV, extracted from Glauber-Model simmulations.}
 \begin{center}
 \input{centralityTable.tex}
 
@@ -54,7 +54,7 @@ Particle species & \dedx\ cut & Hybrid-TOF region & $\Delta (1/\beta)$ cut \\
 \end{table}
 
 
-The centrality of the collision is determined by the number of tracks $N_\mathrm{tracks}$ with at least 10 TPC hits in the rapidity range $|\eta| < 0.5$ and $\mathrm{DCA} < 3\,$cm. This number is then corrected with regards to the geometrical efficiency according to $v_z$ and to the TPC efficiency, according to instant luminosity. Figure~\ref{tab:centrality} shows the centrality definitions extracted from Monte-Carlo simulations~\cite{centrality, HiroshiCentrality}, using the Glauber Model. This model was used to extract the number of binary nucleon--nucleon collisions $N_\mathrm{coll}$ and the number of participants $N_\mathrm{part}$\nomenclature{$N_\mathrm{part}$}{Number of participants} as well.
+The centrality of the collision is determined by the number of tracks $N_\mathrm{tracks}$ with at least 10 TPC hits in the rapidity range $|\eta| < 0.5$ and $\mathrm{DCA} < 3\,$cm. This number is then corrected with regards to the geometrical efficiency according to $v_z$ and to the TPC efficiency, according to instant luminosity. Figure~\ref{tab:centrality} shows the centrality definitions extracted from Monte-Carlo simulations~\cite{centrality, HiroshiCentrality}, using the Glauber Model. This model was used to extract the number of binary nucleon--nucleon collisions $N_\mathrm{coll}$ and the number of participants $N_\mathrm{part}$ as well.
 
 
 
@@ -68,7 +68,7 @@ Thanks to the excellent resolution of the HFT, it is possible to reduce the comb
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = 0.7\textwidth]{img/LambdaMethod}
-\caption{\label{fig:method}Illustration of variables used for topological cuts for the \Lambdac\ analysis.}
+\caption[Illustration of variables used for topological cuts for the \Lambdac\ analysis.]{\label{fig:method}Illustration of variables used for topological cuts for the \Lambdac\ analysis.}
 \end{figure}
 
 First, the distance of closest approach (DCA) of the PV (yellow star in Figure~\ref{fig:method}) to each track helix is calculated and an initial cut is applied. Next, we proceed with the reconstruction of the SV itself\@: Since the SV is very close to the PV (in the order of tens of $\upmu$m), the track helices can be approximated via straight lines. This approximation has been shown to have negligible effect on all the topological variables and saves the computational time by $\sim$2 orders of magnitude since the points of closest approach (PCA\nomenclature{PCA}{Point of Closest Approach}) of two lines can be calculated analytically. The PCA is calculated for each combination of two tracks, i.e.\ we end up with 6 PCA\@. The vector average of each two PCA is stored as the, so called, vertex of daughter pairs (VDP\nomenclature{VDP}{Vertex of Daughter Pairs} -- yellow circles in Figure~\ref{fig:method})
@@ -96,14 +96,14 @@ The difference between the data and background is illustrated in Figure~\ref{fig
 \centering
 \includegraphics[width=0.6\textwidth]{img/cosTheta}\\[1cm]
 \includegraphics[width=0.6\textwidth]{img/dLength}
-\caption{\label{fig:optimization}Examples of topological variables used for selection criteria: Left panel: Decay length; Right panel: cos($\theta$)\@. The red line is the background from data with a wrong charge sign combination and the signal is extracted from the data-driven Monte Carlo simulation.}
+\caption[Examples of topological variables used for selection criteria.]{\label{fig:optimization}Examples of topological variables used for selection criteria: Left panel: Decay length; Right panel: cos($\theta$)\@. The red line is the background from data with a wrong charge sign combination and the signal is extracted from the data-driven Monte Carlo simulation.}
 
 \end{figure}
 
 To save computation time and disc space, the \Lambdac-candidate triplets were pre-selected in both, the signal and the background. Table~\ref{tab:preoptimizationCuts} shows the pre-selection criteria for the 2014 and 2016 data samples. The 2016-data set utilizes slightly more stringent cuts, because the training on the 2014-data set has shown that the open cuts are not needed.
 
 \begin{table}[!htb]
-\caption{\label{tab:preoptimizationCuts} Pre-selection cuts used on the 2014- and 2016-training samples. }
+\caption[Pre-selection cuts used on the 2014- and 2016-training samples.]{\label{tab:preoptimizationCuts} Pre-selection cuts used on the 2014- and 2016-training samples. }
 \begin{center}
 
 \begin{tabular}{lcc}
@@ -139,7 +139,7 @@ where $B_\text{wrong-sign}$ is a background estimate, using the wrong-sign metho
 \centering
 \includegraphics[width = 0.5\textwidth]{img/D0_spectrum}
 
-\caption{\label{fig:D0spectrum}\dzero\ \pt\ spectra measured by STAR~\cite{D0paper} in different centralities, used in the estimate of the number of signal triplets $S$\@.}
+\caption[\dzero\ \pt\ spectra measured by STAR.]{\label{fig:D0spectrum}\dzero\ \pt\ spectra measured by STAR~\cite{D0paper} in different centralities, used in the estimate of the number of signal triplets $S$\@.}
 
 \end{figure}
 
@@ -148,7 +148,7 @@ where $B_\text{wrong-sign}$ is a background estimate, using the wrong-sign metho
 \includegraphics[width = 0.65\textwidth]{img/LcDzeroGrecoPt.png}
 \includegraphics[width = 0.65\textwidth]{img/LcDzeroGrecoCent.png}
 
-\caption{\label{fig:greco}Model calculation~\cite{PlumariGreco} of the ratio of \Lambdac/\dzero\ used in the calculation of the number of signal candidates \Nsig\@. The top plot shows the dependence on \pt\ and the bottom plot the dependence on the centrality.}
+\caption[Model calculation of the ratio of \Lambdac/\dzero\ used in the calculation of the number of signal candidates.]{\label{fig:greco}Model calculation~\cite{PlumariGreco} of the ratio of \Lambdac/\dzero\ used in the calculation of the number of signal candidates \Nsig\@. The top plot shows the dependence on \pt\ and the bottom plot the dependence on the centrality.}
 
 \end{figure}
 
@@ -168,7 +168,7 @@ In our analysis, the selection criteria were optimized via the Toolkit for Multi
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.6\textwidth]{img/BDT}
-\caption{\label{BDT}An illustration of principle of decision-tree-based algorithms~\cite{TMVA}\@.}
+\caption[An illustration of principle of decision-tree-based algorithms.]{\label{BDT}An illustration of principle of decision-tree-based algorithms~\cite{TMVA}\@.}
 \end{figure}
 
 The advantages, compared to set (so-called rectangular) cuts in each variable, is that the BDT selects a hyperplane in the $N$-dimensional space of $N$ selected variables. Thus, we avoid the, so called, dimensionality problem --- the fact that strait cuts tend to fail in many-dimensional spaces, i.e.\ the significance limit in infinite dimension space goes to zero. Even in as few as two dimensions, however, the BDT tend to produce a higher significance of the signal. In this analysis, the significance of the \Lambdac\ improved approximately by a factor of two using the BDT, compared to rectangular cuts.
@@ -180,7 +180,7 @@ An illustration of a decision tree is shown in Figure~\ref{BDT}\@. Decision-tree
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=\textwidth]{img/BDT_response_centralities_white}
-\caption{\label{BDT_centralities}BDT response in centrality and \pt\ bins for signal and background.}
+\caption[BDT response in centrality and \pt\ bins for signal and background.]{\label{BDT_centralities}BDT response in centrality and \pt\ bins for signal and background.}
 \end{figure}
 
 
@@ -189,7 +189,7 @@ An illustration of a decision tree is shown in Figure~\ref{BDT}\@. Decision-tree
 \centering
 \includegraphics[width=\textwidth]{img/BDT_significance_2014_10-80}
 \vspace{-1cm}
-\caption{\label{BDT_sig_2014_pt}Signal and background efficiency (top) and significance (bottom) versus BDT response in the 10--80$\,\%$ central Au+Au collisions recorded in 2014.}
+\caption[Signal and background efficiency and significance versus BDT response in the 10--80$\,\%$ central Au+Au collisions recorded in 2014.]{\label{BDT_sig_2014_pt}Signal and background efficiency (top) and significance (bottom) versus BDT response in the 10--80$\,\%$ central Au+Au collisions recorded in 2014.}
 \end{figure}
 
 \begin{figure}[!p]
@@ -197,7 +197,7 @@ An illustration of a decision tree is shown in Figure~\ref{BDT}\@. Decision-tree
 \centering
 \includegraphics[width=\textwidth]{img/BDT_significance_2014_cents}
 \vspace{-1cm}
-\caption{\label{BDT_sig_2014_cent}Signal and background efficiency (top) and significance (bottom) versus BDT response in for $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$ in different centrality intervals, in 2014 data.}
+\caption[Signal and background efficiency and significance versus BDT response for $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$ in different centrality intervals, in 2014 data.]{\label{BDT_sig_2014_cent}Signal and background efficiency (top) and significance (bottom) versus BDT response for $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$ in different centrality intervals, in 2014 data.}
 \end{figure}
 
 \begin{figure}[!p]
@@ -205,7 +205,7 @@ An illustration of a decision tree is shown in Figure~\ref{BDT}\@. Decision-tree
 \centering
 \includegraphics[width=\textwidth]{img/BDT_significance_2016_10-80}
 \vspace{-1cm}
-\caption{\label{BDT_sig_2016_pt}Signal and background efficiency (top) and significance (bottom) versus BDT response in the 10--80$\,\%$ central Au+Au collisions recorded in 2016.}
+\caption[Signal and background efficiency and significance versus BDT response in the 10--80$\,\%$ central Au+Au collisions recorded in 2016.]{\label{BDT_sig_2016_pt}Signal and background efficiency (top) and significance (bottom) versus BDT response in the 10--80$\,\%$ central Au+Au collisions recorded in 2016.}
 \end{figure}
 
 \begin{figure}[!p]
@@ -213,7 +213,7 @@ An illustration of a decision tree is shown in Figure~\ref{BDT}\@. Decision-tree
 \centering
 \includegraphics[width=\textwidth]{img/BDT_significance_2016_cents}
 \vspace{-1cm}
-\caption{\label{BDT_sig_2016_cent}Signal and background efficiency (top) and significance (bottom) versus BDT response in for $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$ in different centrality intervals, in 2016 data.}
+\caption[Signal and background efficiency and significance versus BDT response for $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$ in different centrality intervals, in 2016 data.]{\label{BDT_sig_2016_cent}Signal and background efficiency (top) and significance (bottom) versus BDT response for $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$ in different centrality intervals, in 2016 data.}
 \end{figure}
 
 Approximately half of the simulated events are used for training and half for the validation of the BDT method, especially for the overtraining check. The BDT training was performed separately for different centrality (0--20$\,\%$, 20--50$\,\%$, 50--80$\,\%$, 10--60$\,\%$, and 10--80$\,\%$) and \pt\ (2.5--3.5$\,$GeV/$c$, 3.5--5.0$\,$GeV/$c$, 5.0--8.0$\,$GeV/$c$,
@@ -224,7 +224,7 @@ The signal and background efficiencies $\epsilon$ (top panels) vs the BDT respon
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/raw_yield_rectangular}
-\caption{\label{fig:bdt_vs_rect} Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--60$\,\%$, recorded in 2014, with a transverse momentum cut of $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$\@. In the left-hand-side plot, the cuts were optimized, using the rectangular cuts and in the right-hand-side, using the BDT\@. The solid circles are the correct-charge combinations and the grey histogram represents scaled wrong-charge triplets.}
+\caption[ Invariant mass spectrum of the p+K+$\uppi$ triplets.]{\label{fig:bdt_vs_rect} Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--60$\,\%$, recorded in 2014, with a transverse momentum cut of $3\,\text{GeV}/c < \pt < 6\,\text{GeV}/c$\@. In the left-hand-side plot, the cuts were optimized, using the rectangular cuts and in the right-hand-side, using the BDT\@. The solid circles are the correct-charge combinations and the grey histogram represents scaled wrong-charge triplets.}
 
 \end{figure}
 
@@ -251,6 +251,61 @@ The detector response is simulated in the following steps:
 \end{itemize}
 
 This simulation has been verified, using simulated \Lambdacpm\ decays in full HIJING simulations of Au+Au events in a GEANT model of STAR, as well as the embedding of GEANT-simulated \Lambdacpm\ decays in measured Au+Au collisions\@.
+% -----------------------------------------------------------
+
+
+\section{Mixed-event background subtraction}
+In the mixed-event method for subtraction of the combinatorial background, tracks from different events are mixed together, therefore they cannot be correlated. The advantage of this method, compared to e.g.\ the wrong-sign method, is that the number of such mixed events is only limited by the computing power. Therefore, the background can be measured very precisely by mixing with a large number of events -- see e.g.\ the formula \eqref{significanceEstimates}. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width = 0.6\textwidth]{img/Mixing.pdf}
+
+\caption[Illustration of the three-body event-mixing method.]{\label{fig:mixedIllustration}Illustration of the three-body event-mixing method. Protons from one event are mixed with kaons from another event and saved as pairs. Pions are then added from different events.}
+
+\end{figure}
+
+
+
+
+There are several caveats to implementing the mixed-event method in three-body-decay analyses with topological selection. The events are always mixed within the same centrality and $v_z$ bin. Figure~\ref{fig:mixedIllustration} illustrates, how the mixed-event method is performed. In this example, we show a buffer of 5 events of the same centrality and $v_z$: First, protons are combined with kaons from another event and saved as pairs. Then we can add pions from all the remaining events. We can make 12 ($3 \times 4$) combinations in a buffer of 5 events. 
+
+
+\begin{figure}[htb]
+ \centering
+\includegraphics[width = 0.2\textwidth]{img/trackShiftEventMixing.pdf}
+
+\caption[Illustration of track shifting in the mixed-event background-subtraction method.]{\label{fig:mixedShifting}Illustration of track shifting in the mixed-event background-subtraction method.}
+\end{figure}
+
+Because of the topological cuts, the tracks have to be shifted when they are mixed into another event. Figure~\ref{fig:mixedShifting} shows the mixing of a track into another event. When a track is being added into another event, it has to be shifted by the relative position of the events' primary vertices, i.e.: When a track from an event with a PV coordinates $\overrightarrow{\mathrm{PV1}}$ is mixed into an event with a PV location $\overrightarrow{\mathrm{PV2}}$, all of the track's coordinates have to be shifted by $\overrightarrow{\mathrm{PV2}} - \overrightarrow{\mathrm{PV1}}$\@.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width = 0.6\textwidth]{img/peakMixedEventExtended.pdf}
+\caption[Comparison of the mixed-event and wrong-sign combinatorial-background-subtraction methods.]{\label{fig:extendedMixed}Invariant-mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV taken in 2014 at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$. Mixed-event and wrong-sign combinatorial-background-subtraction methods are compared.}
+\end{figure}
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width = 0.49\textwidth]{img/peakLcPlusMixed.pdf}
+\includegraphics[width = 0.49\textwidth]{img/peakLcMinusMixed.pdf}
+\caption[\Lcplus\ and \Lcminus\ invariant-mass peaks, using the mixed-event method for subtraction of the combinatorial background.]{\label{fig:chargesMixed}Invariant-mass spectrum of the p$^+$+K$^-$+$\uppi^+$ (left) and p$^-$+K$^+$+$\uppi^-$ (right) triplets in Au+Au collisions taken in 2014 with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$.}
+\end{figure}
+
+Figure~\ref{fig:extendedMixed} shows the comparison of the mixed-event and wrong-sign combinatorial-background-subtraction methods. This invariant-mass spectrum from 2014 data does not use the final topological cuts optimized by BDT, but rather only rectangular cuts. We can easily observe that the overall shape of the mixed-event background copies the wrong-sign triplets. The significance for this topological-cut set improved from   $s_\text{wrong-sign} = 5.6$ to $s_\text{mixed} = 5.9$ --- see the approximate formula \eqref{significanceEstimates}\@. This improvement is rather modest, therefore the wrong-sign method was used in further analysis to conserve computational time.
+The mixed-event method is, however, used when checking the difference between \Lcplus\  and \Lcminus\ (see Section \ref{LcChargeDependence})\@. In this case the wrong-sign background-subtraction method cannot be used as the shape of the background can be different for different charge combinations. Figure~\ref{fig:chargesMixed} shows the invariant-mass spectra for \Lcplus\ and \Lcminus\ from 2014, using the same topological cuts as in Figure~\ref{fig:extendedMixed}\@. For both p$^+$+K$^-$+$\uppi^+$ and p$^-$+K$^+$+$\uppi^-$ triplet combinations, the shape of the mixed-event background copies the the shape of the same-event invariant mass spectrum outside of the \Lcplus\ and \Lcminus\ peaks.
+
+% \begin{figure}[!htb]
+% \centering
+% \includegraphics[width = 0.6\textwidth]{img/mixedEvent12x}
+% \caption{\label{fig:invMass}Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$. Mixed-event and wrong-sign background subtraction methods are compared.}
+% 
+% \end{figure}
+% 
+% 
+% The invariant-mass spectrum of the \Lambdac\ is shown in Figure~\ref{fig:invMass}\@. 
 
 % -----------------------------------------------------------
 \section{\label{raw}Raw-signal extraction}
@@ -262,7 +317,7 @@ The raw signal of \Lambdacpm\ is extracted using the invariant mass spectra via,
 \centering
 \includegraphics[width=.76\textwidth]{img/raw_yield_pt_2014}
 \vspace{-0.5cm}
-\caption{\label{raw_sig_2014_pt}Invariant mass distribution of \pKpi\ triplets, showing the \Lambdac\ peak, obtained using BDT cuts in different \pt\ intervals in 10--80$\,\%$ central Au+Au collisions from 2014.}
+\caption[Invariant mass distribution of \pKpi\ triplets, showing the \Lambdac\ peak, obtained using BDT cuts in different \pt\ intervals from 2014.]{\label{raw_sig_2014_pt}Invariant mass distribution of \pKpi\ triplets, showing the \Lambdac\ peak, obtained using BDT cuts in different \pt\ intervals in 10--80$\,\%$ central Au+Au collisions from 2014.}
 \end{figure}
 
 \begin{figure}[!p]
@@ -270,7 +325,7 @@ The raw signal of \Lambdacpm\ is extracted using the invariant mass spectra via,
 \centering
 \includegraphics[width=.76\textwidth]{img/raw_yield_centrality_2014}
 \vspace{-0.5cm}
-\caption{\label{raw_sig_2014_centrality}Invariant mass distribution of \pKpi\ triplets with $3 <\pt < 6\,$GeV/$c$, showing the \Lambdac\ peak, obtained using BDT cuts in different centrality intervals in Au+Au collisions from 2014.}
+\caption[Invariant mass distribution of \pKpi\ triplet, showing the \Lambdac\ peak, obtained using BDT cuts in different centrality intervals in Au+Au collisions from 2014.]{\label{raw_sig_2014_centrality}Invariant mass distribution of \pKpi\ triplets with $3 <\pt < 6\,$GeV/$c$, showing the \Lambdac\ peak, obtained using BDT cuts in different centrality intervals in Au+Au collisions from 2014.}
 \end{figure}
 
 \begin{figure}[!p]
@@ -278,7 +333,7 @@ The raw signal of \Lambdacpm\ is extracted using the invariant mass spectra via,
 \centering
 \includegraphics[width=.76\textwidth]{img/raw_yield_pt_2016}
 \vspace{-0.5cm}
-\caption{\label{raw_sig_2016_pt}Invariant mass distribution of \pKpi\ triplets, showing the \Lambdac\ peak, obtained using BDT cuts in different \pt\ intervals in 10--80$\,\%$ central Au+Au collisions from 2016.}
+\caption[Invariant mass distribution of \pKpi\ triplets, showing the \Lambdac\ peak, obtained using BDT cuts in different \pt\ intervals from 2016.]{\label{raw_sig_2016_pt}Invariant mass distribution of \pKpi\ triplets, showing the \Lambdac\ peak, obtained using BDT cuts in different \pt\ intervals in 10--80$\,\%$ central Au+Au collisions from 2016.}
 \end{figure}
 
 \begin{figure}[!p]
@@ -286,10 +341,11 @@ The raw signal of \Lambdacpm\ is extracted using the invariant mass spectra via,
 \centering
 \includegraphics[width=.76\textwidth]{img/raw_yield_centrality_2016}
 \vspace{-0.5cm}
-\caption{\label{raw_sig_2016_centrality}Invariant mass distribution of \pKpi\ triplets with $3 <\pt < 6\,$GeV/$c$, showing the \Lambdac\ peak, obtained using BDT cuts in different centrality intervals in Au+Au collisions from 2016.}
+\caption[Invariant mass distribution of \pKpi\ triplet, showing the \Lambdac\ peak, obtained using BDT cuts in different centrality intervals in Au+Au collisions from 2016.]{\label{raw_sig_2016_centrality}Invariant mass distribution of \pKpi\ triplets with $3 <\pt < 6\,$GeV/$c$, showing the \Lambdac\ peak, obtained using BDT cuts in different centrality intervals in Au+Au collisions from 2016.}
 \end{figure}
 
 The BDT-cuts optimization provided enough significance of the \Lambdac\ that the signal could be devided into 3 \pt\ and centrality intervals in both, 2014 and 2016 data sets. Figures~\ref{raw_sig_2014_pt}--\ref{raw_sig_2016_centrality} show the invariant-mass spectra of \pKpi\ combinations with the wrong-sign polynomial fit (blue) and the signal fit (red) for different \pt~(Figures~\ref{raw_sig_2014_pt} and~\ref{raw_sig_2016_pt}) and centrality~(\ref{raw_sig_2014_centrality} and~\ref{raw_sig_2016_centrality}) intervals in Au+Au collisions recorded in 2014~(\ref{raw_sig_2014_pt} and~\ref{raw_sig_2014_centrality}) and 2016~(\ref{raw_sig_2016_pt} and~\ref{raw_sig_2016_centrality})\@. There are approximately 3$\times$ more wrong-sign triplets in the combinatorial background, compared to the right sign, therefore we scaled the wrong-sign-triplets count by~1/3\@. For significance, we use the formula $\sigma = S / \sqrt{S + B}$, in this instance, which is a good approximation for this method as many points are used for the fit. Figures~\ref{raw_sig_2014_pt}--\ref{raw_sig_2016_centrality} show that, thanks to BDT, the \Lambdacpm\ yield is large enough to be divided into three \pt\ and centrality intervals in both, 2014 and 2016 data samples which is crucial the comparison of our measurement to theoretical calculations.
+
 
 \section{Efficiency correction}
 
@@ -315,7 +371,7 @@ Because the efficiencies of detection of different tracks are independent, the f
 \centering
 \includegraphics[width = \textwidth]{img/p_TPC_matching}
 \vspace{-0.8cm}
-\caption{\label{pTPCeff} TPC tracking efficiency of protons $\epsilon_\mathrm{TPC}(\mathrm{p})$ plotted vs \pt\ in various centrality intervals. The red and green histograms are evaluated from 2016 and 2014 data taking, respectively.}
+\caption[TPC tracking efficiency of protons.]{\label{pTPCeff} TPC tracking efficiency of protons $\epsilon_\mathrm{TPC}(\mathrm{p})$ plotted vs \pt\ in various centrality intervals. The red and green histograms are evaluated from 2016 and 2014 data taking, respectively.}
 
 \end{figure}
 
@@ -323,7 +379,7 @@ Because the efficiencies of detection of different tracks are independent, the f
 \centering
 \includegraphics[width = \textwidth]{img/K_TPC_matching}
 \vspace{-0.8cm}
-\caption{\label{KTPCeff} TPC tracking efficiency of kaons $\epsilon_\mathrm{TPC}(\mathrm{K})$ plotted vs \pt\ in various centrality intervals. The red and green histograms are evaluated from 2016 and 2014 data taking, respectively.}
+\caption[TPC tracking efficiency of kaons.]{\label{KTPCeff} TPC tracking efficiency of kaons $\epsilon_\mathrm{TPC}(\mathrm{K})$ plotted vs \pt\ in various centrality intervals. The red and green histograms are evaluated from 2016 and 2014 data taking, respectively.}
 
 \end{figure}
 
@@ -332,7 +388,7 @@ Because the efficiencies of detection of different tracks are independent, the f
 \vspace{-0.2cm}
 \includegraphics[width = \textwidth]{img/pi_TPC_matching}
 \vspace{-0.8cm}
-\caption{\label{piTPCeff} TPC tracking efficiency of pions $\epsilon_\mathrm{TPC}(\uppi)$ plotted vs \pt\ in various centrality intervals. The red and green histograms are evaluated from 2016 and 2014 data taking, respectively.}
+\caption[TPC tracking efficiency of pions.]{\label{piTPCeff} TPC tracking efficiency of pions $\epsilon_\mathrm{TPC}(\uppi)$ plotted vs \pt\ in various centrality intervals. The red and green histograms are evaluated from 2016 and 2014 data taking, respectively.}
 
 \end{figure}
 
@@ -347,7 +403,7 @@ The matching efficiency of tracks in TOF $\epsilon_\mathrm{TOF}$\nomenclature{$\
 \vspace{-0.2cm}
 \includegraphics[width = \textwidth]{img/TOF_efficiency_2014}
 \vspace{-0.8cm}
-\caption{\label{tof2014} TOF matching efficiencies for \pKandpi\ versus \pt\ in run 2014 for two different centrality ranges.}
+\caption[TOF matching efficiencies for \pKandpi\ versus \pt\ in run 2014.]{\label{tof2014} TOF matching efficiencies for \pKandpi\ versus \pt\ in run 2014 for two different centrality ranges.}
 \end{figure}
 
 The TOF matching efficiencies for \piplus, \Kplus, and \pplus, compared to their antiparticles, are shown in Figure~\ref{tof2016}. The efficiencies are comparable to 2014 which shows stable performance in both runs.
@@ -355,7 +411,7 @@ The TOF matching efficiencies for \piplus, \Kplus, and \pplus, compared to their
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/TOF_efficiency_2016}
-\caption{\label{tof2016} TOF matching efficiencies for \piplus, \Kplus, and \pplus\ and their antiparticles versus \pt\ in run 2016 in 0--10$\,\%$ most central Au+Au collisions.}
+\caption[TOF matching efficiencies for \piplus, \Kplus, and \pplus\ and their antiparticles in run 2016.]{\label{tof2016} TOF matching efficiencies for \piplus, \Kplus, and \pplus\ and their antiparticles versus \pt\ in run 2016 in 0--10$\,\%$ most central Au+Au collisions.}
 \end{figure}
 
 The centrality dependence of $\epsilon_\mathrm{TOF}$ is shown in Figure~\ref{tof2016centrality}\@. The efficiency increases towards more peripheral collisions, most likely because of lower occupancy. 
@@ -363,19 +419,19 @@ The centrality dependence of $\epsilon_\mathrm{TOF}$ is shown in Figure~\ref{tof
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = 0.6\textwidth]{img/TOF_efficiency_2016_centrality}
-\caption{\label{tof2016centrality} TOF matching efficiency of TPC tracks as a function of \pt\ in different centrality intervals measured in 2016\@.}
+\caption[TOF matching efficiency of TPC tracks as a function of \pt\ in different centrality intervals measured in 2016.]{\label{tof2016centrality} TOF matching efficiency of TPC tracks as a function of \pt\ in different centrality intervals measured in 2016\@.}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/TOF_efficiency_2016_pileup}
-\caption{\label{tof2016pileup} TOF matching efficiency of TPC tracks as a function of \pt\ in different ZDC-crossing-rate intervals in 2016 for three different centrality ranges.}
+\caption[TOF matching efficiency of TPC tracks as a function of \pt\ in different ZDC-crossing-rate intervals in 2016.]{\label{tof2016pileup} TOF matching efficiency of TPC tracks as a function of \pt\ in different ZDC-crossing-rate intervals in 2016 for three different centrality ranges.}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/TOF_efficiency_2016_luminosity_dependence}
-\caption{\label{tof2016lumiDependence} TOF matching efficiency of TPC tracks as a function of the ZDC-crossing rate in 2016 for three different \pt\ and centrality ranges.}
+\caption[TOF matching efficiency of TPC tracks as a function of the ZDC-crossing rate in 2016.]{\label{tof2016lumiDependence} TOF matching efficiency of TPC tracks as a function of the ZDC-crossing rate in 2016 for three different \pt\ and centrality ranges.}
 \end{figure}
 
 Another factor, that needs to be taken into consideration, is the contribution of out-of-time pileup, i.e.\ stacking of multiple collisions in one measuring window of the TPC\@. This will decrease the TOF matching efficiency during high-luminosity-beam conditions as TOF has more precise timing and is not affected as much by the pileup. Figure~\ref{tof2016pileup} shows $\epsilon_\mathrm{TOF}$ for different ZDC-crossing-rate (ZdcX\nomenclature{ZdcX}{ZDC-crossing rate}) intervals as these can be used as good proxies for the instantaneous luminosity. We observe only a small change in the efficiency which indicates only a small dependence on the luminosity. The dependence on the ZDC-crossing rate is shown in Figure~\ref{tof2016lumiDependence}. As we observe a linear dependence, we fit the TOF efficiency by a first-order polynomial and extrapolate the dependence to zero which indicates the highest bias of our pileup. This extrapolation shows a maximum $3\,\%$ dependence of the efficiency on pileup which is taken into account in the systematic uncertainties.
@@ -389,7 +445,7 @@ The efficiencies of the $n\sigma_{\dedx}$ cut $\epsilon_{n\sigma}$\nomenclature{
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/nSigma}
-\caption{\label{PID_nsigma} Efficiency of the $n\sigma_{\dedx}$ cut in the TPC as a function of \pt\ for \piKandp, from left to right.}
+\caption[Efficiency of the $n\sigma_{\dedx}$ cut in the TPC as a function of \pt.]{\label{PID_nsigma} Efficiency of the $n\sigma_{\dedx}$ cut in the TPC as a function of \pt\ for \piKandp, from left to right.}
 \end{figure}
 
 
@@ -398,7 +454,7 @@ The $1/\beta$ efficiencies $\epsilon_{1/\beta}$\nomenclature{$\epsilon_{1/\beta}
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/beta_efficiency}
-\caption{\label{PID_beta} Efficiency of the $1/\beta$ cut in the TOF as a function of \pt\ for \piKandp, from left to right.}
+\caption[Efficiency of the $1/\beta$ cut in the TOF as a function of \pt.]{\label{PID_beta} Efficiency of the $1/\beta$ cut in the TOF as a function of \pt\ for \piKandp, from left to right.}
 \end{figure}
 
 The final PID efficiency $\epsilon_\text{PID}$ is calculated for each particle separately in the \pt\ intervals with the clean-PID cuts (see Table~\ref{tab:PID})
@@ -425,13 +481,13 @@ The TPC efficiency depends on \pt\ and centrality of the tracks. The HFT efficie
 \begin{figure}[!p]
 \centering
 \includegraphics[width = .6\textwidth]{img/eff_pt2014}
-\caption{\label{eff_pt2014} Efficiency of the reconstruction of \Lambdac\ as a function of \pt\ in the 2014 data in the 10--80$\,\%$ centrality interval.}
+\caption[Efficiency of the reconstruction of \Lambdac\ as a function of \pt\ in the 2014.]{\label{eff_pt2014} Efficiency of the reconstruction of \Lambdac\ as a function of \pt\ in the 2014 data in the 10--80$\,\%$ centrality interval.}
 \end{figure}
 
 \begin{figure}[!p]
 \centering
 \includegraphics[width = .6\textwidth]{img/eff_centrality2014}
-\caption{\label{eff_centrality2014} Efficiency of the reconstruction of \Lambdac\ as a function of centrality for $3\,$GeV$/c < \pt < 6\,$GeV$/c$ in the 2014 data.}
+\caption[ Efficiency of the reconstruction of \Lambdac\ as a function of centrality in the 2014 data.]{\label{eff_centrality2014} Efficiency of the reconstruction of \Lambdac\ as a function of centrality for $3\,$GeV$/c < \pt < 6\,$GeV$/c$ in the 2014 data.}
 \end{figure}
 
 
@@ -447,7 +503,7 @@ Figures~\ref{eff_pt2014}--\ref{eff_centrality2016} show the efficiency as a func
 \begin{figure}[!p]
 \centering
 \includegraphics[width = .6\textwidth]{img/eff_centrality2016}
-\caption{\label{eff_centrality2016} Efficiency of the reconstruction of \Lambdac\ as a function of centrality for $3\,$GeV$/c < \pt < 6\,$GeV$/c$ in the 2016 data.}
+\caption[Efficiency of the reconstruction of \Lambdac\ as a function of centrality in the 2016 data.]{\label{eff_centrality2016} Efficiency of the reconstruction of \Lambdac\ as a function of centrality for $3\,$GeV$/c < \pt < 6\,$GeV$/c$ in the 2016 data.}
 \end{figure}
 
 \section{Corrected spectra}
@@ -455,13 +511,13 @@ Figures~\ref{eff_pt2014}--\ref{eff_centrality2016} show the efficiency as a func
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = .6\textwidth]{img/spectra_pt}
-\caption{\label{spectraPt} Fully corrected \Lambdac\ spectra as a function of \pt\ in the 10--80$\,\%$ centrality interval, plotted for 2014 and 2016. Only statistical uncertainties are shown.}
+\caption[Fully corrected \Lambdac\ spectra as a function of \pt.]{\label{spectraPt} Fully corrected \Lambdac\ spectra as a function of \pt\ in the 10--80$\,\%$ centrality interval, plotted for 2014 and 2016. Only statistical uncertainties are shown.}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = .6\textwidth]{img/spectra_centrality}
-\caption{\label{spectraCent} Fully corrected \Lambdac\ spectra as a function of centrality with $3\,$GeV$/c < \pt < 6\,$GeV$/c$, plotted for 2014 and 2016. Only statistical uncertainties are shown.}
+\caption[Fully corrected \Lambdac\ spectra as a function of centrality.]{\label{spectraCent} Fully corrected \Lambdac\ spectra as a function of centrality with $3\,$GeV$/c < \pt < 6\,$GeV$/c$, plotted for 2014 and 2016. Only statistical uncertainties are shown.}
 \end{figure}
 
 The raw spectra are corrected, using the efficiencies from the previous section. The fully corrected spectra are shown in Figure~\ref{spectraPt} as a function of \pt\ in the 10--80$\,\%$ centrality interval. The corrected spectra as a function of centrality are shown in Figure~\ref{spectraCent}\@. The results from the two runs are consistent within statistical uncertainty intervals.
@@ -491,7 +547,7 @@ To establish the contribution of the fit procedure to the systematic uncertainty
 \centering
 \includegraphics[width = \textwidth]{img/systematics_fit_pT1}
 \includegraphics[width = \textwidth]{img/systematics_count_pT1}
-\caption{\label{syst_pT1} Variation of the yield extraction procedure for the evaluation of the systematic error. Several fitting procedures of the invariant mass of the \pKpi\ triplets, recorded in 2014 at 2.5$\,$GeV$/c < \pt < 3.5\,$GeV$/c$, are shown on the left-hand side\@. The resulting \Lambdac\ yields are plotted on the right-hand side. The top plots show the variation of background estimation procedures and the bottom plots show the yield calculation procedures.}
+\caption[Variation of the yield extraction procedure for the evaluation of the systematic error]{\label{syst_pT1} Variation of the yield extraction procedure for the evaluation of the systematic error. Several fitting procedures of the invariant mass of the \pKpi\ triplets, recorded in 2014 at 2.5$\,$GeV$/c < \pt < 3.5\,$GeV$/c$, are shown on the left-hand side\@. The resulting \Lambdac\ yields are plotted on the right-hand side. The top plots show the variation of background estimation procedures and the bottom plots show the yield calculation procedures.}
 \end{figure}
 
 The yield is extracted by bin counting within a 3$\sigma$ interval around the Gaussian-fit mean. To vary this approach, two additional evaluations are performed: In the first one, the signal is calculated by integrating the Gaussian directly. In the second one, the yield is extracted from bin counting from the extended range of 2--2.6$\,$GeV$/c^2$\@. The default approach of bin counting within 3$\sigma$ and within the extended range are consistent with each other.
@@ -505,7 +561,7 @@ The yield is extracted by bin counting within a 3$\sigma$ interval around the Ga
 \includegraphics[width = .49\textwidth]{img/BDT_yield_systematics}
 \includegraphics[width = .49\textwidth]{img/BDT_efficiency_systematics}
 \includegraphics[width = .49\textwidth]{img/BDT_corrected_systematics}
-\caption{\label{BDT_systematics} The raw yields (top left), reconstruction efficiencies (top right), and the efficincy-corrected invariant yields (bottom) obtained by varying the BDT response cut in the 3.5$\,$GeV$/c < \pt < 5\,$GeV$/c$ and 10--80$\,\%$ centrality interval in the 2014 data.}
+\caption[The raw yields, reconstruction efficiencies, and the efficincy-corrected invariant yields obtained by varying the BDT response cut.]{\label{BDT_systematics} The raw yields (top left), reconstruction efficiencies (top right), and the efficincy-corrected invariant yields (bottom) obtained by varying the BDT response cut in the 3.5$\,$GeV$/c < \pt < 5\,$GeV$/c$ and 10--80$\,\%$ centrality interval in the 2014 data.}
 \end{figure}
 
 To ensure the stability of our choise of the BDT cuts, we varied them to see that the final result remains stable even with different choises. The cuts are varied so that the significance stays above 3\@. This usually means that the signal-reconstruction efficiency is varied within at least $\pm 50\,\%$\@. Figure~\ref{BDT_systematics} shows an example of the BDT response variation in the 3.5$\,$GeV$/c < \pt < 5\,$GeV$/c$ and 10--80$\,\%$ centrality bin in the 2014 data. Raw yields, efficiencies, and also the resulting corrected invariant yields are plotted with statistical uncertainties as a function of the BDT response. Even though the raw yields and the efficiencies vary by more than 7$\,\%$, the corrected invariant yields are consistent within 10--15$\,\%$\@.
@@ -520,19 +576,19 @@ The mean values $\mu_T$ and $\mu_S$ are the corrected spectra in our case. As a 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/BDT_systematic_difference.png}
-\caption{\label{BDT_syst_difference} The invariant yields of \Lambdac\ (left) and the difference from the default yield as a function of the BDT response in the 3.5$\,$GeV$/c < \pt < 5\,$GeV$/c$ and 10--80$\,\%$ centrality interval in the 2014 data. The dashed lines show the default cuts (blue) and cuts at $\pm 25\,\%$, $\pm 50\,\%$, $\pm 75\,\%$, and $\pm 100\,\%$ from the default.}
+\caption[The invariant yields of \Lambdac\ and the difference from the default yield as a function of the BDT response.]{\label{BDT_syst_difference} The invariant yields of \Lambdac\ (left) and the difference from the default yield as a function of the BDT response in the 3.5$\,$GeV$/c < \pt < 5\,$GeV$/c$ and 10--80$\,\%$ centrality interval in the 2014 data. The dashed lines show the default cuts (blue) and cuts at $\pm 25\,\%$, $\pm 50\,\%$, $\pm 75\,\%$, and $\pm 100\,\%$ from the default.}
 \end{figure}
 
 Figure~\ref{BDT_syst_difference} shows an example of the inference of the BDT-systematic-uncertainty contribution. First, the invariant yield is calculated for each set of the varied cuts and then the difference $\Delta$ is calculated with its uncertainty $\sigma_\Delta$. This plot corresponds to the the 3.5$\,$GeV$/c < \pt < 5\,$GeV$/c$ and 10--80$\,\%$ centrality interval in the 2014 data.
 
-\subsection{Charge dependence of efficiency}
+\subsection{Charge dependence of efficiency\label{LcChargeDependence}}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/HFT_ratio_charges10.png}
 \includegraphics[width = \textwidth]{img/HFT_ratio_charges30.png}
 \includegraphics[width = \textwidth]{img/HFT_ratio_charges60.png}
-\caption{\label{HFT_ratio_charge} Charge dependence of the ratio between the number HFT and TPC tracks for \pKandpi\ as a function of \pt\ in several different centrality intervals in the 2016 data.}
+\caption[Charge dependence of the ratio between the number HFT and TPC tracks in the 2016 data.]{\label{HFT_ratio_charge} Charge dependence of the ratio between the number HFT and TPC tracks for \pKandpi\ as a function of \pt\ in several different centrality intervals in the 2016 data.}
 \end{figure}
 
 In the analysis of the \Lambdac/\dzero\ ratio, we combine the \Lcplus\ and \LcminusBar, and $\dzero$ and $\overline{\dzero}$, and in the simulations, we produce the same number of particles and antiparticles. The efficiency of reconstruction of the daughter tracks depends slightly on the charge of the daughter particles and there is some evidence~\cite{D0paper} that the \Lcminus/\Lcplus ratio is not exactly unity. Figure~\ref{HFT_ratio_charge} shows the dependence of the HFT ratio (i.e. ratio between the HFT and TPC tracks) of identified particles. The difference in detection efficiency is always slightly higher in positively charged particles.
@@ -541,7 +597,7 @@ In the analysis of the \Lambdac/\dzero\ ratio, we combine the \Lcplus\ and \Lcmi
 \centering
 \includegraphics[width = .6\textwidth]{img/Lc_efficiency_charges.png}
 
-\caption{\label{Lc_eff_charge} The difference in reconstruction efficiency between \Lcplus\ and \Lcminus\ as a function of \pt\ in the 10--80$\,\%$ centrality range.}
+\caption[The difference in reconstruction efficiency between \Lcplus\ and \Lcminus.]{\label{Lc_eff_charge} The difference in reconstruction efficiency between \Lcplus\ and \Lcminus\ as a function of \pt\ in the 10--80$\,\%$ centrality range.}
 \end{figure}
 
 
@@ -549,7 +605,7 @@ In the analysis of the \Lambdac/\dzero\ ratio, we combine the \Lcplus\ and \Lcmi
 \centering
 \includegraphics[width = .6\textwidth]{img/Lc_efficiency_charges_difference.png}
 
-\caption{\label{Lc_eff_ratio_charge} Ratio between \Lcplus\ and \Lcminus\ reconstruction efficiencies as a function of \pt\ in the 10--80$\,\%$ centrality range.}
+\caption[Ratio between \Lcplus\ and \Lcminus\ reconstruction efficiencies.]{\label{Lc_eff_ratio_charge} Ratio between \Lcplus\ and \Lcminus\ reconstruction efficiencies as a function of \pt\ in the 10--80$\,\%$ centrality range.}
 \end{figure}
 
 Figure~\ref{Lc_eff_charge} shows the efficiency of \Lcplus\ compared to \Lcminus\ and their ratio is plotted in Figure~\ref{Lc_eff_ratio_charge}\@. Because the charge dependence of the daughter particles partially cancels out, the of the efficiency does not depend on the charge very much and the difference can be cited as a systematic uncertainty.
@@ -561,7 +617,7 @@ The HFT ratio depends on the charge in the order of 2$\,\%$.
 \centering
 \includegraphics[width = .6\textwidth]{img/Spectrum_models.png}
 
-\caption{\label{spectrum_models} The shape of the \Lambdac\ spectra as depicted by three different models. The default (red) is the \dzero\ spectrum. The green line depicts the default modified by the \Lambdac/\dzero\ ratio from PYTHIA~\cite{PYTHIA8} and the blue line is modified by a coalescence model (Greco~\cite{GrecoCoalescence}) calculation.}
+\caption[The shape of the \Lambdac\ spectra as depicted by three different models.]{\label{spectrum_models} The shape of the \Lambdac\ spectra as depicted by three different models. The default (red) is the \dzero\ spectrum. The green line depicts the default modified by the \Lambdac/\dzero\ ratio from PYTHIA~\cite{PYTHIA8} and the blue line is modified by a coalescence model (Greco~\cite{GrecoCoalescence}) calculation.}
 \end{figure}
 
 The reconstruction efficiency of the \Lambdac\ is calculated in relatively broad \pt\ bins and can, therefore, be influenced by the shape of the \pt\ spectrum within each bin. Figure~\ref{spectrum_models} shows three different spectra shapes. In this analysis, the default shapes (red) were chosen as the \dzero\ spectra in each centrality bin. Two modifications were chosen for comparison: One is from the \Lambdac/\dzero\ ratio from PYTHIA~\cite{PYTHIA8} and the other uses a quark-coalescence model by the Greco group~\cite{GrecoCoalescence}\@.
@@ -570,7 +626,7 @@ The reconstruction efficiency of the \Lambdac\ is calculated in relatively broad
 \centering
 \includegraphics[width = .6\textwidth]{img/Spectrum_difference}
 
-\caption{\label{spectrum_diff} \Lambdac\ reconstruction efficiencies, using different shapes of the spectra.}
+\caption[\Lambdac\ reconstruction efficiencies, using different shapes of the spectra.]{\label{spectrum_diff} \Lambdac\ reconstruction efficiencies, using different shapes of the spectra.}
 \end{figure}
 
 The comparison of the three spectra shapes is shown in Figure~\ref{spectrum_diff}\@. The efficiency is not modified much by the usage of the \Lambdac/\dzero\ ratio from PYTHIA\@. When using the Greco model, the efficiency is modified by $\sim5\,\%$ in low \pt\ and it rises to $\sim10\,\%$ in high \pt\@. The ratio between the efficiencies, that use the PYTHIA and Greco modifications, is shown in Figure~\ref{spectrum_ratio}\@. The differences between the spectra are propagated into the systematic uncertainties.
@@ -579,7 +635,7 @@ The comparison of the three spectra shapes is shown in Figure~\ref{spectrum_diff
 \centering
 \includegraphics[width = .6\textwidth]{img/Spectrum_ratio}
 
-\caption{\label{spectrum_ratio} Ratio of efficiencies calculated using the spectrum modified by the ratio of \Lambdac/\dzero\ from PYTHIA~\cite{PYTHIA8} and by a quark-coalescence model by the Greco group~\cite{GrecoCoalescence}.}
+\caption[Ratio of efficiencies calculated using the spectrum modified by the ratio of \Lambdac/\dzero\ from PYTHIA and by a quark-coalescence model by the Greco group.]{\label{spectrum_ratio} Ratio of efficiencies calculated using the spectrum modified by the ratio of \Lambdac/\dzero\ from PYTHIA~\cite{PYTHIA8} and by a quark-coalescence model by the Greco group~\cite{GrecoCoalescence}.}
 \end{figure}
 
 \subsection{Primary-vertex resolution}
@@ -590,7 +646,7 @@ The data-driven FastSim is a capable simulator for the reconstruction efficiency
 \centering
 \includegraphics[width = \textwidth]{img/PV_resolution}
 
-\caption{\label{PV_resolution} \Lambdac\ reconstruction efficiencies as functions of \pt\ for different centralities from FastSim and HIJING simulations embedded in MB data for 2014. The smaller panels represent the ratio of the two.}
+\caption[\Lambdac\ reconstruction efficiencies from FastSim and HIJING simulations embedded in MB data for 2014]{\label{PV_resolution} \Lambdac\ reconstruction efficiencies as functions of \pt\ for different centralities from FastSim and HIJING simulations embedded in MB data for 2014. The smaller panels represent the ratio of the two.}
 \end{figure}
 
 Figure~\ref{PV_resolution} shows the efficiencies from the HIJING embedded into MB data, compared to the FastSim. As expected, they differ more in the peripheral collisions with up to $\sim40\,\%$ difference in the 70--80$\,\%$ centrality interval and approximately $\sim10\,\%$ in the 60--70$\,\%$ bin. For centralities bellow 60$\,\%$, the efficiencies are consistent within statistical uncertainties. The most peripheral point is 50--80$\,\%$ in centrality which is shown in Figure~\ref{PV_peripheral}\@. The efficiencies are consistent within 10$\,\%$ in this centrality interval which is quoted as the systematic uncertainty.
@@ -599,7 +655,7 @@ Figure~\ref{PV_resolution} shows the efficiencies from the HIJING embedded into 
 \centering
 \includegraphics[width = .49\textwidth]{img/PV_res_peripheral}
 \includegraphics[width = .49\textwidth]{img/PV_res_peripheral_ratio}
-\caption{\label{PV_peripheral} Left: \Lambdac\ reconstruction efficiencies as functions of \pt\ in the 50--80\,\% centrality bin from FastSim and HIJING simulations embedded in MB data for 2014. Right: Ratio of the two efficiencies vs \pt.}
+\caption[\Lambdac\ reconstruction efficiencies from FastSim and HIJING simulations embedded in MB data for 2014 and ratio of the two efficiencies.]{\label{PV_peripheral} Left: \Lambdac\ reconstruction efficiencies as functions of \pt\ in the 50--80\,\% centrality bin from FastSim and HIJING simulations embedded in MB data for 2014. Right: Ratio of the two efficiencies vs \pt.}
 \end{figure}
 
 The same study was performed in the 2016 data which is shown in Figures~\ref{PV_resolution2016} and~\ref{PV_res_peripheral2016}\@. The efficiencies show a similar behavior as in 2014 with the largest difference in the most peripheral collisions. In the 50--80$\,\%$ centrality bin, the agreement is down to 5$\,\%$ and is consistent within 10$\,\%$ including the statistical uncertainty. The 10$\,\%$ systematic uncertainty is quoted in this bin such as in the 2014 data.
@@ -608,14 +664,14 @@ The same study was performed in the 2016 data which is shown in Figures~\ref{PV_
 \centering
 \includegraphics[width = \textwidth]{img/PV_resolution2016}
 
-\caption{\label{PV_resolution2016} \Lambdac\ reconstruction efficiencies as functions of \pt\ for different centralities from FastSim and HIJING simulations embedded in MB data for 2016. The smaller panels represent the ratio of the two.}
+\caption[\Lambdac\ reconstruction efficiencies from FastSim and HIJING simulations embedded in MB data for 2016.]{\label{PV_resolution2016} \Lambdac\ reconstruction efficiencies as functions of \pt\ for different centralities from FastSim and HIJING simulations embedded in MB data for 2016. The smaller panels represent the ratio of the two.}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = .49\textwidth]{img/PV_res_peripheral2016}
 \includegraphics[width = .49\textwidth]{img/PV_res_peripheral_ratio2016}
-\caption{\label{PV_peripheral2016} Left: \Lambdac\ reconstruction efficiencies as functions of \pt\ in the 50--80\,\% centrality bin from FastSim and HIJING simulations embedded in MB data for 2016. Right: Ratio of the two efficiencies vs \pt.}
+\caption[\Lambdac\ reconstruction efficiencies from FastSim and HIJING simulations embedded in MB data for 2016 and ratio of the two efficiencies.]{\label{PV_peripheral2016} Left: \Lambdac\ reconstruction efficiencies as functions of \pt\ in the 50--80\,\% centrality bin from FastSim and HIJING simulations embedded in MB data for 2016. Right: Ratio of the two efficiencies vs \pt.}
 \end{figure}
 
 
@@ -625,14 +681,14 @@ In our analysis method, there is a finite probability that one or more daughter 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/nSigmaDoubleCountingPion}
-\caption{\label{nSigmaDoublePion} Left: Invariant mass distribution of the \Kshort\ sample. Right: Mean and width of the pion \dedx\ distribution, compared to the theoretical values for pions (black), kaons (red), and protons (blue), evaluated in terms of $\sigma_{\dedx}$ of the respective hadron.}
+\caption[Invariant mass distribution of the \Kshort\ sample. Mean and width of the pion \dedx\ distribution.]{\label{nSigmaDoublePion} Left: Invariant mass distribution of the \Kshort\ sample. Right: Mean and width of the pion \dedx\ distribution, compared to the theoretical values for pions (black), kaons (red), and protons (blue), evaluated in terms of $\sigma_{\dedx}$ of the respective hadron.}
 \end{figure}
 
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/nSigmaDoubleCountingProton}
-\caption{\label{nSigmaDoubleProton} Left: Invariant mass distribution of the $\Lambda$ sample. Right: Mean and width of the proton \dedx\ distribution, compared to the theoretical values for pions (black), kaons (red), and protons (blue), evaluated in terms of $\sigma_{\dedx}$ of the respective hadron.}
+\caption[Invariant mass distribution of the $\Lambda$ sample. Mean and width of the proton \dedx\ distribution.]{\label{nSigmaDoubleProton} Left: Invariant mass distribution of the $\Lambda$ sample. Right: Mean and width of the proton \dedx\ distribution, compared to the theoretical values for pions (black), kaons (red), and protons (blue), evaluated in terms of $\sigma_{\dedx}$ of the respective hadron.}
 \end{figure}
 
 The \dedx\ distribution of a particle species generally follows a Gaussian distribution for a fixed \pt\@. Pure samples of pions and protons from the decays of \Kshort\ and $\Lambda$, respectively, were used. Figures \ref{nSigmaDoublePion} and \ref{nSigmaDoubleProton} show the invariant mass of the reconstructed \Kshort\ and  $\Lambda$ samples, as well as the mean and the width of the \dedx\ distributions of the pure pions and protons in terms of the width $\sigma_{\dedx}$ of other particle species. Figure \ref{nSigmaComparison} depicts the shape of the \dedx\ distributions of daughter species in terms of $\sigma_{\dedx}$ of other particle species in several \pt\ intervals. All these figures show good separation in low \pt\@.
@@ -640,7 +696,7 @@ The \dedx\ distribution of a particle species generally follows a Gaussian distr
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/nSigmaComparison}
-\caption{\label{nSigmaComparison} \dedx\ distributions for various \pt\ intervals measured for pions (left) and for protons (right).}
+\caption[\dedx\ distributions for pions and for protons.]{\label{nSigmaComparison} \dedx\ distributions for various \pt\ intervals measured for pions (left) and for protons (right).}
 \end{figure}
 
 The same procedure can be performed to evaluate the separation in PID in TOF\@. Figure~\ref{TOF_misPID} shows $1/\beta$ distributions of protons and pions in several \pt\ regions. These distributions are used to evaluate the overlap between pions and protons. The vertical lines indicate the $1/\beta$ cuts of the other particle (protons with pions $1/\beta$ distribution and vice versa)\@. Both the \dedx\ and $1/\beta$ distributions are shown in the 10--20$\,\%$ centrality interval, however the centrality dependence is negligible in this case. 
@@ -648,13 +704,13 @@ The same procedure can be performed to evaluate the separation in PID in TOF\@. 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/TOF_misPID}
-\caption{\label{TOF_misPID} $1/\beta$ distributions for various \pt\ intervals measured for pions (left) and for protons (right)\@. The vertical lines denote the TOF $1/\beta$ cuts for protons (left) and pions (right).}
+\caption[ $1/\beta$ distributions for pions and for protons.]{\label{TOF_misPID} $1/\beta$ distributions for various \pt\ intervals measured for pions (left) and for protons (right)\@. The vertical lines denote the TOF $1/\beta$ cuts for protons (left) and pions (right).}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = \textwidth]{img/misPID}
-\caption{\label{misPID} Probabilities for pions to be misidentified as protons (left) and protons to be misidentified as pions (right) for several different selection criteria. }
+\caption[Probabilities for pions to be misidentified as protons and protons to be misidentified as pions.]{\label{misPID} Probabilities for pions to be misidentified as protons (left) and protons to be misidentified as pions (right) for several different selection criteria. }
 \end{figure}
 
 Figure~\ref{misPID} shows the overall probabilities of misidentification of pions as protons and vice versa for several selection criteria. The probability for pions with $\pt < 3\,$GeV$/c$ to be misidentified as protons is close to zero, because we require both, TOF and TPC-\dedx\ information in this region.
@@ -664,21 +720,21 @@ The probability of double counting of the \Lambdac\ triplets is shown in Figure~
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = .5\textwidth]{img/doubleCounting}
-\caption{\label{doubleCounting} Double-counting probability due to PID as a function of \pt\ in the 2014 and 2016 data taking.}
+\caption[Double-counting probability due to PID.]{\label{doubleCounting} Double-counting probability due to PID as a function of \pt\ in the 2014 and 2016 data taking.}
 \end{figure}
 
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = .6\textwidth]{img/mass_shift_misPID_Lc}
-\caption{\label{misPID_Lc} Simulated invariant mass of daughters of simulated \Lambdac\ decays with swapped \pipm\ and \ppm\ (red), and correctly identified triplets (black). }
+\caption[Simulated invariant mass of daughters of simulated \Lambdac\ decays with swapped \pipm\ and \ppm.]{\label{misPID_Lc} Simulated invariant mass of daughters of simulated \Lambdac\ decays with swapped \pipm\ and \ppm\ (red), and correctly identified triplets (black). }
 \end{figure}
 
 
 \subsection{Summary of systematic uncertainties}
 
 \begin{table}[!htb]
-\caption{\label{tab:Syst} Summary of systematic and statistical uncertainties of the \Lambdac\ spectrum (S) and the \Lambdac/\dzero\ ratio (R) in the 10--80$\,\%$ centrality interval in different \pt\ bins.}
+\caption[Summary of systematic and statistical uncertainties of the \Lambdac\ spectrum and the \Lambdac/\dzero\ ratio in different \pt\ bins.]{\label{tab:Syst} Summary of systematic and statistical uncertainties of the \Lambdac\ spectrum (S) and the \Lambdac/\dzero\ ratio (R) in the 10--80$\,\%$ centrality interval in different \pt\ bins.}
 
 \hspace{-6ex}\begin{tabular}{lccccccc}
 \toprule
@@ -693,7 +749,7 @@ The probability of double counting of the \Lambdac\ triplets is shown in Figure~
 \end{table}
 
 \begin{table}[!htb]
-\caption{\label{tab:SystCent} Summary of systematic and statistical uncertainties of the \Lambdac\ spectrum (S) and the \Lambdac/\dzero\ ratio (R) within the 3$\,$GeV$/c < \pt < 6\,$GeV$/c$ interval in different centrality bins.}
+\caption[Summary of systematic and statistical uncertainties of the \Lambdac\ spectrum and the \Lambdac/\dzero\ ratio in different centrality bins.]{\label{tab:SystCent} Summary of systematic and statistical uncertainties of the \Lambdac\ spectrum (S) and the \Lambdac/\dzero\ ratio (R) within the 3$\,$GeV$/c < \pt < 6\,$GeV$/c$ interval in different centrality bins.}
 
 \hspace{-6ex}\begin{tabular}{lccccccc}
 \toprule
@@ -723,7 +779,7 @@ The measured \Lambdac\ do not necessarily originate directly in the collision, b
 \centering
 \includegraphics[width = .6\textwidth]{img/FONLLbPP}
 \includegraphics[width = .6\textwidth]{img/FONLLbMinBias}
-\caption{\label{FONLLb} The bottom cross-section from FONLL~\cite{FONLLcharm} (upper limit) in p+p collisions at $\sqrt{s} = 200\,$GeV (top panel) and the $\Lambda_\mathrm{b}^0$ in 10--80$\,\%$ central Au+Au collisions at $\snn = 200\,$GeV (bottom panel)\@.}
+\caption[The bottom cross-section from FONLL (upper limit) in p+p collisions and the $\Lambda_\mathrm{b}^0$ in  Au+Au collisions.]{\label{FONLLb} The bottom cross-section from FONLL~\cite{FONLLcharm} (upper limit) in p+p collisions at $\sqrt{s} = 200\,$GeV (top panel) and the $\Lambda_\mathrm{b}^0$ in 10--80$\,\%$ central Au+Au collisions at $\snn = 200\,$GeV (bottom panel)\@.}
 \end{figure}
 
 
@@ -733,7 +789,7 @@ The total cross-section of the bottom hadrons in p+p collisions at $\sqrt{s} = 2
 \centering
 \includegraphics[width = .6\textwidth]{img/bFeedDown}
 \includegraphics[width = .6\textwidth]{img/bFeedDownRatio}
-\caption{\label{bFeedDown} (Top panel) Measured \Lambdacpm\ \pt\ spectrum, compared to the feed-down contribution from the $\Lambda_\mathrm{b}^0$ baryon@. (Bottom panel) The ratio between the feed-down contribution from $\Lambda_\mathrm{b}^0$ and the inclusive \Lambdacpm\ spectrum a a function of \pt.}
+\caption[Measured \Lambdacpm\ \pt\ spectrum, compared to the feed-down contribution from the $\Lambda_\mathrm{b}^0$ baryon. The ratio between the feed-down contribution from $\Lambda_\mathrm{b}^0$ and the inclusive \Lambdacpm\ spectrum.]{\label{bFeedDown} (Top panel) Measured \Lambdacpm\ \pt\ spectrum, compared to the feed-down contribution from the $\Lambda_\mathrm{b}^0$ baryon. (Bottom panel) The ratio between the feed-down contribution from $\Lambda_\mathrm{b}^0$ and the inclusive \Lambdacpm\ spectrum a function of \pt.}
 \end{figure}
 
 The $\Lambda_\mathrm{b}^0$ decay was simulated in the \texttt{EvtGen} package with a branching ratio of $\Lambda_\mathrm{b}^0 \rightarrow \Lambdac + l + \overline{\upnu_l}$ as $5\,\%$~\cite{PDG} and of $\Lambda_\mathrm{b}^0 \rightarrow \Lambdac + \uppi^+ + \uppi^- + l + \overline{\upnu_l}$ of $5.6\,\%$, where $l$ is a lepton and $\overline{\upnu_l}$ is an antineutrino of the same family. Figure~\ref{bFeedDown} shows the $\Lambda_\mathrm{b}^0$ spectrum obtained from FONLL and the \Lambdac\ feed down, compared to the measured \Lambdac\ spectrum. The bottom panel shows the ratio of the measured \Lambdac\ from the  $\Lambda_\mathrm{b}^0$ decays divided by the measured \pt\ spectrum. As can be seen, the contribution  from the $\Lambda_\mathrm{b}^0$ is small ($< 1\,\%$ in all measured \pt\ intervals)\@. The contributions from the B$^0$ and B$^\pm$ were not evaluated, but are clearly to be expected $\sim1\,\%$, based on the $\Lambda_\mathrm{b}^0$\@.
@@ -743,21 +799,21 @@ The $\Lambda_\mathrm{b}^0$ decay was simulated in the \texttt{EvtGen} package wi
 \includegraphics[width = \textwidth]{img/LambdabTopo}
 \includegraphics[width = \textwidth]{img/LambdabTopo2}
 \includegraphics[width = \textwidth]{img/LambdabTopo3}
-\caption{\label{LambdabTopo} Topological variables of the simulated prompt \Lambdac\ decays and the \Lambdac\ from the $\Lambda_\mathrm{b}^0$ feed down.}
+\caption[Topological variables of the simulated prompt and non-prompt \Lambdac\ decays.]{\label{LambdabTopo} Topological variables of the simulated prompt \Lambdac\ decays and the \Lambdac\ from the $\Lambda_\mathrm{b}^0$ feed down.}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = 0.49\textwidth]{img/FeedDownEff}
 \includegraphics[width = 0.49\textwidth]{img/FeedDownEffRatio}
-\caption{\label{FeedDownEff} (Left) reconstruction efficiency of various topological cuts of prompt \Lambdac\ and \Lambdac\ from the $\Lambda_\mathrm{b}^0$ feed down in the 2014 data in the 10--80$\,\%$ centrality interval. (Right) Ratio of the non-prompt and prompt reconstruction efficiencies.}
+\caption[Reconstruction efficiency of various topological cuts of prompt and non-prompt \Lambdac\ for 2014.]{\label{FeedDownEff} (Left) reconstruction efficiency of various topological cuts of prompt \Lambdac\ and \Lambdac\ from the $\Lambda_\mathrm{b}^0$ feed down in the 2014 data in the 10--80$\,\%$ centrality interval. (Right) Ratio of the non-prompt and prompt reconstruction efficiencies.}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width = 0.49\textwidth]{img/FeedDownEff2016}
 \includegraphics[width = 0.49\textwidth]{img/FeedDownEffRatio2016}
-\caption{\label{FeedDownEff2016} (Left) reconstruction efficiency of various topological cuts of prompt \Lambdac\ and \Lambdac\ from the $\Lambda_\mathrm{b}^0$ feed down in the 2016 data in the 10--20$\,\%$ centrality interval. (Right) Ratio of the non-prompt and prompt reconstruction efficiencies.}
+\caption[Reconstruction efficiency of various topological cuts of prompt and non-prompt \Lambdac\ for 2016.]{\label{FeedDownEff2016} (Left) reconstruction efficiency of various topological cuts of prompt \Lambdac\ and \Lambdac\ from the $\Lambda_\mathrm{b}^0$ feed down in the 2016 data in the 10--20$\,\%$ centrality interval. (Right) Ratio of the non-prompt and prompt reconstruction efficiencies.}
 \end{figure}
 
 The reconstruction efficiencies of the \Lambdac, coming from the $\Lambda_\mathrm{b}^0$ feed down, are evaluated in the \texttt{FastSim} package. Figure~\ref{LambdabTopo} shows the distributions of various topological variables of the simulated prompt \Lambdac, as compared to the \Lambdac\ from the $\Lambda_\mathrm{b}^0$ feed down in several different \pt\ intervals. The decay length, the DCA of single daughters to the PV, and the DCA of \Lambdac\ to the PV is higher in the $\Lambda_\mathrm{b}^0$ feed-down, making the efficiency of the cuts in these variables smaller for the prompt the \Lambdac\@. DCA between the daughters was slightly smaller in the prompt \Lambdac, thus the reconstruction efficiency is higher for the prompt case in this variable\@.
@@ -766,57 +822,6 @@ The reconstruction efficiencies of the \Lambdac, coming from the $\Lambda_\mathr
 The total reconstruction efficiencies in of the \Lambdac\ from the $\Lambda_\mathrm{b}^0$ decay is compared to the prompt \Lambdac\ in the left panel of Figure~\ref{FeedDownEff} for the 2014 data and of Figure~\ref{FeedDownEff2016} in the 2016 data. The right panels of these figures show the ratios between the non-prompt ($\Lambda_\mathrm{b}^0 \rightarrow \Lambdac$) reconstruction efficiency and the prompt one. The efficiencies are larger in the non-prompt case by $\sim 40$--80$\,\%$ in both, 2014 and 2016 at all \pt\ intervals. With the reconstruction efficiency taken into account, the non-prompt contribution to the measured \Lambdac\ remains lower than $4\,\%$ at all \pt\@. The bottom feed-down is, therefore, small and is not propagated into the final uncertainties.
 % 
 % 
-% \section{Mixed-event background subtraction}
-% In the mixed-event method, tracks from different events are mixed together to determine the background, thus removing all correlations between tracks. The advantage of this method is that the number of such mixed events is only limited by the computing power. Therefore, the background can be measured very precisely by mixing with a large amount of events. 
-% 
-% \begin{figure}[htb]
-% \centering
-% $
-% \vcenter{\hbox{\includegraphics[width = 0.6\textwidth]{img/Mixing.pdf}
-% \footnotesize{(a)}
-% }}
-% $
-% \hspace*{0.\textwidth}
-% $
-% \vcenter{\hbox{\includegraphics[width = 0.2\textwidth]{img/trackShiftEventMixing.pdf}
-% \footnotesize{(b)}
-% }}
-% $
-% \caption{\label{fig:mixedIllustrations}The event-mixing method: (a) Illustration of how events are selected. Each particle species is selected from a different event. (b) Each mixed track has to be shifted by the difference of the positions of the primary vertices of the two events.}
-% 
-% \end{figure}
-% 
-% The events are always mixed within the same centrality and $v_z$ bin in order to reconstruct the same shape of the background. Figure~\ref{fig:mixedIllustrations} shows, how the mixed-event method is performed. When a buffer of 5 events of the same centrality and $v_z$ is filled, first protons are combined with kaons from another event, then these pairs are combined with pions. We can make 12 ($3 \times 4$) combinations for a buffer with 5 events. Because of the topological cuts, the tracks have to be shifted when they are mixed into another event by the difference in position of the primary vertices.
-% 
-% 
-% % \section{Efficiency corrections and assessment of systematic uncertainties}
-% 
-% \begin{figure}[htb]
-% \centering % negative space after an empty character
-% \includegraphics[width=0.6\textwidth]{img/BaryonMesonRatio_onlyData_430}
-% \caption{\label{fig:ratio}Ratio of the yield of $\Lambda_\mathrm{c}$ over D$^0$ vs $p_\mathrm{T}$ measured at STAR in Au+Au collisions with centrality 10--60$\,\%$~\cite{GuannanLc} compared to coalescence models~\cite{LcCoalescence_OhKoLeeYasui, Ghosh_Lc_rescattering, SHM} --- see description in text.}
-% 
-% \end{figure}
-% 
-% 
-% 
-% 
-% 
-% % 
-% % \begin{figure*}
-% % \centering
-% % \includegraphics[width=0.8\linewidth]{graph_a}
-% % \caption{Wide figure~\cite{}.}
-% % \label{fig:gr_a}
-% % \end{figure*}
-% \section{Mixed-event raw signal}
-% The invariant mass spectra of the \Lambdac\ can be found in Figure~\ref{fig:invMass}\@. 
-% 
-% \begin{figure}[htb]
-% \centering
-% \includegraphics[width = 0.6\textwidth]{img/mixedEvent12x}
-% \caption{\label{fig:invMass}Invariant mass spectrum of the p+K+$\uppi$ triplets in Au+Au collisions with $\sqrt{s_\mathrm{NN}} = 200\,$GeV at centrality 10--80$\,\%$ with a transverse momentum cut of $p_\mathrm{T} > 3\,\text{GeV}/c$. Mixed-event and wrong-sign background subtraction methods are compared.}
-% 
-% \end{figure}
+
 % 
 % 

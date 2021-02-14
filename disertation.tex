@@ -52,10 +52,10 @@
 
 %-------------------------------------------------------------------------------------------------------------------
 
-\newcommand{\myself}{Ing. Miroslav Šimko}
+\newcommand{\myself}{Ing.\ Miroslav Šimko}
 \newcommand{\engtitle}{Study of Heavy Flavor at the STAR Experiment}
 \newcommand{\czechtitle}{Studium těžkých vůní na experimentu STAR}
-\newcommand{\skolitel}{Mgr.\ Jaroslav Bielčík, Ph.D.}
+\newcommand{\skolitel}{Doc.\ Mgr.\ Jaroslav Bielčík, Ph.D.}
 \newcommand{\konzultant}{Mgr.\ Jana Bielčíková, Ph.D.}
 
 \newcommand{\konv}[1]{\ensuremath{\stackrel{\rm #1}{\longrightarrow}}}
@@ -78,7 +78,7 @@
 \newcommand{\snn}{\ensuremath{\sqrt{s_\text{NN}}}}
 \newcommand{\snnFull}{\ensuremath{\sqrt{s_\text{NN}} = 200\,\text{GeV}}}
 \newcommand{\Raa}{\ensuremath{R_\text{AA}}}
-\newcommand{\Rcp}{\ensuremath{R_\text{cp}}}
+\newcommand{\Rcp}{\ensuremath{R_\text{CP}}}
 \newcommand{\dzero}{\ensuremath{{\text{D}^0}}}
 \newcommand{\pipm}{\ensuremath{\uppi^\pm}}
 \newcommand{\ppm}{\ensuremath{\text{p}^\pm}}
@@ -94,6 +94,8 @@
 \newcommand{\pKandpi}{\ensuremath{\text{p, K, and\ }\uppi}}
 \newcommand{\piKandp}{\ensuremath{\uppi\text{, K, and p}}}
 \newcommand{\Kshort}{\ensuremath{\text{K}^0_\text{s}}}
+\newcommand{\LambdaQCD}{\ensuremath{\Lambda_\mathrm{QCD}}}
+\newcommand{\Ds}{\ensuremath{\text{D}_\text{s}}}
 
 \usepackage{geometry}
 \usepackage[doublespacing]{setspace}  % package for setting custom spacing (useful in long tables)
@@ -129,47 +131,49 @@
 \begin{center}
     {\LARGE \textsc CZECH TECHNICAL UNIVERSITY IN \\[0.3cm]PRAGUE}\\[2ex]
     {\LARGE \textsc Faculty of Nuclear Sciences and Physical \\[0.2cm]Engineering}\\[2ex]
-    {\LARGE \textsc Department of Physics}\\
+    {\LARGE \textsc Physics Department}\\
     \vspace{1cm}
     \begin{figure}[ht!]
     \begin{center}
-      {\includegraphics[width=5cm]{lev}}
+      {\includegraphics[width=5cm]{lev_new}}
     \end{center}
     \end{figure}
     \vspace{1cm}
 
-    {\textbf {\Huge Ph.D. Thesis \\[4ex]}
+    {\textbf {\Huge Doctoral Thesis \\[4ex]}
     {\LARGE \bf \engtitle} 
     }
 
     \vfill
 
     {\Large \bf \myself }\\ [4ex]
-    {\large \bf  Supervisor: \skolitel}\\[4ex]
+    {\large \bf  Supervisor: \skolitel}\\
+    {\large \bf  Co-supervisor: \konzultant}\\[4ex]
     {\Large \bf Prague, \justyear\today}\\
     \newpage \rule{0pt}{2cm}
 \end{center}
 \thispagestyle{empty}
 \begin{center}
     {\LARGE \textsc \mbox{\v{C}ESK\' E VYSOKÉ U\v CEN\' I TECHNICK\' E \\[0.3cm]V PRAZE}}\\[2ex]
-    {\LARGE \textsc Fakulta Jadern\' a a Fyzik\' aln\v e In\v zen\' yrsk\' a}\\[2ex]
+    {\LARGE \textsc Fakulta jadern\' a a fyzik\' aln\v e in\v zen\' yrsk\' a}\\[2ex]
     {\LARGE \textsc Katedra fyziky}\\
     \vspace{1cm}
     \begin{figure}[ht!]
     \begin{center}
-      {\includegraphics[width=5cm]{lev}}
+      {\includegraphics[width=5cm]{lev_new}}
     \end{center}
     \end{figure}
     \vspace{1cm}
 
-    {\textbf {\Huge Rozprava k Diserta\v cn\' i pr\' aci \\[4ex]}
+    {\textbf {\Huge Dizertační práce \\[4ex]}
     {\LARGE \bf \czechtitle} 
     }
 
     \vfill
 
     {\Large \bf \myself }\\ [4ex]
-    {\large \bf Školitel: \skolitel}\\[4ex]
+    {\large \bf Školitel: \skolitel}\\
+    {\large \bf Školitel specialista: \konzultant}\\[4ex]
     {\Large \bf Praha, \justyear\today}\\
     \newpage \rule{0pt}{2cm}
 \end{center}
@@ -181,12 +185,16 @@
 % \input{zadani}
 \input{prohlaseni}
 \input{vzor}
-\newpage
+\newpage \cleardoublepage
 % \input{acknowledgement}
 \input{contribution}
+\cleardoublepage
 \listoffigures
+\cleardoublepage
 \listoftables
+\cleardoublepage
 \tableofcontents 
+\cleardoublepage
 % \thispagestyle{plain}
 % \pagestyle{headings}
 %-------------------------------------------------------------------------------------------------------------------
@@ -202,23 +210,23 @@
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \markboth{LIST OF ABBREVIATIONS}{LIST OF ABBREVIATIONS}
-
 \addcontentsline{toc}{chapter}{List of Abbreviations}
 \Listofabbrev \newpage
 \cleardoublepage
 %--------%----------------------------------------------------------------------------------------------------------
-\chapter{Introduction}
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 
 \input{intro}
 
 \cleardoublepage
-\chapter{The Physics of Quark-Gluon Plasma}
+\chapter{The Physics of Quark-Gluon Plasma\label{QGPintro}}
 
 % \chapter{\Lambdac\ measurements at the LHC\label{LcLHC}}
 \input{introduction}
 
 \cleardoublepage
-\chapter{Open Heavy Flavor and Quark-Gluon Plasma}
+\chapter{Open Heavy Flavor\label{HFintro}}
 \input{hf}
 \input{lc}
 
@@ -233,11 +241,11 @@
 
 % \chapter{\Lambdac\ baryon analysis\label{analysis}}
 \cleardoublepage
-\chapter{Reconstruction of the $\Lambda_\text{c}$ Baryon in Au+Au Collisions}
+\chapter{Reconstruction of the $\Lambda_\text{c}$ Baryon in Au+Au Collisions\label{ReconstructionChapter}}
 \input{analysis}
 
 \cleardoublepage
-\chapter{Results}
+\chapter{Results\label{resultsChapter}}
 \input{results}
 
 \cleardoublepage
@@ -253,7 +261,7 @@
 
 \cleardoublepage
 \input{bibliography}
-% % -------------------------------------------------------------------------------------------------------------------
+% % ------------------------------------------------------------------ -------------------------------------------------
 
 \cleardoublepage
 \begin{appendices}

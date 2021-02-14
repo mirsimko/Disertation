@@ -6,7 +6,7 @@ to determine the frequency of collisions, and can be utilized for the measuremen
   \includegraphics[width=0.65\textwidth]{img/ZDC_in_STAR}\\
   \includegraphics[width=0.8\textwidth]{img/ZDC_scheme}
 \end{center}
-\caption{\label{ZDC_scheme}ZDC positions in the RHIC tunnel (top image) and the ZDC layout (bottom image)~\cite{ZDCSMD}. }
+\caption[ZDC positions in the RHIC tunnel and the ZDC layout.]{\label{ZDC_scheme}ZDC positions in the RHIC tunnel (top image) and the ZDC layout (bottom image)~\cite{ZDCSMD}. }
 \end{figure}
 
 
@@ -17,7 +17,7 @@ the first deflecting magnets. Each side consists of 3 towers made of a tungsten 
 \begin{center}
   \includegraphics[width=0.75\textwidth]{img/ZDC_modules_photo}
 \end{center}
-\caption{\label{ZDC_photo}Photo of the ZDC assembly installed between RHIC accelerator tubes~\cite{ZDCSMD}. }
+\caption[Photo of the ZDC assembly installed between RHIC accelerator tubes.]{\label{ZDC_photo}Photo of the ZDC assembly installed between RHIC accelerator tubes~\cite{ZDCSMD}. }
 \end{figure}
 
 Behind the first tower, there is the Shower-Maximum Detector, consisting of two overlaid layers of scintillator strips placed perpendicularly to the $z$ direction. The SMD adds spatial information to the ZDC which is crucial to the event-plane determination, using spectator particles, and for the determination of the proton polarization\@. The scintillator strips are glued to optical fibers which lead the emitted light into a 16-channel PMT (enclosed in the black box on top of the assembly in Figure~\ref{ZDC_photo})\@.
@@ -57,7 +57,7 @@ be at the same ADC value in both, the East and the West side. In reality, these 
 
 For the calibration, in each step, we take a dedicated ZDC run with
 $\sim$10$\,$M events (at full luminosity, this takes less than $5\,$min). Then, we
-look at the resulting Single-Neutron Peak (SNP\nomenclature{SNP}{Single-Neutron Peak}).
+look at the resulting SNP\@.
 For an illustration of the SNP see Figure~\ref{SNPillustration}\@.
 During the calibration, we change the voltages until at least 1 standard deviation of the SNP is in the ZDC measured
 range. Also, the ratio between the gain of the ZDC towers is corrected to match the ideal ratio 6:3:1\@. If the position of the SNP is too low and/or the ratio between the towers' gain is wrong,
@@ -69,7 +69,7 @@ has to be repeated until the ratio of the gains approximates the desired one wel
 \begin{center}
 \includegraphics[width=.6\textwidth]{img/SNPandDNPexample.pdf}
 \end{center}
-\caption{\label{SNPillustration} Single-neutron and double-neutron peaks for the West towers for in a 2018 test run.}
+\caption[ Single-neutron and double-neutron peaks for the West towers for in a 2018 test run.]{\label{SNPillustration} Single-neutron and double-neutron peaks for the West towers for in a 2018 test run.}
 
 \end{figure}
 
@@ -99,16 +99,16 @@ tower and the current tower, and $R$ is the current ratio.
 
 This calibration has to be performed at the beginning of each ion run at the top energy down to the energy per nucleon of about $E_\mathrm{N}\gtrsim40\,$GeV\@ as bellow this energy, the SNP falls bellow the sensitive range of the ZDC\@.
 
-\subsection{ZDC Tower PMT replacement and calibration}
+\subsection{\label{ZdcPmtTest}ZDC Tower PMT replacement and calibration}
 The calibrations, described in the previous section, have shown that the yield from SNP in the ZDC towers is lowering in between the RHIC runs each year. The possible causes include gas leaks into the PMTs, slow decremental loss of the PMT dinodes properties, or darkening of the ZDC optical fibers. 
 
-In 2018, before the isobar (${}^{96}$Zr and ${}^{96}$Ru) running at $\snn = 200\,$GeV, the ZDC towers were thoroughly tested and several PMTs were replaced. The original goal was to replace all of the ZDC PMTs with spares from the Brahms experiment, however a check had to be made, whether the spares performance exceeded one of the original PMTs.
+In 2018, before the isobar (${}^{96}$Zr and ${}^{96}$Ru) running at $\snn = 200\,$GeV, the ZDC towers were thoroughly tested and several PMTs were replaced. The original goal was to replace all of the ZDC PMTs with spares from the Broad RAnge Hadron Magnetic Spectrometers (Brahms\nomenclature{Brahms}{Broad RAnge Hadron Magnetic Spectrometers}) experiment, however a check had to be made, whether the spares performance exceeded one of the original PMTs.
 
 \begin{figure}[!htb]
 \begin{center}
  \includegraphics[width=0.47\textwidth]{img/ZDC_PMT_test_setup.jpg}$\quad$\includegraphics[width=0.47\textwidth]{img/ZDC_PMT_test_people.jpg}
 \end{center}
-\caption{\label{photo_ZDC_PTM_setup}Photos of the ZDC-PMT and possible spare-PMT test setup. Left: Inside of the black box. Right: The entire setup deployed inside the RHIC tunel.}
+\caption[Photos of the ZDC-PMT and  test setup for spare-PMT candidates.]{\label{photo_ZDC_PTM_setup}Photos of the ZDC-PMT and spare-PMT-candidate test setup. Left: Inside of the black box. Right: The entire setup deployed inside the RHIC tunel.}
 \end{figure}
 
 A photo of the experimental setup is shown in Figure~\ref{photo_ZDC_PTM_setup}\@. It consists of a flashing weak LED light, a control PMT, and the tested PMT, all enclosed in a wooden black box. The LED is controlled by a Beagle Board, powered via a USB charger which supplies the control PMT as well. The tested PMT uses an external high-voltage (HV) power supply. Both, the tested PMT and the control are read out in an oscilloscope that uses the control PMT as a trigger. The main purpose of the control PMT is, however, to measure the light output of the LED and ensure that it is stable throughout the measurement.
@@ -127,14 +127,14 @@ The first measurement consisted of measuring the gain performance of the Brahms-
 \includegraphics[width=0.32\textwidth]{img/AA1783}
 \includegraphics[width=0.32\textwidth]{img/H2431-50}
 % \end{center}
-\caption{\label{ZDCgains}Measurement of the dependence of the PMT gain on the applied high voltage. All the ZDC towers were measured as well as two spares that were used instead of ZDC East3 and ZDC West3\@. AA1783 and H2431-50 are serial numbers of the PMTs. The data are fitted by the power law~\eqref{powerLaw} where $a=1/U_0$ and $b$ is the Exponent.}
+\caption[Measurement of the dependence of the PMT gain on the applied high voltage.]{\label{ZDCgains}Measurement of the dependence of the PMT gain on the applied high voltage. All the ZDC towers were measured as well as two spares that were used instead of ZDC East3 and ZDC West3\@. AA1783 and H2431-50 are serial numbers of the PMTs. The data are fitted by the power law~\eqref{powerLaw} where $a=1/U_0$ and $b$ is the Exponent.}
 \end{figure}
 
 Next, all the PMT from the ZDC towers and the chosen spares were tested for linearity of gain vs the light input. The voltage on the LED light was risen and the increase in gain was compared to the control PMT which had been previously proven to be linear. The results were fitted by a linear function. All of the ZDC towers and the tested spares followed a linear response to the change of light input.
 
 
 \begin{table}[!htb] 
-\caption{\label{HVtable}Swaps and final ZDC voltages after the calibration performed for the 2018 isobar run.}
+\caption[Swaps and final ZDC voltages after the calibration performed for the 2018 isobar run]{\label{HVtable}Swaps and final ZDC voltages after the calibration performed for the 2018 isobar run.}
 \label{corected}
 \begin{center}
 \begin{tabular}{lccc}
