@@ -1,17 +1,17 @@
 The method of choice for studying of Quark-Gluon Plasma, that was discussed in length in the previous chapter, are collisions of relativistic nuclei. These are achieved in laboratory on particle accelerators. The work in this thesis was performed at Relativistic Heavy-Ion Collider (RHIC) that can collide several species of nuclei, as well as polarized protons, at various energies. 
 
 
-Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAnge Hadron Magnetic Spectrometers}, PHENIX\footnote{Pioneering High Energy Nuclear Interaction eXperiment}, and finally, recording data at the time of writing this thesis: STAR. Phobos and Brahms were decommissioned after concluding their physics programs in 2005 and 2006, respectively, and PHENIX is currently undergoing a major overhaul upgrade to be transformed into a new experiment: the sPHENIX~\cite{sphenix}. This state-of-the-art experiment will be able to measure charged particles with high rate in the entire azimuth. It will feature a time-projection chamber with a continuous readout, as well electromagnetic and hadronic calorimeters which will make it a perfect tool for measuring jets and heavy flavor.
+Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAnge Hadron Magnetic Spectrometers}, PHENIX\footnote{Pioneering High Energy Nuclear Interaction eXperiment}, and finally, recording data at the time of writing this thesis: STAR. Phobos and Brahms were decommissioned after concluding their physics programs in 2005 and 2006, respectively, and PHENIX stopped its operation in 2017 is currently being replaced by a new experiment: the sPHENIX~\cite{sphenix}. This state-of-the-art experiment will be able to measure charged particles with high rate in the entire azimuth. It will feature a time-projection chamber with a continuous readout, as well electromagnetic and hadronic calorimeters which will make it a perfect tool for measuring jets and heavy flavor.
 
 %-------------------------------------------------------------------------------------------------------------------
 
 \section{Relativistic Heavy Ion Collider (RHIC)\label{RHIC}}
 
-\begin{table}[!t]
+\begin{table}[!p]
 \caption[Summary of RHIC runs between 2013 and 2019 with integrated luminosity.]{\label{runTableYears}Summary of RHIC runs between 2013 and 2019 with integrated luminosity at the STAR experiment~\cite{RHICrunsTable}. As of writing this thesis, the 2019 run is currently on-going, therefore the final luminosity data are not available.}
 \begin{center}
-\renewcommand{\arraystretch}{1.15}
-\begin{spacing}{1.15}
+\renewcommand{\arraystretch}{1.0}
+\begin{spacing}{1.0}
 \begin{tabular}{llD{.}{.}{3.1}c}
 \toprule
  Year & Species & \multicolumn{1}{c}{\snn\ (GeV)} & Luminosity (nb$^{-1}$) \\
@@ -33,14 +33,26 @@ Four experiments have operated at RHIC so far: Phobos, Brahms\footnote{Broad RAn
   2018 & ${}^{96}$Zr+${}^{96}$Zr & 200.0 & 3.91\\
        & ${}^{96}$Ru+${}^{96}$Ru & 200.0 & 4.00\\
        & Au+Au & 27.0 & 0.282 \\
-       & Au+Au fixed target & 3.0 & 0.054 \\
-       & Au+Au fixed target & 7.2 & 0.035 \\
-  2019 & Au+Au & 14.6 & --- \\
-       & Au+Au & 19.6 & --- \\
-       & Au+Au fixed target & 3.9 & --- \\
-       & Au+Au & 7.7 & --- \\
-       & Au+Au fixed target & 4.5 & --- \\
-       & Au+Au fixed target & 7.8 & --- \\
+       & Au+Au fixed target & 3.0 & $5.4\times 10^{-2}$ \\
+       & Au+Au fixed target & 7.2 & $3.5\times 10^{-2}$ \\
+  2019 & Au+Au & 9.8 & 0.151\\
+       & Au+Au & 7.3 & 0.132\\
+       & Au+Au fixed target & 7.3 & $1.1\times 10^{-2}$\\
+       & Au+Au & 3.85 & $3.6\times 10^{-3}$\\
+       & Au+Au fixed target& 3.85 & $1.1\times 10^{-3}$\\
+       & Au+Au & 4.59 & $4.2\times 10^{-2}$\\
+       & Au+Au fixed target& 4.59 & $7.0\times 10^{-3}$\\
+       & Au+Au fixed target& 31.2 & $1.1\times 10^{-2}$\\
+       & Au+Au & 100.0 & $8.0\times 10^{-2}$\\
+ 2020 & Au+Au & 5.75 & 0.143\\
+       & Au+Au & 4.59 & 0.176\\
+       &  Au+Au fixed target& 31.2 & $2.3\times 10^{-2}$\\
+       &  Au+Au fixed target& 19.5 & $2.3\times 10^{-2}$\\
+       &  Au+Au fixed target& 13.5 & $2.5\times 10^{-2}$\\
+       &  Au+Au fixed target& 9.8  & $2.1\times 10^{-2}$\\
+       &  Au+Au fixed target& 7.3  & $2.4\times 10^{-2}$\\
+       &  Au+Au fixed target& 5.75 & $2.4\times 10^{-2}$\\
+       &  Au+Au fixed target& 26.5 & $6.5\times 10^{-2}$\\
 \bottomrule
 \end{tabular}
 \end{spacing}
@@ -93,7 +105,7 @@ STAR is a multipurpose detector that is capable of measuring charged particles a
 \begin{center}
  \includegraphics[width=0.9\textwidth]{img/STAR}\\
 \end{center}
-\caption{[Overview of the STAR detector.]\label{STAR}Overview of the STAR detector.}
+\caption{\label{STAR}Overview of the STAR detector.}
 \end{figure}
 
 The Solenoidal Tracker At RHIC (STAR) experiment~\cite{STARoverview} can be seen in Figure~\ref{STAR}. It is a multipurpose detector with full-azimuth
@@ -135,7 +147,7 @@ in the P10 gas is calibrated every several hours via a laser calibration system~
 
 The layout of the TPC is shown in Figure~\ref{TPC}. It is barrel-shaped with the outer radius of \SI{2}{\metre}, inner radius of \SI{0.5}{\metre} and length of \SI{4.2}{\metre}
 with the beam pipe going through the center. This barrel is filled with the P10 gas: a mixture of 90$\,\%$ argon and 10$\,\%$ methane. It covers the full azimuth \nomenclature{$\phi$}{Azimuthal angle (in a perpendicular plane to the beam pipe)}($0 < \phi < 2\pi$) and the outer edge covers the
-pseudorapidity range of $|\eta| < 1$. 
+pseudorapidity\nomenclature{$\eta$}{Pseudorapidity}\ range of $|\eta| < 1$. 
 In the center ($z = 0$)\nomenclature{$z$}{Horizontal axis in STAR along the beam pipe}, it is divided into two halves by the, so called, Central Membrane which is connected to an electric 
 potential of $-\SI{28}{\kilo\volt}$\@.  The sides of the cylinder consist of the, so called, field cage that ensures that the electric field in the TPC stays uniform.
 
@@ -188,7 +200,7 @@ decayed outside of the primary vertex, such as K$^0$ or $\Lambda$\@.
 
 
 
-Figure~\ref{TOF_mrpc} shows two side views of the TOF tray. A MRPC basically consists of a stack of resistive plates with uniform gas gaps in between. A high voltage is applied to the graphite electrodes that have electrically floating glass plates in between Typical resistivity of the glass plates is in the order of $10^13\,\Omega/$cm. A charged particle going through the tray generates electrical avalanches in the gas gaps. The signal is read out via copper pads on the outside of the graphite electrodes, separated by $0.35\,$mm of mylar. Because of the high resistivity of the glass plates, they are transparent to the charge induction in the gaps. The signal is the sum of all avalanches in the gas gaps in between the opposing copper pads. The gas consists of 95$\,\%$ Freon R134a and 5$\,\%$ iso-butane. This gas mixture was chosen for its dielectric strength and electronegativity. The trays are mechanically supported poly-carbonate (PC\nomenclature{PC}{Poly-Carbonate}) boards on each side, glued to honeycomb structures that are rigid while having a low material budget.
+Figure~\ref{TOF_mrpc} shows two side views of the TOF tray. A MRPC basically consists of a stack of resistive plates with uniform gas gaps in between. A high voltage is applied to the graphite electrodes that have electrically floating glass plates in between Typical resistivity of the glass plates is in the order of $10^{13}\,\Omega/$cm. A charged particle going through the tray generates electrical avalanches in the gas gaps. The signal is read out via copper pads on the outside of the graphite electrodes, separated by $0.35\,$mm of mylar. Because of the high resistivity of the glass plates, they are transparent to the charge induction in the gaps. The signal is the sum of all avalanches in the gas gaps in between the opposing copper pads. The gas consists of 95$\,\%$ Freon R134a and 5$\,\%$ iso-butane. This gas mixture was chosen for its dielectric strength and electronegativity. The trays are mechanically supported poly-carbonate (PC\nomenclature{PC}{Poly-Carbonate}) boards on each side, glued to honeycomb structures that are rigid while having a low material budget.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -247,4 +259,31 @@ for Au+Au and p+p collisions, respectively.
 
 % \section{Data Acquisition}
 % \subsection{Trigger}
+
+\section{STAR forward upgrade: Forward Calorimeter System and
+Forward Tracking System }
+
+
+Currently, STAR is preparing new upgrades in the forward pseudorapidity region $2.5 < \eta < 4$~\cite{forwardProposal}\@. This upgrade has a rich physics program, consisting of diverse topics from cold QCD to heavy-ion physics. STAR will be able to explore QCD properties in the low regions of Bjorken $x$\@. This region of QCD is not currently well understood and the new STAR measurements will have a transformative effect. The measurement of the Drell-Yan process will be enabled for the first time at RHIC\@. Moreover, this forward upgrade will also enable the study of longitudinal structure of initial state of the evolution of heavy-ion collisions and study of the transport properties of QGP\@. In order to achieve this, the forward detector system will have supreme detection capability of neutral pions,
+photons, electron pairs, jets and leading hadrons.
+
+\begin{figure}[!htb]
+\begin{center}
+ \includegraphics[width=0.8\textwidth]{img/forwardUpgrade}\\
+\end{center}
+\caption[Layout of the STAR forward upgrade.]{\label{forward}Layout of the STAR forward upgrade plan. Taken from~\cite{forwardProposal}.}
+\end{figure}
+
+The layout of this upgrade is shown in Figure~\ref{forward}\@. Two detector systems are being developed: the Forward Calorimeter System (FCS\nomenclature{FCS}{Forward Calorimeter System}) with an electromagnetic and hadronic calorimeters, and the Forward Tracking System (FTS\nomenclature{FTS}{Forward Tracking System})\@. To achieve the upgrade's goals, the design requirements for the FTS are the track-charge separation ability, 30$\,\%$ momentum resolution for tracks with 
+$0.2< \pt <2\,$GeV/$c$, and more than $80\,\%$ efficiency at 100 track multiplicity per event\@. The FCS-electromagnetic calorimeter should achieve accuracy of $10\,\% / \sqrt{E}$ in p+p and p+ion collisions and $20\,\% / \sqrt{E}$ in ion+ion collisions and the FCS-hadron calorimeter $10\,\% + 50\,\% / \sqrt{E}$.
+
+
+ The FTS consists of three radially oriented discs of silicon detectors, called the Forward Silicon Tracker (FST\nomenclature{FST}{Forward Silicon Tracker}), and three larger discs outside of the TPC, called Forward sTGC Tracker (FTT\nomenclature{FTT}{Forward sTGC Tracker})\@. The FST is made out of silicon micro-strip sensors similar to the IST (see Section~\ref{IstSection})\@. As the name suggests, the FTT is made of three discs small-strip Thin Gap Chambers (sTGC)~\cite{FTTproceedings}, similar to the ones already installed in the ATLAS detector~\cite{AtlasStgc}\@.
+ 
+ The FCS-electromagnetic calorimeter uses a refurbished lead-scintilator-sandwich detector, originally used by PHENIX~\cite{PhenixCalorimeter}. The FCS-hadronic calorimeter consists or scintilator-iron-sandwich towers. Both of these detectors are read out by similar silicon photomultipliers and FEEs. This is the first hadronic calorimeter installed at STAR\@.
+ 
+ Both FCS elctromagnetic and hadronic calorimeters are already installed at STAR and being tested while taking Au+Au data. Several modules of the FTS are being tested inside of STAR and the entire system is ready to be installed this year (in 2021) and take data from the polarized p+p collisions at $\sqrt{s} = 510\,$GeV that are planned to take place at RHIC in 2022\@. 
+
+
+
 
